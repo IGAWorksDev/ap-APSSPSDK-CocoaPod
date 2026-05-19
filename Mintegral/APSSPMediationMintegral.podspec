@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "APSSPMediationMintegral"
-  s.version      = "8.1.1.1"
+  s.version      = "8.1.1.2"
   s.summary      = "APSSPSDK Mediation Mintegral Adapter"
   s.homepage     = "https://github.com/IGAWorksDev/ap-APSSPSDK-CocoaPod"
   s.license      = { "type": "Apache License, Version 2.0", "file": "LICENSE" }
@@ -17,5 +17,4 @@ Pod::Spec.new do |s|
   s.pod_target_xcconfig = { "OTHER_LDFLAGS" => "-ObjC" }
 
   s.dependency "APSSPSDK", ">= 3.0.2"
-  s.dependency "MintegralAdSDK", "~> 8.1"
 end

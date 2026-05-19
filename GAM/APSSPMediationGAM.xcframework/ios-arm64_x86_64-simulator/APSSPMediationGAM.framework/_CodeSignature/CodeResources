@@ -6,7 +6,7 @@
 	<dict>
 		<key>Frameworks/APSSPSDK.framework/APSSPSDK</key>
 		<data>
-		3u5U+LVBs0s1O7Szvv3wc3V6lDw=
+		CSv+DW9+ghf8EFAiIJdi7cUKx0Y=
 		</data>
 		<key>Frameworks/APSSPSDK.framework/Info.plist</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>Frameworks/GoogleMobileAds.framework/GoogleMobileAds</key>
 		<data>
-		2znCxS1q58IiphPzIXLlzKO7NHg=
+		C7IOQPqDiPmhZIzSwBo/+Y/a43Y=
 		</data>
 		<key>Frameworks/GoogleMobileAds.framework/Info.plist</key>
 		<data>
@@ -118,11 +118,15 @@
 		</data>
 		<key>Frameworks/UserMessagingPlatform.framework/UserMessagingPlatform</key>
 		<data>
-		eLI5CyzInzVyb0Bc76yKwCVguqQ=
+		Q/zZajl+Y1h8RwTw0PtJNShm8IY=
 		</data>
 		<key>Frameworks/UserMessagingPlatform.framework/_CodeSignature/CodeResources</key>
 		<data>
 		U0CbPsAVTuufx7abQZX3RwpeoxU=
+		</data>
+		<key>Headers/MediationGAM.h</key>
+		<data>
+		Z8H08dvkiUA1xCpSo6URw09wvLY=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -175,7 +179,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			PCEAYij3Gt7pC0rK/W3dPf7t2cavpHbyH8e3+Qe/gsM=
+			k6kEfeVnbZcvUkDAJDQD1usTldhcVz0OeU82lNKKPTg=
 			</data>
 		</dict>
 		<key>Frameworks/APSSPSDK.framework/Info.plist</key>
@@ -329,7 +333,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			NYrOIY2oCdQoSED5U5GgXCit2EgH84bvGcZvj4cukXQ=
+			CyVq8G2XzqO4eAdR3Yn8ryCDKmaNXox3x0lI860HnQg=
 			</data>
 		</dict>
 		<key>Frameworks/GoogleMobileAds.framework/Info.plist</key>
@@ -371,7 +375,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pWC1eGg0ROGWWAZXpQYUR9MPd18WOpFyw82oW5KdrGE=
+			lxJOsDlVJxpT/cQhKg7WVstMSvm9pkihHKZkZ+6ArOc=
 			</data>
 		</dict>
 		<key>Frameworks/UserMessagingPlatform.framework/_CodeSignature/CodeResources</key>
@@ -379,6 +383,13 @@
 			<key>hash2</key>
 			<data>
 			rAdRpZwoJm8WoiP+FwAfFuAA6sd2aXXni65qCifZOZE=
+			</data>
+		</dict>
+		<key>Headers/MediationGAM.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			l9Dnus4B7F/BIBt+AjvkmShliC80lrnO08yJlUU4ytA=
 			</data>
 		</dict>
 		<key>Modules/APSSPMediationGAM.swiftmodule/arm64-apple-ios-simulator.abi.json</key>

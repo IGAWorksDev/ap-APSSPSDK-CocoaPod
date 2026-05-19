@@ -6,7 +6,7 @@
 	<dict>
 		<key>Frameworks/APSSPSDK.framework/APSSPSDK</key>
 		<data>
-		NyabcFz8Yx9bJT9e2elt3RXNTv4=
+		NSL3SqQELxrb0GsiOZOE4Ha8FYs=
 		</data>
 		<key>Frameworks/APSSPSDK.framework/Info.plist</key>
 		<data>
@@ -102,7 +102,7 @@
 		</data>
 		<key>Frameworks/MolocoSDK.framework/MolocoSDK</key>
 		<data>
-		YxbXWkSYf0XcM2fYuoxr8jVfMJY=
+		XiqRaLHHdg37CbIpeahWxm531PI=
 		</data>
 		<key>Frameworks/MolocoSDK.framework/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -119,6 +119,10 @@
 		<key>Frameworks/MolocoSDK.framework/mraid.js.ignore</key>
 		<data>
 		QbcmfpscYXVHrQDN7tmKwxTKmss=
+		</data>
+		<key>Headers/MediationMoloco.h</key>
+		<data>
+		Gb36CfkPpsSDfL3MB7Ovfzo1ipQ=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -167,7 +171,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			OVLMd9QKwlUI0+Djc6AzRPnf9G0zo3JpXwC2LzohEr8=
+			Uo8AnRq9gWeP2GEH1CLgvYoy2sU/3UrALF/7BtILT1I=
 			</data>
 		</dict>
 		<key>Frameworks/APSSPSDK.framework/Info.plist</key>
@@ -335,7 +339,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			oqs84cfRvja8JMD9aNZO3F33tbILf9xTlp9HXfN1lKs=
+			sq8btpsgzvBxr+xZFRT1Z4hhNj8bP8AD9iPEUvazB5o=
 			</data>
 		</dict>
 		<key>Frameworks/MolocoSDK.framework/PrivacyInfo.xcprivacy</key>
@@ -364,6 +368,13 @@
 			<key>hash2</key>
 			<data>
 			0ymH9S0677V8jqsxQQzygdJKIOtCZOIZSkcaYxd/uQ4=
+			</data>
+		</dict>
+		<key>Headers/MediationMoloco.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			VUuW1/7hE8Lsp2UAdoDlYlG9ac3BDeUUR8r8lpYFLNk=
 			</data>
 		</dict>
 		<key>Modules/APSSPMediationMoloco.swiftmodule/arm64-apple-ios.abi.json</key>

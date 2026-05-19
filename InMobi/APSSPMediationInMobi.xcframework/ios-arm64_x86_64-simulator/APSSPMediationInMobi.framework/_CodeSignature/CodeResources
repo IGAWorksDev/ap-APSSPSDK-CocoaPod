@@ -6,7 +6,7 @@
 	<dict>
 		<key>Frameworks/APSSPSDK.framework/APSSPSDK</key>
 		<data>
-		YDIEh57CIFa/npzMV3QMym5TjlE=
+		og7V8yEQxiL5i+GiKPGkj7Cj3QY=
 		</data>
 		<key>Frameworks/APSSPSDK.framework/Info.plist</key>
 		<data>
@@ -120,6 +120,10 @@
 		<data>
 		jrNLHSZ78BivJAUwAOnbDGjb3nw=
 		</data>
+		<key>Headers/MediationInMobi.h</key>
+		<data>
+		anBJ8T+BIOygp/fFLVOQVkJSEtc=
+		</data>
 		<key>Info.plist</key>
 		<data>
 		RNUgjRF/GuQ7csgbrXLt7jGHYxo=
@@ -171,7 +175,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WlUKWQALtS+7PiAghlWoU8XX7y//U+I6c5VSIQ6R+Kk=
+			KHkOwwNLC3VCOuIpEwPMx1mu45z2jeA9mxN509Fwk2Q=
 			</data>
 		</dict>
 		<key>Frameworks/APSSPSDK.framework/Info.plist</key>
@@ -368,6 +372,13 @@
 			<key>hash2</key>
 			<data>
 			CrAlBVq6ud9EsQCrl17TAu5YMcEj93Ck4o9WRpZzNZg=
+			</data>
+		</dict>
+		<key>Headers/MediationInMobi.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			EV8SYDiqdT5KMDbrm9UFLhzRArULSpkIytqQiQA9xbA=
 			</data>
 		</dict>
 		<key>Modules/APSSPMediationInMobi.swiftmodule/arm64-apple-ios-simulator.abi.json</key>

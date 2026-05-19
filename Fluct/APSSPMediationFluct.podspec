@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "APSSPMediationFluct"
-  s.version      = "6.42.1.1"
+  s.version      = "6.42.1.2"
   s.summary      = "APSSPSDK Mediation Fluct Adapter"
   s.homepage     = "https://github.com/IGAWorksDev/ap-APSSPSDK-CocoaPod"
   s.license      = { "type": "Apache License, Version 2.0", "file": "LICENSE" }

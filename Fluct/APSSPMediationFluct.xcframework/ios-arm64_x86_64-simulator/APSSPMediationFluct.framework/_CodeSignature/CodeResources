@@ -26,7 +26,7 @@
 		</data>
 		<key>Frameworks/APSSPSDK.framework/APSSPSDK</key>
 		<data>
-		baoJuBrsenNHAp68GjXyG9i0AV4=
+		6OkYVQFSXqYkg8jLJHB+7dIoDLs=
 		</data>
 		<key>Frameworks/APSSPSDK.framework/Info.plist</key>
 		<data>
@@ -114,7 +114,7 @@
 		</data>
 		<key>Frameworks/FluctSDK.framework/FluctSDK</key>
 		<data>
-		9zWH3V6fgKURn0sybGk+Bo3BOkI=
+		VBdaYmzqs9seq8imwFXCWCgaghM=
 		</data>
 		<key>Frameworks/FluctSDK.framework/Info.plist</key>
 		<data>
@@ -123,6 +123,10 @@
 		<key>Frameworks/FluctSDK.framework/_CodeSignature/CodeResources</key>
 		<data>
 		eu9A5qyAm7HKA4G13XTafZhBfqY=
+		</data>
+		<key>Headers/MediationFluct.h</key>
+		<data>
+		fl82j8jhheHGex/k/fsE5DqKdWs=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -210,7 +214,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1mZp9Oe5cl/AMDFEc66xH0vNRsHKOX+l/D53U4W35Jk=
+			pcIWdhVIFcJQYMpNEytxZKP3bBRUCosSu08NiI1Vmr8=
 			</data>
 		</dict>
 		<key>Frameworks/APSSPSDK.framework/Info.plist</key>
@@ -364,7 +368,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			QmizBdxYh1VqtdIz3Fk7Ts77aCqxwqJG9+f5CeMzJD4=
+			usdvXXUukN/afGByusBZbX8+5j7s/6OGKgupR6RJCdU=
 			</data>
 		</dict>
 		<key>Frameworks/FluctSDK.framework/Info.plist</key>
@@ -379,6 +383,13 @@
 			<key>hash2</key>
 			<data>
 			sokX1rcP+Et8iPxxwJcTC/TGv70CaHhfn7RpgfEt+W0=
+			</data>
+		</dict>
+		<key>Headers/MediationFluct.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			zU6dvX7OlVskPmzwrhmkOMOx/ATCCYndh+KK+1xZGIs=
 			</data>
 		</dict>
 		<key>Modules/APSSPMediationFluct.swiftmodule/arm64-apple-ios-simulator.abi.json</key>

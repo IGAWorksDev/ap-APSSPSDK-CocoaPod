@@ -6,7 +6,7 @@
 	<dict>
 		<key>Frameworks/APSSPSDK.framework/APSSPSDK</key>
 		<data>
-		cwPet9jyOphNZYw11FRMvoaDgoM=
+		58CZrjgVnnLgOqVJr7o+W224+KU=
 		</data>
 		<key>Frameworks/APSSPSDK.framework/Info.plist</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>Frameworks/IASDKCore.framework/IASDKCore</key>
 		<data>
-		b0aHxPNehuxdass0yed65qV0MA4=
+		ZyvqegWPTdMOPJc0I0wIkgSmOKQ=
 		</data>
 		<key>Frameworks/IASDKCore.framework/Info.plist</key>
 		<data>
@@ -171,7 +171,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Xf0IkLo9XPv+haCFvLPkeHQiV10rbSptRbkLw1nbUXU=
+			C/a3EOnLA0MrSgQVBx7XmyLgGbZpJ73/VitckS8Sv7I=
 			</data>
 		</dict>
 		<key>Frameworks/APSSPSDK.framework/Info.plist</key>
@@ -325,7 +325,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BNoShPzzAnfmXRojtszQkrZr1D7g1/MXt/2IwqhDwJ8=
+			BlfdPcPZOV0ZatIFa5mJrv+7LTg4GeIImWkLiaSDNmU=
 			</data>
 		</dict>
 		<key>Frameworks/IASDKCore.framework/Info.plist</key>

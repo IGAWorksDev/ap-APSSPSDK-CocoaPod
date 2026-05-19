@@ -6,7 +6,7 @@
 	<dict>
 		<key>Frameworks/APSSPSDK.framework/APSSPSDK</key>
 		<data>
-		iYFJkjGMUOtbWOt1NZOM9M9j4XQ=
+		r38NxsB0LlFr2kVcX+hvqkq+Ntk=
 		</data>
 		<key>Frameworks/APSSPSDK.framework/Info.plist</key>
 		<data>
@@ -120,6 +120,10 @@
 		<data>
 		QbcmfpscYXVHrQDN7tmKwxTKmss=
 		</data>
+		<key>Headers/MediationMoloco.h</key>
+		<data>
+		Gb36CfkPpsSDfL3MB7Ovfzo1ipQ=
+		</data>
 		<key>Info.plist</key>
 		<data>
 		mraNHt/qQOGQT+Aojwfq0KyvOFg=
@@ -187,7 +191,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			028R3P9vYazgMdy7Zu0eXveEai0XBRdrHYuB6U6FRwE=
+			67cRcBAEpFf50unLg2+mQaN2K4tIcx1TGUUZoxwgu4Y=
 			</data>
 		</dict>
 		<key>Frameworks/APSSPSDK.framework/Info.plist</key>
@@ -384,6 +388,13 @@
 			<key>hash2</key>
 			<data>
 			0ymH9S0677V8jqsxQQzygdJKIOtCZOIZSkcaYxd/uQ4=
+			</data>
+		</dict>
+		<key>Headers/MediationMoloco.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			VUuW1/7hE8Lsp2UAdoDlYlG9ac3BDeUUR8r8lpYFLNk=
 			</data>
 		</dict>
 		<key>Modules/APSSPMediationMoloco.swiftmodule/arm64-apple-ios-simulator.abi.json</key>

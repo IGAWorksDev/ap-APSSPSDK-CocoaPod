@@ -6,7 +6,7 @@
 	<dict>
 		<key>Frameworks/APSSPSDK.framework/APSSPSDK</key>
 		<data>
-		gikz79odX+6EwfLRbb7Z+vyrAT8=
+		/4koWn0prpxQBjv+Xcb2p7XF3N0=
 		</data>
 		<key>Frameworks/APSSPSDK.framework/Info.plist</key>
 		<data>
@@ -112,6 +112,10 @@
 		<data>
 		vUAzcmZUr9PdJQfuv5ByL+90YqY=
 		</data>
+		<key>Headers/MediationMaio.h</key>
+		<data>
+		rguDeN04o6vhLeIq2qG5wvd80pQ=
+		</data>
 		<key>Info.plist</key>
 		<data>
 		zQZV2vXjiIm7fyy7+47anopJtkE=
@@ -163,7 +167,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			K5pDlxIrDE/HEB16BefX4l4htXRKxK3YEX7JCYwHX5M=
+			dw++vC9ZTVGFLbmSSfcC8Nkz4+aA0CZI839ARBCSH5k=
 			</data>
 		</dict>
 		<key>Frameworks/APSSPSDK.framework/Info.plist</key>
@@ -346,6 +350,13 @@
 			<key>hash2</key>
 			<data>
 			PtmJlURu8/NoYSjyzCXybASgk1NACTEYvuhCfCKU47U=
+			</data>
+		</dict>
+		<key>Headers/MediationMaio.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			l0wP2/WyzICGBYNWxnHKtT/d2JA51sQYIBQLuUHWjwA=
 			</data>
 		</dict>
 		<key>Modules/APSSPMediationMaio.swiftmodule/arm64-apple-ios-simulator.abi.json</key>

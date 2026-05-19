@@ -6,7 +6,7 @@
 	<dict>
 		<key>Frameworks/APSSPSDK.framework/APSSPSDK</key>
 		<data>
-		Ijwq1aW5MUVi/dCaqbUvyoJh470=
+		r7Dsi32wbIV+pgkQcNmRbKDQmv4=
 		</data>
 		<key>Frameworks/APSSPSDK.framework/Info.plist</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>Frameworks/GoogleMobileAds.framework/GoogleMobileAds</key>
 		<data>
-		l+dXzkc9CDNXbp5nSjWTEbdWH4k=
+		PNStgRhFvBwlaONEduWUp1J8hMY=
 		</data>
 		<key>Frameworks/GoogleMobileAds.framework/Info.plist</key>
 		<data>
@@ -118,11 +118,15 @@
 		</data>
 		<key>Frameworks/UserMessagingPlatform.framework/UserMessagingPlatform</key>
 		<data>
-		km1qH87W++S8k7E2hKcQ/agD7zQ=
+		+sMCqUbscQe12N5RSzPLhTExvsc=
 		</data>
 		<key>Frameworks/UserMessagingPlatform.framework/_CodeSignature/CodeResources</key>
 		<data>
 		sgIDbQZt5KDxtNpCBc82ip6xhIk=
+		</data>
+		<key>Headers/MediationGAM.h</key>
+		<data>
+		Z8H08dvkiUA1xCpSo6URw09wvLY=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -155,7 +159,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			TWeX5PD9XCNEVcVn8JndaQ13LDjQScDIPhjCxOI4cYY=
+			+1kU7EAeeVTxXixDm3TroVXhKCEQK71bxbMjjMlIQ9I=
 			</data>
 		</dict>
 		<key>Frameworks/APSSPSDK.framework/Info.plist</key>
@@ -309,7 +313,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			mO4xCl2v1BzgYWt6CfbjemGrZu+FsHgXLoZnkEklwIk=
+			+jZ/lJopm6v47mTS6XVlNA9ioRIJdHxYM6LhpnOd+i4=
 			</data>
 		</dict>
 		<key>Frameworks/GoogleMobileAds.framework/Info.plist</key>
@@ -351,7 +355,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JHrquzE5OrrINREsQu8aUFGYQRJLnTa7/UQsbCFBnd0=
+			0C55X2D7ExibxFuZkpvvDwpeJatyVknHl2txz2rJLic=
 			</data>
 		</dict>
 		<key>Frameworks/UserMessagingPlatform.framework/_CodeSignature/CodeResources</key>
@@ -359,6 +363,13 @@
 			<key>hash2</key>
 			<data>
 			Jcm7hwhmzO+JSkY2MTFOQnF8fzIVbnHgAQ+Vf92hCXg=
+			</data>
+		</dict>
+		<key>Headers/MediationGAM.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			l9Dnus4B7F/BIBt+AjvkmShliC80lrnO08yJlUU4ytA=
 			</data>
 		</dict>
 		<key>Modules/APSSPMediationGAM.swiftmodule/arm64-apple-ios.abi.json</key>

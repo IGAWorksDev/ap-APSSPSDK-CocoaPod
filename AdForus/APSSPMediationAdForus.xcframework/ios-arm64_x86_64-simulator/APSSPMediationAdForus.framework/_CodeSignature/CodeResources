@@ -6,7 +6,7 @@
 	<dict>
 		<key>Frameworks/APSSPSDK.framework/APSSPSDK</key>
 		<data>
-		lujj8svbl/FbyC17cUms/z+iYlI=
+		UqSz1miy3KRdGiRjaSauaa2dibw=
 		</data>
 		<key>Frameworks/APSSPSDK.framework/Info.plist</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>Frameworks/GoogleMobileAds.framework/GoogleMobileAds</key>
 		<data>
-		4o/AulUBPvM6tfSaia5K0tqtF78=
+		JJn4ve9B80TNJ0L+e57Rp1GqPfI=
 		</data>
 		<key>Frameworks/GoogleMobileAds.framework/Info.plist</key>
 		<data>
@@ -118,11 +118,15 @@
 		</data>
 		<key>Frameworks/UserMessagingPlatform.framework/UserMessagingPlatform</key>
 		<data>
-		GIgt5nMpC15Q+h/Q8VWTG77OPkA=
+		QaWYuqXKxZyK0XhFuoYC42hePnI=
 		</data>
 		<key>Frameworks/UserMessagingPlatform.framework/_CodeSignature/CodeResources</key>
 		<data>
 		U0CbPsAVTuufx7abQZX3RwpeoxU=
+		</data>
+		<key>Headers/MediationAdForus.h</key>
+		<data>
+		Ru5SlzvxFhQ2cz6VEl4Qi5PuA88=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -175,7 +179,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			z1iF873z9Myj06xX9T2fa+qGwYOkI9qesRRb2s+fWaM=
+			BN4XDGhX3lu6xY847CaqR0lb9W0oFvV+xeURHIltZQc=
 			</data>
 		</dict>
 		<key>Frameworks/APSSPSDK.framework/Info.plist</key>
@@ -329,7 +333,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Uf1psBt66oSdYCToHAYDVarKEXNA4WhDA0GDNRMR6+k=
+			RtXl65wY76YlMJNHns9uMFXfDCEX66cn2zs5tWJjjBA=
 			</data>
 		</dict>
 		<key>Frameworks/GoogleMobileAds.framework/Info.plist</key>
@@ -371,7 +375,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fipFxY8wgCT02qncsukbFBxlpfKd0vMHtyod4qc6JvQ=
+			Z/6dJ9FpR9J1FXZzBZAWOm0k6CB6irhJY9gWHQPgYHQ=
 			</data>
 		</dict>
 		<key>Frameworks/UserMessagingPlatform.framework/_CodeSignature/CodeResources</key>
@@ -379,6 +383,13 @@
 			<key>hash2</key>
 			<data>
 			rAdRpZwoJm8WoiP+FwAfFuAA6sd2aXXni65qCifZOZE=
+			</data>
+		</dict>
+		<key>Headers/MediationAdForus.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			fZsd+nOckup37WT7RuTZECY7N6qeIJ2Vk5BgIlR5xbg=
 			</data>
 		</dict>
 		<key>Modules/APSSPMediationAdForus.swiftmodule/arm64-apple-ios-simulator.abi.json</key>

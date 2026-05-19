@@ -6,7 +6,7 @@
 	<dict>
 		<key>Frameworks/APSSPSDK.framework/APSSPSDK</key>
 		<data>
-		L8yDKKFQV9rLcl+oL7rbgEiO0Qw=
+		c5HooQrir0Lo7meZScB0qoYG4ew=
 		</data>
 		<key>Frameworks/APSSPSDK.framework/Info.plist</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>Frameworks/InMobiSDK.framework/InMobiSDK</key>
 		<data>
-		h2vj6kWjAPxSwQuRxoumw05If+s=
+		uF/azOGK1lMnZ5aqYu5nc2ed3Lk=
 		</data>
 		<key>Frameworks/InMobiSDK.framework/Info.plist</key>
 		<data>
@@ -119,6 +119,10 @@
 		<key>Frameworks/InMobiSDK.framework/im_unmute.png</key>
 		<data>
 		jrNLHSZ78BivJAUwAOnbDGjb3nw=
+		</data>
+		<key>Headers/MediationInMobi.h</key>
+		<data>
+		anBJ8T+BIOygp/fFLVOQVkJSEtc=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -151,7 +155,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fdsPDJiYIfYxVh6qC5h3Q7IXFK2OH4OwoX4aO3o4H9k=
+			4RAzjHqyzd91OZL9zwKv3+m7mAOsnvYWNAWHgaTdamA=
 			</data>
 		</dict>
 		<key>Frameworks/APSSPSDK.framework/Info.plist</key>
@@ -305,7 +309,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HBdCThuSPCqMitOn8fSpGKtLggojPpAu2WSJ9SkSbqs=
+			GYAkSx+f07PMVubQNEygrfSW24IWot+tmdSkdu/THDo=
 			</data>
 		</dict>
 		<key>Frameworks/InMobiSDK.framework/Info.plist</key>
@@ -348,6 +352,13 @@
 			<key>hash2</key>
 			<data>
 			CrAlBVq6ud9EsQCrl17TAu5YMcEj93Ck4o9WRpZzNZg=
+			</data>
+		</dict>
+		<key>Headers/MediationInMobi.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			EV8SYDiqdT5KMDbrm9UFLhzRArULSpkIytqQiQA9xbA=
 			</data>
 		</dict>
 		<key>Modules/APSSPMediationInMobi.swiftmodule/arm64-apple-ios.abi.json</key>

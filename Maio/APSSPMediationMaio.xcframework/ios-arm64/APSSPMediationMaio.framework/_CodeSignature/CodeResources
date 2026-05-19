@@ -6,7 +6,7 @@
 	<dict>
 		<key>Frameworks/APSSPSDK.framework/APSSPSDK</key>
 		<data>
-		7cGdP1Y6UehnP6zQcc+3nPVW8ug=
+		WX3F4vYn1Y/bWZ08dLIldN9D+7w=
 		</data>
 		<key>Frameworks/APSSPSDK.framework/Info.plist</key>
 		<data>
@@ -98,7 +98,7 @@
 		</data>
 		<key>Frameworks/Maio.framework/Maio</key>
 		<data>
-		YrYBucfhPtE4NNpVvXXBuPiSSPI=
+		+hhy6U63G8UcrDndgwSpGWGY8Gw=
 		</data>
 		<key>Frameworks/Maio.framework/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -111,6 +111,10 @@
 		<key>Frameworks/Maio.framework/force_close_button.png</key>
 		<data>
 		vUAzcmZUr9PdJQfuv5ByL+90YqY=
+		</data>
+		<key>Headers/MediationMaio.h</key>
+		<data>
+		rguDeN04o6vhLeIq2qG5wvd80pQ=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -143,7 +147,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Vr/aQ1OYMq1Vyr6zeW8YZGK/stQJ9WqKK5L2QfQdBjI=
+			0Mq5NQEOwQUBKmpq84jh/821IxmDZJOrOzvZVEvrmEA=
 			</data>
 		</dict>
 		<key>Frameworks/APSSPSDK.framework/Info.plist</key>
@@ -304,7 +308,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			H+yznzq+maaO/edkPqKBvfwy/93C75G87QsLfbn7e/g=
+			plP2UXjxIgmx5dJ4YxTYb43C/fMHlX9TmLB1+DGoIBw=
 			</data>
 		</dict>
 		<key>Frameworks/Maio.framework/PrivacyInfo.xcprivacy</key>
@@ -326,6 +330,13 @@
 			<key>hash2</key>
 			<data>
 			PtmJlURu8/NoYSjyzCXybASgk1NACTEYvuhCfCKU47U=
+			</data>
+		</dict>
+		<key>Headers/MediationMaio.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			l0wP2/WyzICGBYNWxnHKtT/d2JA51sQYIBQLuUHWjwA=
 			</data>
 		</dict>
 		<key>Modules/APSSPMediationMaio.swiftmodule/arm64-apple-ios.abi.json</key>

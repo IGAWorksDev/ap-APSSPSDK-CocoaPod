@@ -6,7 +6,7 @@
 	<dict>
 		<key>Frameworks/APSSPSDK.framework/APSSPSDK</key>
 		<data>
-		ddiL0rCGHiwiBP45xkDEkJr4QjM=
+		vry7WTOkBiXqIupBz22AFYCV28w=
 		</data>
 		<key>Frameworks/APSSPSDK.framework/Info.plist</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>Frameworks/GoogleMobileAds.framework/GoogleMobileAds</key>
 		<data>
-		83oQHclWu5sm6sJl7akzk2ahSyA=
+		Yfj2KtOKdJjlpVdLMUTV5TOOFL8=
 		</data>
 		<key>Frameworks/GoogleMobileAds.framework/Info.plist</key>
 		<data>
@@ -118,11 +118,15 @@
 		</data>
 		<key>Frameworks/UserMessagingPlatform.framework/UserMessagingPlatform</key>
 		<data>
-		uJjGhih/v/8Wrjxgy6qXfhyUsZI=
+		qWAZ7HhH0TmtqTVCBFIomseeLPU=
 		</data>
 		<key>Frameworks/UserMessagingPlatform.framework/_CodeSignature/CodeResources</key>
 		<data>
 		sgIDbQZt5KDxtNpCBc82ip6xhIk=
+		</data>
+		<key>Headers/MediationAdForus.h</key>
+		<data>
+		Ru5SlzvxFhQ2cz6VEl4Qi5PuA88=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -155,7 +159,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			t4cBz1UjLpX6+LVVVYFqy/Ay6dv51JO9T6MbSfVDt+o=
+			ARqwGNA6mZ0jH3l0gxGj2kk3e45314KFzy1U0MxrXqQ=
 			</data>
 		</dict>
 		<key>Frameworks/APSSPSDK.framework/Info.plist</key>
@@ -309,7 +313,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Dy7agCADHZqUqooPiaSD29Eyv3KJxIEIqGHstHUPdn0=
+			8CzXtdMj/VUrRPafVrkBSSclEVjQU1331n8EgE8+ZvY=
 			</data>
 		</dict>
 		<key>Frameworks/GoogleMobileAds.framework/Info.plist</key>
@@ -351,7 +355,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zMc2EPGJKIYyD7YLUDI2uCgJ1MTJR4O1zOeRzaCkZcg=
+			Hfhvb48yvP2r+t05URI9PLwcb8bmO/RFjNj8D766MU8=
 			</data>
 		</dict>
 		<key>Frameworks/UserMessagingPlatform.framework/_CodeSignature/CodeResources</key>
@@ -359,6 +363,13 @@
 			<key>hash2</key>
 			<data>
 			Jcm7hwhmzO+JSkY2MTFOQnF8fzIVbnHgAQ+Vf92hCXg=
+			</data>
+		</dict>
+		<key>Headers/MediationAdForus.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			fZsd+nOckup37WT7RuTZECY7N6qeIJ2Vk5BgIlR5xbg=
 			</data>
 		</dict>
 		<key>Modules/APSSPMediationAdForus.swiftmodule/arm64-apple-ios.abi.json</key>

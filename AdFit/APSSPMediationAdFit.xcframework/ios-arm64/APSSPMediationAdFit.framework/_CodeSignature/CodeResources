@@ -6,7 +6,7 @@
 	<dict>
 		<key>Frameworks/APSSPSDK.framework/APSSPSDK</key>
 		<data>
-		bQOAfMxrahmx7XsvA8JwSBCmXtk=
+		UqysIYRSkz7+EUm+rATUHIXOnos=
 		</data>
 		<key>Frameworks/APSSPSDK.framework/Info.plist</key>
 		<data>
@@ -98,7 +98,7 @@
 		</data>
 		<key>Frameworks/Pods_MediationAdFit.framework/Pods_MediationAdFit</key>
 		<data>
-		gowF9iv57dcyDCHvd8xxWw2Wry0=
+		aTCyzWb6ylIRqRaSH4PVtObiV5Y=
 		</data>
 		<key>Frameworks/Pods_MediationAdFit.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -107,6 +107,10 @@
 		<key>Headers/APSSPMediationAdFit-Swift.h</key>
 		<data>
 		Um3iX37SxSOJ1tF1q/eGO9Wgym8=
+		</data>
+		<key>Headers/MediationAdFit.h</key>
+		<data>
+		nAe10yUtm8dG/QTEig71KRD1zMk=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -143,7 +147,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vyIomV5oUUXgxClXHgXLeCdcFe+wHknerijMfRySO0U=
+			oHwgiaowCHPwinFflG2yIpWLBlsv0flmm6FFM4K3fWo=
 			</data>
 		</dict>
 		<key>Frameworks/APSSPSDK.framework/Info.plist</key>
@@ -304,7 +308,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gjQczbgHx41vPQujx24J1BDDRKw6ZNPXeFG5zgZtxV8=
+			bV1fP7RTYMyxcqaCdjXVO34qB4AWpjxOJHRatH9wkqw=
 			</data>
 		</dict>
 		<key>Frameworks/Pods_MediationAdFit.framework/_CodeSignature/CodeResources</key>
@@ -319,6 +323,13 @@
 			<key>hash2</key>
 			<data>
 			ZX6bqs+hoy5CyIJmg/DT/HACnDL5148rn9UFBm5vu0c=
+			</data>
+		</dict>
+		<key>Headers/MediationAdFit.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ldYbXh39Zyc9u0HeBzOwlvWDS54vn1CwFxZxWNc0h6g=
 			</data>
 		</dict>
 		<key>Modules/APSSPMediationAdFit.swiftmodule/arm64-apple-ios.abi.json</key>

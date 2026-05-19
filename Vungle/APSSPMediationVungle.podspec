@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "APSSPMediationVungle"
-  s.version      = "7.7.2.1"
+  s.version      = "7.7.2.2"
   s.summary      = "APSSPSDK Mediation Vungle Adapter"
   s.homepage     = "https://github.com/IGAWorksDev/ap-APSSPSDK-CocoaPod"
   s.license      = { "type": "Apache License, Version 2.0", "file": "LICENSE" }

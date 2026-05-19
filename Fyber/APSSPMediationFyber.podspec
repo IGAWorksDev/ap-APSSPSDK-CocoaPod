@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "APSSPMediationFyber"
-  s.version      = "8.4.6.1"
+  s.version      = "8.4.6.2"
   s.summary      = "APSSPSDK Mediation Fyber Adapter"
   s.homepage     = "https://github.com/IGAWorksDev/ap-APSSPSDK-CocoaPod"
   s.license      = { "type": "Apache License, Version 2.0", "file": "LICENSE" }
