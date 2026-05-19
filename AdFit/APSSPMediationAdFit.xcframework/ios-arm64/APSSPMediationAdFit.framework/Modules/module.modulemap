@@ -1,0 +1,4 @@
+framework module APSSPMediationAdFit {
+  header "APSSPMediationAdFit-Swift.h"
+  requires objc
+}

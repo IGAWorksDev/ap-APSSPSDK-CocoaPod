@@ -1,0 +1,4 @@
+framework module APSSPMediationAdMob {
+  header "APSSPMediationAdMob-Swift.h"
+  requires objc
+}

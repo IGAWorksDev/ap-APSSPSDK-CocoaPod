@@ -1,0 +1,4429 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "APSSPMediationNAM",
+    "printedName": "APSSPMediationNAM",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "APSSPMediationNAM",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "APSSPSDK",
+        "printedName": "APSSPSDK",
+        "declKind": "Import",
+        "moduleName": "APSSPMediationNAM"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NAMBannerAdapter",
+        "printedName": "NAMBannerAdapter",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "delegate",
+            "printedName": "delegate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "(any APSSPSDK.APSSPBannerAdapterDelegate)?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17APSSPMediationNAM16NAMBannerAdapterC8delegate8APSSPSDK011APSSPBannerD8Delegate_pSgvp",
+            "mangledName": "$s17APSSPMediationNAM16NAMBannerAdapterC8delegate8APSSPSDK011APSSPBannerD8Delegate_pSgvp",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ReferenceOwnership"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any APSSPSDK.APSSPBannerAdapterDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "APSSPBannerAdapterDelegate",
+                        "printedName": "any APSSPSDK.APSSPBannerAdapterDelegate",
+                        "usr": "s:8APSSPSDK26APSSPBannerAdapterDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17APSSPMediationNAM16NAMBannerAdapterC8delegate8APSSPSDK011APSSPBannerD8Delegate_pSgvg",
+                "mangledName": "$s17APSSPMediationNAM16NAMBannerAdapterC8delegate8APSSPSDK011APSSPBannerD8Delegate_pSgvg",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any APSSPSDK.APSSPBannerAdapterDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "APSSPBannerAdapterDelegate",
+                        "printedName": "any APSSPSDK.APSSPBannerAdapterDelegate",
+                        "usr": "s:8APSSPSDK26APSSPBannerAdapterDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17APSSPMediationNAM16NAMBannerAdapterC8delegate8APSSPSDK011APSSPBannerD8Delegate_pSgvs",
+                "mangledName": "$s17APSSPMediationNAM16NAMBannerAdapterC8delegate8APSSPSDK011APSSPBannerD8Delegate_pSgvs",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17APSSPMediationNAM16NAMBannerAdapterC8delegate8APSSPSDK011APSSPBannerD8Delegate_pSgvM",
+                "mangledName": "$s17APSSPMediationNAM16NAMBannerAdapterC8delegate8APSSPSDK011APSSPBannerD8Delegate_pSgvM",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rootViewController",
+            "printedName": "rootViewController",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "UIKit.UIViewController?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17APSSPMediationNAM16NAMBannerAdapterC18rootViewControllerSo06UIViewG0CSgvp",
+            "mangledName": "$s17APSSPMediationNAM16NAMBannerAdapterC18rootViewControllerSo06UIViewG0CSgvp",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ReferenceOwnership"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIViewController?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIViewController",
+                        "printedName": "UIKit.UIViewController",
+                        "usr": "c:objc(cs)UIViewController"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17APSSPMediationNAM16NAMBannerAdapterC18rootViewControllerSo06UIViewG0CSgvg",
+                "mangledName": "$s17APSSPMediationNAM16NAMBannerAdapterC18rootViewControllerSo06UIViewG0CSgvg",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIViewController?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIViewController",
+                        "printedName": "UIKit.UIViewController",
+                        "usr": "c:objc(cs)UIViewController"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17APSSPMediationNAM16NAMBannerAdapterC18rootViewControllerSo06UIViewG0CSgvs",
+                "mangledName": "$s17APSSPMediationNAM16NAMBannerAdapterC18rootViewControllerSo06UIViewG0CSgvs",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17APSSPMediationNAM16NAMBannerAdapterC18rootViewControllerSo06UIViewG0CSgvM",
+                "mangledName": "$s17APSSPMediationNAM16NAMBannerAdapterC18rootViewControllerSo06UIViewG0CSgvM",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(placementDic:bannerType:rootViewController:info:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NAMBannerAdapter",
+                "printedName": "APSSPMediationNAM.NAMBannerAdapter",
+                "usr": "s:17APSSPMediationNAM16NAMBannerAdapterC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "APSSPBannerSize",
+                "printedName": "APSSPSDK.APSSPBannerSize",
+                "usr": "c:@M@APSSPSDK@E@APSSPBannerSize"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIViewController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIViewController",
+                    "printedName": "UIKit.UIViewController",
+                    "usr": "c:objc(cs)UIViewController"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any?]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Any?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17APSSPMediationNAM16NAMBannerAdapterC12placementDic10bannerType18rootViewController4infoACSDyS2SG_8APSSPSDK15APSSPBannerSizeOSo06UIViewK0CSgSDySSypSgGtcfc",
+            "mangledName": "$s17APSSPMediationNAM16NAMBannerAdapterC12placementDic10bannerType18rootViewController4infoACSDyS2SG_8APSSPSDK15APSSPBannerSizeOSo06UIViewK0CSgSDySSypSgGtcfc",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "connectDelegate",
+            "printedName": "connectDelegate(delegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "APSSPBannerAdapterDelegate",
+                "printedName": "any APSSPSDK.APSSPBannerAdapterDelegate",
+                "usr": "s:8APSSPSDK26APSSPBannerAdapterDelegateP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17APSSPMediationNAM16NAMBannerAdapterC15connectDelegate8delegatey8APSSPSDK011APSSPBannerdF0_p_tF",
+            "mangledName": "$s17APSSPMediationNAM16NAMBannerAdapterC15connectDelegate8delegatey8APSSPSDK011APSSPBannerdF0_p_tF",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "disconnectDelegate",
+            "printedName": "disconnectDelegate()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17APSSPMediationNAM16NAMBannerAdapterC18disconnectDelegateyyF",
+            "mangledName": "$s17APSSPMediationNAM16NAMBannerAdapterC18disconnectDelegateyyF",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stop",
+            "printedName": "stop()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17APSSPMediationNAM16NAMBannerAdapterC4stopyyF",
+            "mangledName": "$s17APSSPMediationNAM16NAMBannerAdapterC4stopyyF",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "bannerViewSuccess",
+            "printedName": "bannerViewSuccess(bannerView:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17APSSPMediationNAM16NAMBannerAdapterC17bannerViewSuccess0eF0ySo6UIViewC_tF",
+            "mangledName": "$s17APSSPMediationNAM16NAMBannerAdapterC17bannerViewSuccess0eF0ySo6UIViewC_tF",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "bannerViewFailed",
+            "printedName": "bannerViewFailed(bannerView:error:errorMessage:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "APSSPNetworkError",
+                "printedName": "APSSPSDK.APSSPNetworkError",
+                "usr": "c:@M@APSSPSDK@E@APSSPNetworkError"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17APSSPMediationNAM16NAMBannerAdapterC16bannerViewFailed0eF05error0H7MessageySo6UIViewC_8APSSPSDK17APSSPNetworkErrorOSSSgtF",
+            "mangledName": "$s17APSSPMediationNAM16NAMBannerAdapterC16bannerViewFailed0eF05error0H7MessageySo6UIViewC_8APSSPSDK17APSSPNetworkErrorOSSSgtF",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "bannerViewClicked",
+            "printedName": "bannerViewClicked(message:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17APSSPMediationNAM16NAMBannerAdapterC17bannerViewClicked7messageySS_tF",
+            "mangledName": "$s17APSSPMediationNAM16NAMBannerAdapterC17bannerViewClicked7messageySS_tF",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "bannerViewImpression",
+            "printedName": "bannerViewImpression(message:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17APSSPMediationNAM16NAMBannerAdapterC20bannerViewImpression7messageySS_tF",
+            "mangledName": "$s17APSSPMediationNAM16NAMBannerAdapterC20bannerViewImpression7messageySS_tF",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:17APSSPMediationNAM16NAMBannerAdapterC",
+        "mangledName": "$s17APSSPMediationNAM16NAMBannerAdapterC",
+        "moduleName": "APSSPMediationNAM",
+        "declAttributes": [
+          "AccessControl",
+          "Final"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "APSSPBannerAdapterProtocol",
+            "printedName": "APSSPBannerAdapterProtocol",
+            "usr": "s:8APSSPSDK26APSSPBannerAdapterProtocolP",
+            "mangledName": "$s8APSSPSDK26APSSPBannerAdapterProtocolP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "APSSPBannerAdapterDelegate",
+            "printedName": "APSSPBannerAdapterDelegate",
+            "usr": "s:8APSSPSDK26APSSPBannerAdapterDelegateP",
+            "mangledName": "$s8APSSPSDK26APSSPBannerAdapterDelegateP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "APSSPMediationNAM",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "APSSPSDK",
+        "printedName": "APSSPSDK",
+        "declKind": "Import",
+        "moduleName": "APSSPMediationNAM"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NAMNativeAdapter",
+        "printedName": "NAMNativeAdapter",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "render",
+            "printedName": "render",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AnyObject?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "AnyObject"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17APSSPMediationNAM16NAMNativeAdapterC6renderyXlSgvp",
+            "mangledName": "$s17APSSPMediationNAM16NAMNativeAdapterC6renderyXlSgvp",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "AnyObject?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "AnyObject"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17APSSPMediationNAM16NAMNativeAdapterC6renderyXlSgvg",
+                "mangledName": "$s17APSSPMediationNAM16NAMNativeAdapterC6renderyXlSgvg",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "AnyObject?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "AnyObject"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17APSSPMediationNAM16NAMNativeAdapterC6renderyXlSgvs",
+                "mangledName": "$s17APSSPMediationNAM16NAMNativeAdapterC6renderyXlSgvs",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17APSSPMediationNAM16NAMNativeAdapterC6renderyXlSgvM",
+                "mangledName": "$s17APSSPMediationNAM16NAMNativeAdapterC6renderyXlSgvM",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "delegate",
+            "printedName": "delegate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "(any APSSPSDK.APSSPNativeViewAdapterDelegate)?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17APSSPMediationNAM16NAMNativeAdapterC8delegate8APSSPSDK015APSSPNativeViewD8Delegate_pSgvp",
+            "mangledName": "$s17APSSPMediationNAM16NAMNativeAdapterC8delegate8APSSPSDK015APSSPNativeViewD8Delegate_pSgvp",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ReferenceOwnership"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any APSSPSDK.APSSPNativeViewAdapterDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "APSSPNativeViewAdapterDelegate",
+                        "printedName": "any APSSPSDK.APSSPNativeViewAdapterDelegate",
+                        "usr": "s:8APSSPSDK30APSSPNativeViewAdapterDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17APSSPMediationNAM16NAMNativeAdapterC8delegate8APSSPSDK015APSSPNativeViewD8Delegate_pSgvg",
+                "mangledName": "$s17APSSPMediationNAM16NAMNativeAdapterC8delegate8APSSPSDK015APSSPNativeViewD8Delegate_pSgvg",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any APSSPSDK.APSSPNativeViewAdapterDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "APSSPNativeViewAdapterDelegate",
+                        "printedName": "any APSSPSDK.APSSPNativeViewAdapterDelegate",
+                        "usr": "s:8APSSPSDK30APSSPNativeViewAdapterDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17APSSPMediationNAM16NAMNativeAdapterC8delegate8APSSPSDK015APSSPNativeViewD8Delegate_pSgvs",
+                "mangledName": "$s17APSSPMediationNAM16NAMNativeAdapterC8delegate8APSSPSDK015APSSPNativeViewD8Delegate_pSgvs",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17APSSPMediationNAM16NAMNativeAdapterC8delegate8APSSPSDK015APSSPNativeViewD8Delegate_pSgvM",
+                "mangledName": "$s17APSSPMediationNAM16NAMNativeAdapterC8delegate8APSSPSDK015APSSPNativeViewD8Delegate_pSgvM",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rootViewController",
+            "printedName": "rootViewController",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIViewController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIViewController",
+                    "printedName": "UIKit.UIViewController",
+                    "usr": "c:objc(cs)UIViewController"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17APSSPMediationNAM16NAMNativeAdapterC18rootViewControllerSo06UIViewG0CSgvp",
+            "mangledName": "$s17APSSPMediationNAM16NAMNativeAdapterC18rootViewControllerSo06UIViewG0CSgvp",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIViewController?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIViewController",
+                        "printedName": "UIKit.UIViewController",
+                        "usr": "c:objc(cs)UIViewController"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17APSSPMediationNAM16NAMNativeAdapterC18rootViewControllerSo06UIViewG0CSgvg",
+                "mangledName": "$s17APSSPMediationNAM16NAMNativeAdapterC18rootViewControllerSo06UIViewG0CSgvg",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIViewController?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIViewController",
+                        "printedName": "UIKit.UIViewController",
+                        "usr": "c:objc(cs)UIViewController"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17APSSPMediationNAM16NAMNativeAdapterC18rootViewControllerSo06UIViewG0CSgvs",
+                "mangledName": "$s17APSSPMediationNAM16NAMNativeAdapterC18rootViewControllerSo06UIViewG0CSgvs",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17APSSPMediationNAM16NAMNativeAdapterC18rootViewControllerSo06UIViewG0CSgvM",
+                "mangledName": "$s17APSSPMediationNAM16NAMNativeAdapterC18rootViewControllerSo06UIViewG0CSgvM",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(placementDic:rootViewController:render:info:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NAMNativeAdapter",
+                "printedName": "APSSPMediationNAM.NAMNativeAdapter",
+                "usr": "s:17APSSPMediationNAM16NAMNativeAdapterC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIViewController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIViewController",
+                    "printedName": "UIKit.UIViewController",
+                    "usr": "c:objc(cs)UIViewController"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "AnyObject"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any?]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Any?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17APSSPMediationNAM16NAMNativeAdapterC12placementDic18rootViewController6render4infoACSDyS2SG_So06UIViewI0CSgyXlSDySSypSgGtcfc",
+            "mangledName": "$s17APSSPMediationNAM16NAMNativeAdapterC12placementDic18rootViewController6render4infoACSDyS2SG_So06UIViewI0CSgyXlSDySSypSgGtcfc",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "connectDelegate",
+            "printedName": "connectDelegate(delegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "APSSPNativeViewAdapterDelegate",
+                "printedName": "any APSSPSDK.APSSPNativeViewAdapterDelegate",
+                "usr": "s:8APSSPSDK30APSSPNativeViewAdapterDelegateP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17APSSPMediationNAM16NAMNativeAdapterC15connectDelegate8delegatey8APSSPSDK015APSSPNativeViewdF0_p_tF",
+            "mangledName": "$s17APSSPMediationNAM16NAMNativeAdapterC15connectDelegate8delegatey8APSSPSDK015APSSPNativeViewdF0_p_tF",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "disconnectDelegate",
+            "printedName": "disconnectDelegate()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17APSSPMediationNAM16NAMNativeAdapterC18disconnectDelegateyyF",
+            "mangledName": "$s17APSSPMediationNAM16NAMNativeAdapterC18disconnectDelegateyyF",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stop",
+            "printedName": "stop()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17APSSPMediationNAM16NAMNativeAdapterC4stopyyF",
+            "mangledName": "$s17APSSPMediationNAM16NAMNativeAdapterC4stopyyF",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "nativeLoadSuccess",
+            "printedName": "nativeLoadSuccess()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17APSSPMediationNAM16NAMNativeAdapterC17nativeLoadSuccessyyF",
+            "mangledName": "$s17APSSPMediationNAM16NAMNativeAdapterC17nativeLoadSuccessyyF",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "nativeLoadFail",
+            "printedName": "nativeLoadFail(error:errorMessage:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "APSSPNetworkError",
+                "printedName": "APSSPSDK.APSSPNetworkError",
+                "usr": "c:@M@APSSPSDK@E@APSSPNetworkError"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17APSSPMediationNAM16NAMNativeAdapterC14nativeLoadFail5error0H7Messagey8APSSPSDK17APSSPNetworkErrorO_SSSgtF",
+            "mangledName": "$s17APSSPMediationNAM16NAMNativeAdapterC14nativeLoadFail5error0H7Messagey8APSSPSDK17APSSPNetworkErrorO_SSSgtF",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "nativeClicked",
+            "printedName": "nativeClicked(message:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17APSSPMediationNAM16NAMNativeAdapterC13nativeClicked7messageySS_tF",
+            "mangledName": "$s17APSSPMediationNAM16NAMNativeAdapterC13nativeClicked7messageySS_tF",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "nativeImpression",
+            "printedName": "nativeImpression(message:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17APSSPMediationNAM16NAMNativeAdapterC16nativeImpression7messageySS_tF",
+            "mangledName": "$s17APSSPMediationNAM16NAMNativeAdapterC16nativeImpression7messageySS_tF",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:17APSSPMediationNAM16NAMNativeAdapterC",
+        "mangledName": "$s17APSSPMediationNAM16NAMNativeAdapterC",
+        "moduleName": "APSSPMediationNAM",
+        "declAttributes": [
+          "AccessControl",
+          "Final"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "APSSPNativeAdapterProtocol",
+            "printedName": "APSSPNativeAdapterProtocol",
+            "usr": "s:8APSSPSDK26APSSPNativeAdapterProtocolP",
+            "mangledName": "$s8APSSPSDK26APSSPNativeAdapterProtocolP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "APSSPNativeViewAdapterDelegate",
+            "printedName": "APSSPNativeViewAdapterDelegate",
+            "usr": "s:8APSSPSDK30APSSPNativeViewAdapterDelegateP",
+            "mangledName": "$s8APSSPSDK30APSSPNativeViewAdapterDelegateP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "APSSPMediationNAM"
+      },
+      {
+        "kind": "Import",
+        "name": "APSSPSDK",
+        "printedName": "APSSPSDK",
+        "declKind": "Import",
+        "moduleName": "APSSPMediationNAM"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "APSSPMediationNAM",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "APSSPSDK",
+        "printedName": "APSSPSDK",
+        "declKind": "Import",
+        "moduleName": "APSSPMediationNAM"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "APSSPMediationNAM",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "APSSPSDK",
+        "printedName": "APSSPSDK",
+        "declKind": "Import",
+        "moduleName": "APSSPMediationNAM"
+      },
+      {
+        "kind": "Import",
+        "name": "GFPSDK",
+        "printedName": "GFPSDK",
+        "declKind": "Import",
+        "moduleName": "APSSPMediationNAM"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NAMInitializationAdapter",
+        "printedName": "NAMInitializationAdapter",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NAMInitializationAdapter",
+                "printedName": "APSSPMediationNAM.NAMInitializationAdapter",
+                "usr": "c:@M@APSSPMediationNAM@objc(cs)NAMInitializationAdapter"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@APSSPMediationNAM@objc(cs)NAMInitializationAdapter(im)init",
+            "mangledName": "$s17APSSPMediationNAM24NAMInitializationAdapterCACycfc",
+            "moduleName": "APSSPMediationNAM",
+            "overriding": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "sdkVersion",
+            "printedName": "sdkVersion",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17APSSPMediationNAM24NAMInitializationAdapterC10sdkVersionSSSgvp",
+            "mangledName": "$s17APSSPMediationNAM24NAMInitializationAdapterC10sdkVersionSSSgvp",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17APSSPMediationNAM24NAMInitializationAdapterC10sdkVersionSSSgvg",
+                "mangledName": "$s17APSSPMediationNAM24NAMInitializationAdapterC10sdkVersionSSSgvg",
+                "moduleName": "APSSPMediationNAM",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "start",
+            "printedName": "start(keys:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Bool, Swift.String?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Swift.Bool, Swift.String?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.String?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17APSSPMediationNAM24NAMInitializationAdapterC5start4keys10completionySDyS2SG_ySb_SSSgtctF",
+            "mangledName": "$s17APSSPMediationNAM24NAMInitializationAdapterC5start4keys10completionySDyS2SG_ySb_SSSgtctF",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "attStatus",
+            "printedName": "attStatus()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GFPATTAuthorizationStatus",
+                "printedName": "GFPSDK.GFPATTAuthorizationStatus",
+                "usr": "c:@E@GFPATTAuthorizationStatus"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@APSSPMediationNAM@objc(cs)NAMInitializationAdapter(im)attStatus",
+            "mangledName": "$s17APSSPMediationNAM24NAMInitializationAdapterC9attStatusSo019GFPATTAuthorizationF0VyF",
+            "moduleName": "APSSPMediationNAM",
+            "objc_name": "attStatus",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@APSSPMediationNAM@objc(cs)NAMInitializationAdapter",
+        "mangledName": "$s17APSSPMediationNAM24NAMInitializationAdapterC",
+        "moduleName": "APSSPMediationNAM",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "APSSPInitializationProtocol",
+            "printedName": "APSSPInitializationProtocol",
+            "usr": "s:8APSSPSDK27APSSPInitializationProtocolP",
+            "mangledName": "$s8APSSPSDK27APSSPInitializationProtocolP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "APSSPMediationNAM"
+      },
+      {
+        "kind": "Import",
+        "name": "APSSPSDK",
+        "printedName": "APSSPSDK",
+        "declKind": "Import",
+        "moduleName": "APSSPMediationNAM"
+      },
+      {
+        "kind": "Import",
+        "name": "GFPSDK",
+        "printedName": "GFPSDK",
+        "declKind": "Import",
+        "moduleName": "APSSPMediationNAM"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NAMAdapterFactory",
+        "printedName": "NAMAdapterFactory",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "networkID",
+            "printedName": "networkID",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17APSSPMediationNAM17NAMAdapterFactoryC9networkIDSivpZ",
+            "mangledName": "$s17APSSPMediationNAM17NAMAdapterFactoryC9networkIDSivpZ",
+            "moduleName": "APSSPMediationNAM",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17APSSPMediationNAM17NAMAdapterFactoryC9networkIDSivgZ",
+                "mangledName": "$s17APSSPMediationNAM17NAMAdapterFactoryC9networkIDSivgZ",
+                "moduleName": "APSSPMediationNAM",
+                "static": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "sdkVersion",
+            "printedName": "sdkVersion",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17APSSPMediationNAM17NAMAdapterFactoryC10sdkVersionSSSgvpZ",
+            "mangledName": "$s17APSSPMediationNAM17NAMAdapterFactoryC10sdkVersionSSSgvpZ",
+            "moduleName": "APSSPMediationNAM",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17APSSPMediationNAM17NAMAdapterFactoryC10sdkVersionSSSgvgZ",
+                "mangledName": "$s17APSSPMediationNAM17NAMAdapterFactoryC10sdkVersionSSSgvgZ",
+                "moduleName": "APSSPMediationNAM",
+                "static": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "makeInitializationAdapter",
+            "printedName": "makeInitializationAdapter()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AnyObject?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "AnyObject"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17APSSPMediationNAM17NAMAdapterFactoryC25makeInitializationAdapteryXlSgyFZ",
+            "mangledName": "$s17APSSPMediationNAM17NAMAdapterFactoryC25makeInitializationAdapteryXlSgyFZ",
+            "moduleName": "APSSPMediationNAM",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "makeBannerAdapter",
+            "printedName": "makeBannerAdapter(placementDic:bannerType:rootViewController:info:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AnyObject?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "AnyObject"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "APSSPBannerSize",
+                "printedName": "APSSPSDK.APSSPBannerSize",
+                "usr": "c:@M@APSSPSDK@E@APSSPBannerSize"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIViewController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIViewController",
+                    "printedName": "UIKit.UIViewController",
+                    "usr": "c:objc(cs)UIViewController"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17APSSPMediationNAM17NAMAdapterFactoryC17makeBannerAdapter12placementDic10bannerType18rootViewController4infoyXlSgSDyS2SG_8APSSPSDK15APSSPBannerSizeOSo06UIViewN0CSgSDySSypGtFZ",
+            "mangledName": "$s17APSSPMediationNAM17NAMAdapterFactoryC17makeBannerAdapter12placementDic10bannerType18rootViewController4infoyXlSgSDyS2SG_8APSSPSDK15APSSPBannerSizeOSo06UIViewN0CSgSDySSypGtFZ",
+            "moduleName": "APSSPMediationNAM",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "makeNativeAdapter",
+            "printedName": "makeNativeAdapter(placementDic:rootViewController:render:info:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AnyObject?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "AnyObject"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIViewController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIViewController",
+                    "printedName": "UIKit.UIViewController",
+                    "usr": "c:objc(cs)UIViewController"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "AnyObject"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17APSSPMediationNAM17NAMAdapterFactoryC17makeNativeAdapter12placementDic18rootViewController6render4infoyXlSgSDyS2SG_So06UIViewL0CSgyXlSDySSypGtFZ",
+            "mangledName": "$s17APSSPMediationNAM17NAMAdapterFactoryC17makeNativeAdapter12placementDic18rootViewController6render4infoyXlSgSDyS2SG_So06UIViewL0CSgyXlSDySSypGtFZ",
+            "moduleName": "APSSPMediationNAM",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "makeModalAdapter",
+            "printedName": "makeModalAdapter(placementDic:rootViewController:info:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AnyObject?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "AnyObject"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIViewController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIViewController",
+                    "printedName": "UIKit.UIViewController",
+                    "usr": "c:objc(cs)UIViewController"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17APSSPMediationNAM17NAMAdapterFactoryC16makeModalAdapter12placementDic18rootViewController4infoyXlSgSDyS2SG_So06UIViewL0CSgSDySSypGtFZ",
+            "mangledName": "$s17APSSPMediationNAM17NAMAdapterFactoryC16makeModalAdapter12placementDic18rootViewController4infoyXlSgSDyS2SG_So06UIViewL0CSgSDySSypGtFZ",
+            "moduleName": "APSSPMediationNAM",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NAMAdapterFactory",
+                "printedName": "APSSPMediationNAM.NAMAdapterFactory",
+                "usr": "c:@M@APSSPMediationNAM@objc(cs)APSSPNAMAdapterFactory"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@APSSPMediationNAM@objc(cs)APSSPNAMAdapterFactory(im)init",
+            "mangledName": "$s17APSSPMediationNAM17NAMAdapterFactoryCACycfc",
+            "moduleName": "APSSPMediationNAM",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@APSSPMediationNAM@objc(cs)APSSPNAMAdapterFactory",
+        "mangledName": "$s17APSSPMediationNAM17NAMAdapterFactoryC",
+        "moduleName": "APSSPMediationNAM",
+        "objc_name": "APSSPNAMAdapterFactory",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "APSSPAdapterFactory",
+            "printedName": "APSSPAdapterFactory",
+            "usr": "s:8APSSPSDK19APSSPAdapterFactoryP",
+            "mangledName": "$s8APSSPSDK19APSSPAdapterFactoryP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "APSSPMediationNAM",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "APSSPSDK",
+        "printedName": "APSSPSDK",
+        "declKind": "Import",
+        "moduleName": "APSSPMediationNAM"
+      },
+      {
+        "kind": "Import",
+        "name": "GFPSDK",
+        "printedName": "GFPSDK",
+        "declKind": "Import",
+        "moduleName": "APSSPMediationNAM"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "APSSPNAMNativeAdRenderer",
+        "printedName": "APSSPNAMNativeAdRenderer",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "contentView",
+            "printedName": "contentView",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@APSSPMediationNAM@objc(cs)APSSPNAMNativeAdRenderer(py)contentView",
+            "mangledName": "$s17APSSPMediationNAM24APSSPNAMNativeAdRendererC11contentViewSo6UIViewCSgvp",
+            "moduleName": "APSSPMediationNAM",
+            "objc_name": "contentView",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "ObjC",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPMediationNAM@objc(cs)APSSPNAMNativeAdRenderer(im)contentView",
+                "mangledName": "$s17APSSPMediationNAM24APSSPNAMNativeAdRendererC11contentViewSo6UIViewCSgvg",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "objc_name": "contentView",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPMediationNAM@objc(cs)APSSPNAMNativeAdRenderer(im)setContentView:",
+                "mangledName": "$s17APSSPMediationNAM24APSSPNAMNativeAdRendererC11contentViewSo6UIViewCSgvs",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "objc_name": "setContentView:",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17APSSPMediationNAM24APSSPNAMNativeAdRendererC11contentViewSo6UIViewCSgvM",
+                "mangledName": "$s17APSSPMediationNAM24APSSPNAMNativeAdRendererC11contentViewSo6UIViewCSgvM",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "namNativeSimpleAdView",
+            "printedName": "namNativeSimpleAdView",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "GFPSDK.GFPNativeSimpleAdView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GFPNativeSimpleAdView",
+                    "printedName": "GFPSDK.GFPNativeSimpleAdView",
+                    "usr": "c:objc(cs)GFPNativeSimpleAdView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@APSSPMediationNAM@objc(cs)APSSPNAMNativeAdRenderer(py)namNativeSimpleAdView",
+            "mangledName": "$s17APSSPMediationNAM24APSSPNAMNativeAdRendererC015namNativeSimpleD4ViewSo09GFPNativehdI0CSgvp",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "GFPSDK.GFPNativeSimpleAdView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GFPNativeSimpleAdView",
+                        "printedName": "GFPSDK.GFPNativeSimpleAdView",
+                        "usr": "c:objc(cs)GFPNativeSimpleAdView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPMediationNAM@objc(cs)APSSPNAMNativeAdRenderer(im)namNativeSimpleAdView",
+                "mangledName": "$s17APSSPMediationNAM24APSSPNAMNativeAdRendererC015namNativeSimpleD4ViewSo09GFPNativehdI0CSgvg",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "GFPSDK.GFPNativeSimpleAdView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GFPNativeSimpleAdView",
+                        "printedName": "GFPSDK.GFPNativeSimpleAdView",
+                        "usr": "c:objc(cs)GFPNativeSimpleAdView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPMediationNAM@objc(cs)APSSPNAMNativeAdRenderer(im)setNamNativeSimpleAdView:",
+                "mangledName": "$s17APSSPMediationNAM24APSSPNAMNativeAdRendererC015namNativeSimpleD4ViewSo09GFPNativehdI0CSgvs",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17APSSPMediationNAM24APSSPNAMNativeAdRendererC015namNativeSimpleD4ViewSo09GFPNativehdI0CSgvM",
+                "mangledName": "$s17APSSPMediationNAM24APSSPNAMNativeAdRendererC015namNativeSimpleD4ViewSo09GFPNativehdI0CSgvM",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "namNativeAdView",
+            "printedName": "namNativeAdView",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "GFPSDK.GFPNativeAdView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GFPNativeAdView",
+                    "printedName": "GFPSDK.GFPNativeAdView",
+                    "usr": "c:objc(cs)GFPNativeAdView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@APSSPMediationNAM@objc(cs)APSSPNAMNativeAdRenderer(py)namNativeAdView",
+            "mangledName": "$s17APSSPMediationNAM24APSSPNAMNativeAdRendererC09namNativeD4ViewSo09GFPNativedH0CSgvp",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "GFPSDK.GFPNativeAdView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GFPNativeAdView",
+                        "printedName": "GFPSDK.GFPNativeAdView",
+                        "usr": "c:objc(cs)GFPNativeAdView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPMediationNAM@objc(cs)APSSPNAMNativeAdRenderer(im)namNativeAdView",
+                "mangledName": "$s17APSSPMediationNAM24APSSPNAMNativeAdRendererC09namNativeD4ViewSo09GFPNativedH0CSgvg",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "GFPSDK.GFPNativeAdView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GFPNativeAdView",
+                        "printedName": "GFPSDK.GFPNativeAdView",
+                        "usr": "c:objc(cs)GFPNativeAdView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPMediationNAM@objc(cs)APSSPNAMNativeAdRenderer(im)setNamNativeAdView:",
+                "mangledName": "$s17APSSPMediationNAM24APSSPNAMNativeAdRendererC09namNativeD4ViewSo09GFPNativedH0CSgvs",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17APSSPMediationNAM24APSSPNAMNativeAdRendererC09namNativeD4ViewSo09GFPNativedH0CSgvM",
+                "mangledName": "$s17APSSPMediationNAM24APSSPNAMNativeAdRendererC09namNativeD4ViewSo09GFPNativedH0CSgvM",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "namDedupeManager",
+            "printedName": "namDedupeManager",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "GFPSDK.GFPAdDedupeManager?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GFPAdDedupeManager",
+                    "printedName": "GFPSDK.GFPAdDedupeManager",
+                    "usr": "c:objc(cs)GFPAdDedupeManager"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@APSSPMediationNAM@objc(cs)APSSPNAMNativeAdRenderer(py)namDedupeManager",
+            "mangledName": "$s17APSSPMediationNAM24APSSPNAMNativeAdRendererC16namDedupeManagerSo05GFPAdgH0CSgvp",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "GFPSDK.GFPAdDedupeManager?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GFPAdDedupeManager",
+                        "printedName": "GFPSDK.GFPAdDedupeManager",
+                        "usr": "c:objc(cs)GFPAdDedupeManager"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPMediationNAM@objc(cs)APSSPNAMNativeAdRenderer(im)namDedupeManager",
+                "mangledName": "$s17APSSPMediationNAM24APSSPNAMNativeAdRendererC16namDedupeManagerSo05GFPAdgH0CSgvg",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "GFPSDK.GFPAdDedupeManager?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GFPAdDedupeManager",
+                        "printedName": "GFPSDK.GFPAdDedupeManager",
+                        "usr": "c:objc(cs)GFPAdDedupeManager"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPMediationNAM@objc(cs)APSSPNAMNativeAdRenderer(im)setNamDedupeManager:",
+                "mangledName": "$s17APSSPMediationNAM24APSSPNAMNativeAdRendererC16namDedupeManagerSo05GFPAdgH0CSgvs",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17APSSPMediationNAM24APSSPNAMNativeAdRendererC16namDedupeManagerSo05GFPAdgH0CSgvM",
+                "mangledName": "$s17APSSPMediationNAM24APSSPNAMNativeAdRendererC16namDedupeManagerSo05GFPAdgH0CSgvM",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "GFPNativeSetting",
+            "printedName": "GFPNativeSetting",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "GFPSDK.GFPNativeAdRenderingSetting?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GFPNativeAdRenderingSetting",
+                    "printedName": "GFPSDK.GFPNativeAdRenderingSetting",
+                    "usr": "c:objc(cs)GFPNativeAdRenderingSetting"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@APSSPMediationNAM@objc(cs)APSSPNAMNativeAdRenderer(py)GFPNativeSetting",
+            "mangledName": "$s17APSSPMediationNAM24APSSPNAMNativeAdRendererC16GFPNativeSettingSo0fd9RenderingG0CSgvp",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "GFPSDK.GFPNativeAdRenderingSetting?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GFPNativeAdRenderingSetting",
+                        "printedName": "GFPSDK.GFPNativeAdRenderingSetting",
+                        "usr": "c:objc(cs)GFPNativeAdRenderingSetting"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPMediationNAM@objc(cs)APSSPNAMNativeAdRenderer(im)GFPNativeSetting",
+                "mangledName": "$s17APSSPMediationNAM24APSSPNAMNativeAdRendererC16GFPNativeSettingSo0fd9RenderingG0CSgvg",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "GFPSDK.GFPNativeAdRenderingSetting?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GFPNativeAdRenderingSetting",
+                        "printedName": "GFPSDK.GFPNativeAdRenderingSetting",
+                        "usr": "c:objc(cs)GFPNativeAdRenderingSetting"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPMediationNAM@objc(cs)APSSPNAMNativeAdRenderer(im)setGFPNativeSetting:",
+                "mangledName": "$s17APSSPMediationNAM24APSSPNAMNativeAdRendererC16GFPNativeSettingSo0fd9RenderingG0CSgvs",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17APSSPMediationNAM24APSSPNAMNativeAdRendererC16GFPNativeSettingSo0fd9RenderingG0CSgvM",
+                "mangledName": "$s17APSSPMediationNAM24APSSPNAMNativeAdRendererC16GFPNativeSettingSo0fd9RenderingG0CSgvM",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "GFPNativeSimpleSetting",
+            "printedName": "GFPNativeSimpleSetting",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "GFPSDK.GFPNativeSimpleAdRenderingSetting?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GFPNativeSimpleAdRenderingSetting",
+                    "printedName": "GFPSDK.GFPNativeSimpleAdRenderingSetting",
+                    "usr": "c:objc(cs)GFPNativeSimpleAdRenderingSetting"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@APSSPMediationNAM@objc(cs)APSSPNAMNativeAdRenderer(py)GFPNativeSimpleSetting",
+            "mangledName": "$s17APSSPMediationNAM24APSSPNAMNativeAdRendererC22GFPNativeSimpleSettingSo0fgd9RenderingH0CSgvp",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "GFPSDK.GFPNativeSimpleAdRenderingSetting?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GFPNativeSimpleAdRenderingSetting",
+                        "printedName": "GFPSDK.GFPNativeSimpleAdRenderingSetting",
+                        "usr": "c:objc(cs)GFPNativeSimpleAdRenderingSetting"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPMediationNAM@objc(cs)APSSPNAMNativeAdRenderer(im)GFPNativeSimpleSetting",
+                "mangledName": "$s17APSSPMediationNAM24APSSPNAMNativeAdRendererC22GFPNativeSimpleSettingSo0fgd9RenderingH0CSgvg",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "GFPSDK.GFPNativeSimpleAdRenderingSetting?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GFPNativeSimpleAdRenderingSetting",
+                        "printedName": "GFPSDK.GFPNativeSimpleAdRenderingSetting",
+                        "usr": "c:objc(cs)GFPNativeSimpleAdRenderingSetting"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPMediationNAM@objc(cs)APSSPNAMNativeAdRenderer(im)setGFPNativeSimpleSetting:",
+                "mangledName": "$s17APSSPMediationNAM24APSSPNAMNativeAdRendererC22GFPNativeSimpleSettingSo0fgd9RenderingH0CSgvs",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17APSSPMediationNAM24APSSPNAMNativeAdRendererC22GFPNativeSimpleSettingSo0fgd9RenderingH0CSgvM",
+                "mangledName": "$s17APSSPMediationNAM24APSSPNAMNativeAdRendererC22GFPNativeSimpleSettingSo0fgd9RenderingH0CSgvM",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "timeOut",
+            "printedName": "timeOut",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@APSSPMediationNAM@objc(cs)APSSPNAMNativeAdRenderer(py)timeOut",
+            "mangledName": "$s17APSSPMediationNAM24APSSPNAMNativeAdRendererC7timeOutSdvp",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPMediationNAM@objc(cs)APSSPNAMNativeAdRenderer(im)timeOut",
+                "mangledName": "$s17APSSPMediationNAM24APSSPNAMNativeAdRendererC7timeOutSdvg",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPMediationNAM@objc(cs)APSSPNAMNativeAdRenderer(im)setTimeOut:",
+                "mangledName": "$s17APSSPMediationNAM24APSSPNAMNativeAdRendererC7timeOutSdvs",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17APSSPMediationNAM24APSSPNAMNativeAdRendererC7timeOutSdvM",
+                "mangledName": "$s17APSSPMediationNAM24APSSPNAMNativeAdRendererC7timeOutSdvM",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "backgroundBlur",
+            "printedName": "backgroundBlur",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@APSSPMediationNAM@objc(cs)APSSPNAMNativeAdRenderer(py)backgroundBlur",
+            "mangledName": "$s17APSSPMediationNAM24APSSPNAMNativeAdRendererC14backgroundBlurSbvp",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPMediationNAM@objc(cs)APSSPNAMNativeAdRenderer(im)backgroundBlur",
+                "mangledName": "$s17APSSPMediationNAM24APSSPNAMNativeAdRendererC14backgroundBlurSbvg",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPMediationNAM@objc(cs)APSSPNAMNativeAdRenderer(im)setBackgroundBlur:",
+                "mangledName": "$s17APSSPMediationNAM24APSSPNAMNativeAdRendererC14backgroundBlurSbvs",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17APSSPMediationNAM24APSSPNAMNativeAdRendererC14backgroundBlurSbvM",
+                "mangledName": "$s17APSSPMediationNAM24APSSPNAMNativeAdRendererC14backgroundBlurSbvM",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "APSSPNAMNativeAdRenderer",
+                "printedName": "APSSPMediationNAM.APSSPNAMNativeAdRenderer",
+                "usr": "c:@M@APSSPMediationNAM@objc(cs)APSSPNAMNativeAdRenderer"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@APSSPMediationNAM@objc(cs)APSSPNAMNativeAdRenderer(im)init",
+            "mangledName": "$s17APSSPMediationNAM24APSSPNAMNativeAdRendererCACycfc",
+            "moduleName": "APSSPMediationNAM",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@APSSPMediationNAM@objc(cs)APSSPNAMNativeAdRenderer",
+        "mangledName": "$s17APSSPMediationNAM24APSSPNAMNativeAdRendererC",
+        "moduleName": "APSSPMediationNAM",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "APSSPNativeRenderer",
+            "printedName": "APSSPNativeRenderer",
+            "usr": "c:@M@APSSPSDK@objc(pl)APSSPNativeRenderer",
+            "mangledName": "$s8APSSPSDK19APSSPNativeRendererP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "APSSPMediationNAM",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "APSSPSDK",
+        "printedName": "APSSPSDK",
+        "declKind": "Import",
+        "moduleName": "APSSPMediationNAM"
+      },
+      {
+        "kind": "Import",
+        "name": "GFPSDK",
+        "printedName": "GFPSDK",
+        "declKind": "Import",
+        "moduleName": "APSSPMediationNAM"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "APSSPMediationNAM",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "APSSPSDK",
+        "printedName": "APSSPSDK",
+        "declKind": "Import",
+        "moduleName": "APSSPMediationNAM"
+      },
+      {
+        "kind": "Import",
+        "name": "GFPSDK",
+        "printedName": "GFPSDK",
+        "declKind": "Import",
+        "moduleName": "APSSPMediationNAM"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NAMModalAdapter",
+        "printedName": "NAMModalAdapter",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "delegate",
+            "printedName": "delegate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "(any APSSPSDK.APSSPModalAdapterDelegate)?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17APSSPMediationNAM15NAMModalAdapterC8delegate8APSSPSDK010APSSPModalD8Delegate_pSgvp",
+            "mangledName": "$s17APSSPMediationNAM15NAMModalAdapterC8delegate8APSSPSDK010APSSPModalD8Delegate_pSgvp",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ReferenceOwnership"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any APSSPSDK.APSSPModalAdapterDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "APSSPModalAdapterDelegate",
+                        "printedName": "any APSSPSDK.APSSPModalAdapterDelegate",
+                        "usr": "s:8APSSPSDK25APSSPModalAdapterDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17APSSPMediationNAM15NAMModalAdapterC8delegate8APSSPSDK010APSSPModalD8Delegate_pSgvg",
+                "mangledName": "$s17APSSPMediationNAM15NAMModalAdapterC8delegate8APSSPSDK010APSSPModalD8Delegate_pSgvg",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any APSSPSDK.APSSPModalAdapterDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "APSSPModalAdapterDelegate",
+                        "printedName": "any APSSPSDK.APSSPModalAdapterDelegate",
+                        "usr": "s:8APSSPSDK25APSSPModalAdapterDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17APSSPMediationNAM15NAMModalAdapterC8delegate8APSSPSDK010APSSPModalD8Delegate_pSgvs",
+                "mangledName": "$s17APSSPMediationNAM15NAMModalAdapterC8delegate8APSSPSDK010APSSPModalD8Delegate_pSgvs",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17APSSPMediationNAM15NAMModalAdapterC8delegate8APSSPSDK010APSSPModalD8Delegate_pSgvM",
+                "mangledName": "$s17APSSPMediationNAM15NAMModalAdapterC8delegate8APSSPSDK010APSSPModalD8Delegate_pSgvM",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rootViewController",
+            "printedName": "rootViewController",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "UIKit.UIViewController?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17APSSPMediationNAM15NAMModalAdapterC18rootViewControllerSo06UIViewG0CSgvp",
+            "mangledName": "$s17APSSPMediationNAM15NAMModalAdapterC18rootViewControllerSo06UIViewG0CSgvp",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ReferenceOwnership"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIViewController?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIViewController",
+                        "printedName": "UIKit.UIViewController",
+                        "usr": "c:objc(cs)UIViewController"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17APSSPMediationNAM15NAMModalAdapterC18rootViewControllerSo06UIViewG0CSgvg",
+                "mangledName": "$s17APSSPMediationNAM15NAMModalAdapterC18rootViewControllerSo06UIViewG0CSgvg",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIViewController?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIViewController",
+                        "printedName": "UIKit.UIViewController",
+                        "usr": "c:objc(cs)UIViewController"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17APSSPMediationNAM15NAMModalAdapterC18rootViewControllerSo06UIViewG0CSgvs",
+                "mangledName": "$s17APSSPMediationNAM15NAMModalAdapterC18rootViewControllerSo06UIViewG0CSgvs",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17APSSPMediationNAM15NAMModalAdapterC18rootViewControllerSo06UIViewG0CSgvM",
+                "mangledName": "$s17APSSPMediationNAM15NAMModalAdapterC18rootViewControllerSo06UIViewG0CSgvM",
+                "moduleName": "APSSPMediationNAM",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(placementDic:rootViewController:info:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NAMModalAdapter",
+                "printedName": "APSSPMediationNAM.NAMModalAdapter",
+                "usr": "c:@M@APSSPMediationNAM@objc(cs)NAMModalAdapter"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIViewController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIViewController",
+                    "printedName": "UIKit.UIViewController",
+                    "usr": "c:objc(cs)UIViewController"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any?]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Any?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17APSSPMediationNAM15NAMModalAdapterC12placementDic18rootViewController4infoACSDyS2SG_So06UIViewI0CSgSDySSypSgGtcfc",
+            "mangledName": "$s17APSSPMediationNAM15NAMModalAdapterC12placementDic18rootViewController4infoACSDyS2SG_So06UIViewI0CSgSDySSypSgGtcfc",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "AccessControl",
+              "Required"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "connectDelegate",
+            "printedName": "connectDelegate(delegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "APSSPModalAdapterDelegate",
+                "printedName": "any APSSPSDK.APSSPModalAdapterDelegate",
+                "usr": "s:8APSSPSDK25APSSPModalAdapterDelegateP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17APSSPMediationNAM15NAMModalAdapterC15connectDelegate8delegatey8APSSPSDK010APSSPModaldF0_p_tF",
+            "mangledName": "$s17APSSPMediationNAM15NAMModalAdapterC15connectDelegate8delegatey8APSSPSDK010APSSPModaldF0_p_tF",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "disconnectDelegate",
+            "printedName": "disconnectDelegate()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17APSSPMediationNAM15NAMModalAdapterC18disconnectDelegateyyF",
+            "mangledName": "$s17APSSPMediationNAM15NAMModalAdapterC18disconnectDelegateyyF",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "loadAd",
+            "printedName": "loadAd()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17APSSPMediationNAM15NAMModalAdapterC6loadAdyyF",
+            "mangledName": "$s17APSSPMediationNAM15NAMModalAdapterC6loadAdyyF",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "showAd",
+            "printedName": "showAd()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17APSSPMediationNAM15NAMModalAdapterC6showAdyyF",
+            "mangledName": "$s17APSSPMediationNAM15NAMModalAdapterC6showAdyyF",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stop",
+            "printedName": "stop()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17APSSPMediationNAM15NAMModalAdapterC4stopyyF",
+            "mangledName": "$s17APSSPMediationNAM15NAMModalAdapterC4stopyyF",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NAMModalAdapter",
+                "printedName": "APSSPMediationNAM.NAMModalAdapter",
+                "usr": "c:@M@APSSPMediationNAM@objc(cs)NAMModalAdapter"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@APSSPMediationNAM@objc(cs)NAMModalAdapter(im)init",
+            "mangledName": "$s17APSSPMediationNAM15NAMModalAdapterCACycfc",
+            "moduleName": "APSSPMediationNAM",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "adLoader",
+            "printedName": "adLoader(_:didReceiveBannerAd:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "GFPSDK.GFPAdLoader?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GFPAdLoader",
+                    "printedName": "GFPSDK.GFPAdLoader",
+                    "usr": "c:objc(cs)GFPAdLoader"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "GFPSDK.GFPBannerView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GFPBannerView",
+                    "printedName": "GFPSDK.GFPBannerView",
+                    "usr": "c:objc(cs)GFPBannerView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@APSSPMediationNAM@objc(cs)NAMModalAdapter(im)adLoader:didReceiveBannerAd:",
+            "mangledName": "$s17APSSPMediationNAM15NAMModalAdapterC8adLoader_18didReceiveBannerAdySo05GFPAdF0CSg_So13GFPBannerViewCSgtF",
+            "moduleName": "APSSPMediationNAM",
+            "objc_name": "adLoader:didReceiveBannerAd:",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "adLoader",
+            "printedName": "adLoader(_:didFailWithError:responseInfo:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "GFPSDK.GFPAdLoader?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GFPAdLoader",
+                    "printedName": "GFPSDK.GFPAdLoader",
+                    "usr": "c:objc(cs)GFPAdLoader"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "NaverAdsServices.GFPError?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GFPError",
+                    "printedName": "NaverAdsServices.GFPError",
+                    "usr": "c:@M@NaverAdsServices@objc(cs)GFPError"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "GFPSDK.GFPLoadResponseInfo?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GFPLoadResponseInfo",
+                    "printedName": "GFPSDK.GFPLoadResponseInfo",
+                    "usr": "c:objc(cs)GFPLoadResponseInfo"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@APSSPMediationNAM@objc(cs)NAMModalAdapter(im)adLoader:didFailWithError:responseInfo:",
+            "mangledName": "$s17APSSPMediationNAM15NAMModalAdapterC8adLoader_16didFailWithError12responseInfoySo05GFPAdF0CSg_16NaverAdsServices8GFPErrorCSgSo015GFPLoadResponseL0CSgtF",
+            "moduleName": "APSSPMediationNAM",
+            "objc_name": "adLoader:didFailWithError:responseInfo:",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "bannerAdWasSeen",
+            "printedName": "bannerAdWasSeen(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GFPBannerView",
+                "printedName": "GFPSDK.GFPBannerView",
+                "usr": "c:objc(cs)GFPBannerView"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@APSSPMediationNAM@objc(cs)NAMModalAdapter(im)bannerAdWasSeen:",
+            "mangledName": "$s17APSSPMediationNAM15NAMModalAdapterC15bannerAdWasSeenyySo13GFPBannerViewCF",
+            "moduleName": "APSSPMediationNAM",
+            "objc_name": "bannerAdWasSeen:",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "bannerAdWasClicked",
+            "printedName": "bannerAdWasClicked(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GFPBannerView",
+                "printedName": "GFPSDK.GFPBannerView",
+                "usr": "c:objc(cs)GFPBannerView"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@APSSPMediationNAM@objc(cs)NAMModalAdapter(im)bannerAdWasClicked:",
+            "mangledName": "$s17APSSPMediationNAM15NAMModalAdapterC18bannerAdWasClickedyySo13GFPBannerViewCF",
+            "moduleName": "APSSPMediationNAM",
+            "objc_name": "bannerAdWasClicked:",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "bannerShouldUnload",
+            "printedName": "bannerShouldUnload(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GFPBannerView",
+                "printedName": "GFPSDK.GFPBannerView",
+                "usr": "c:objc(cs)GFPBannerView"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@APSSPMediationNAM@objc(cs)NAMModalAdapter(im)bannerShouldUnload:",
+            "mangledName": "$s17APSSPMediationNAM15NAMModalAdapterC18bannerShouldUnloadyySo13GFPBannerViewCF",
+            "moduleName": "APSSPMediationNAM",
+            "objc_name": "bannerShouldUnload:",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "bannerAdWasMuted",
+            "printedName": "bannerAdWasMuted(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GFPBannerView",
+                "printedName": "GFPSDK.GFPBannerView",
+                "usr": "c:objc(cs)GFPBannerView"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@APSSPMediationNAM@objc(cs)NAMModalAdapter(im)bannerAdWasMuted:",
+            "mangledName": "$s17APSSPMediationNAM15NAMModalAdapterC16bannerAdWasMutedyySo13GFPBannerViewCF",
+            "moduleName": "APSSPMediationNAM",
+            "objc_name": "bannerAdWasMuted:",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@APSSPMediationNAM@objc(cs)NAMModalAdapter",
+        "mangledName": "$s17APSSPMediationNAM15NAMModalAdapterC",
+        "moduleName": "APSSPMediationNAM",
+        "declAttributes": [
+          "AccessControl",
+          "Final",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "APSSPModalAdapterProtocol",
+            "printedName": "APSSPModalAdapterProtocol",
+            "usr": "s:8APSSPSDK25APSSPModalAdapterProtocolP",
+            "mangledName": "$s8APSSPSDK25APSSPModalAdapterProtocolP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "APSSPAds",
+        "printedName": "APSSPAds",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "NAMisSupportBanner",
+            "printedName": "NAMisSupportBanner()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8APSSPSDK8APSSPAdsC17APSSPMediationNAME18NAMisSupportBannerSbyF",
+            "mangledName": "$s8APSSPSDK8APSSPAdsC17APSSPMediationNAME18NAMisSupportBannerSbyF",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "NAMisSupportNative",
+            "printedName": "NAMisSupportNative()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8APSSPSDK8APSSPAdsC17APSSPMediationNAME18NAMisSupportNativeSbyF",
+            "mangledName": "$s8APSSPSDK8APSSPAdsC17APSSPMediationNAME18NAMisSupportNativeSbyF",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "NAMisSupportInterstitial",
+            "printedName": "NAMisSupportInterstitial()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8APSSPSDK8APSSPAdsC17APSSPMediationNAME24NAMisSupportInterstitialSbyF",
+            "mangledName": "$s8APSSPSDK8APSSPAdsC17APSSPMediationNAME24NAMisSupportInterstitialSbyF",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "NAMisSupportInterstitialVideo",
+            "printedName": "NAMisSupportInterstitialVideo()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8APSSPSDK8APSSPAdsC17APSSPMediationNAME29NAMisSupportInterstitialVideoSbyF",
+            "mangledName": "$s8APSSPSDK8APSSPAdsC17APSSPMediationNAME29NAMisSupportInterstitialVideoSbyF",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "NAMisSupportRewardVideo",
+            "printedName": "NAMisSupportRewardVideo()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8APSSPSDK8APSSPAdsC17APSSPMediationNAME23NAMisSupportRewardVideoSbyF",
+            "mangledName": "$s8APSSPSDK8APSSPAdsC17APSSPMediationNAME23NAMisSupportRewardVideoSbyF",
+            "moduleName": "APSSPMediationNAM",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@APSSPSDK@objc(cs)APSSPAds",
+        "mangledName": "$s8APSSPSDK8APSSPAdsC",
+        "moduleName": "APSSPSDK",
+        "declAttributes": [
+          "Final",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "APSSPNativeAd",
+        "printedName": "APSSPNativeAd",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "bindNAMRenderer",
+            "printedName": "bindNAMRenderer(renderer:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "APSSPNAMNativeAdRenderer",
+                "printedName": "APSSPMediationNAM.APSSPNAMNativeAdRenderer",
+                "usr": "c:@M@APSSPMediationNAM@objc(cs)APSSPNAMNativeAdRenderer"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@APSSPMediationNAM@APSSPSDK@objc(cs)APSSPNativeAd(im)bindNAMRendererWithRenderer:",
+            "mangledName": "$s8APSSPSDK13APSSPNativeAdC17APSSPMediationNAME15bindNAMRenderer8rendereryAD014APSSPNAMNativeC8RendererC_tF",
+            "moduleName": "APSSPMediationNAM",
+            "objc_name": "bindNAMRendererWithRenderer:",
+            "declAttributes": [
+              "Final",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@APSSPSDK@objc(cs)APSSPNativeAd",
+        "mangledName": "$s8APSSPSDK13APSSPNativeAdC",
+        "moduleName": "APSSPSDK",
+        "declAttributes": [
+          "Preconcurrency",
+          "Final",
+          "ObjC",
+          "Custom"
+        ],
+        "superclassUsr": "c:objc(cs)UIView",
+        "isExternal": true,
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "UIKit.UIView",
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "__DefaultCustomPlaygroundQuickLookable",
+            "printedName": "__DefaultCustomPlaygroundQuickLookable",
+            "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
+            "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/MediationNAM\/Native\/NAMMediationNativeAdView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 705,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/MediationNAM\/Native\/NAMMediationNativeAdView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 751,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/MediationNAM\/Native\/NAMMediationNativeAdView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1216,
+      "length": 5,
+      "value": "false"
+    }
+  ]
+}
