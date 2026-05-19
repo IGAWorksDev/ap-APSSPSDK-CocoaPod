@@ -6,7 +6,7 @@
 	<dict>
 		<key>Frameworks/APSSPSDK.framework/APSSPSDK</key>
 		<data>
-		u5NNWnE01BB8St4qObsL9BlK5r0=
+		3jO/wuXmzC7LUayIwM3UjbsCf48=
 		</data>
 		<key>Frameworks/APSSPSDK.framework/Info.plist</key>
 		<data>
@@ -102,7 +102,7 @@
 		</data>
 		<key>Frameworks/UnityAds.framework/UnityAds</key>
 		<data>
-		mOz70FIvw8ddNETnVLQ10FU0FiI=
+		4sZYudwkCyx4rKKt70TQFRtEwbY=
 		</data>
 		<key>Frameworks/UnityAds.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -167,7 +167,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Je1TTvB48rqBicMa4YxiPiVlog4/IexorjjRjAJ2lcw=
+			M9Etch60ewjCOKC/JmopT3w2dQei3qEM14fUNqOrLwM=
 			</data>
 		</dict>
 		<key>Frameworks/APSSPSDK.framework/Info.plist</key>
@@ -335,7 +335,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Cr27FKBQnklhfkuiSqso48gJWrA3oJMi1MgxDRCer1M=
+			P37pVv3awwdTMEdOaZCoApxV/bPW7pNbfeBoMP2t2dY=
 			</data>
 		</dict>
 		<key>Frameworks/UnityAds.framework/_CodeSignature/CodeResources</key>

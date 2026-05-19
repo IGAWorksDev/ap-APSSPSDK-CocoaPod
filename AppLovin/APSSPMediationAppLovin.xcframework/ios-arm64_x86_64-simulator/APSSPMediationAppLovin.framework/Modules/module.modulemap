@@ -1,0 +1,4 @@
+framework module APSSPMediationAppLovin {
+  header "APSSPMediationAppLovin-Swift.h"
+  requires objc
+}

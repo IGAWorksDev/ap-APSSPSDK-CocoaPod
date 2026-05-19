@@ -1,0 +1,4 @@
+framework module APSSPMediationAppLovinMax {
+  header "APSSPMediationAppLovinMax-Swift.h"
+  requires objc
+}

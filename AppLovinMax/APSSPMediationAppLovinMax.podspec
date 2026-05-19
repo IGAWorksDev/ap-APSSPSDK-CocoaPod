@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
   s.name         = "APSSPMediationAppLovinMax"
-  s.version      = "13.6.2.0"
+  s.version      = "13.6.2.1"
   s.summary      = "APSSPSDK Mediation AppLovinMax Adapter"
   s.homepage     = "https://github.com/IGAWorksDev/ap-APSSPSDK-CocoaPod"
   s.license      = { "type": "Apache License, Version 2.0", "file": "LICENSE" }
   s.author       = { "mick.kim" => "mick.kim@adpopcorn.com", "odin.song" => "odin.song@adpopcorn.com" }
 
   s.ios.deployment_target = "13.0"
-  s.source       = { :git => "https://github.com/IGAWorksDev/ap-APSSPSDK-CocoaPod.git", :tag => "3.0.0" }
+  s.source       = { :git => "https://github.com/IGAWorksDev/ap-APSSPSDK-CocoaPod.git", :tag => "3.0.2" }
 
   s.vendored_frameworks = "AppLovinMax/APSSPMediationAppLovinMax.xcframework"
 
@@ -16,6 +16,6 @@ Pod::Spec.new do |s|
   s.swift_versions = ["5.0"]
   s.pod_target_xcconfig = { "OTHER_LDFLAGS" => "-ObjC" }
 
-  s.dependency "APSSPSDK", ">= 3.0.0"
+  s.dependency "APSSPSDK", ">= 3.0.2"
   s.dependency "AppLovinSDK", "~> 13.6"
 end

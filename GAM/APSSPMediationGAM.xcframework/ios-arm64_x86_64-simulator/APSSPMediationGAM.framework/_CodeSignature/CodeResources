@@ -6,7 +6,7 @@
 	<dict>
 		<key>Frameworks/APSSPSDK.framework/APSSPSDK</key>
 		<data>
-		atefxUrIgrphOrAy4DVq0ZfENJw=
+		3u5U+LVBs0s1O7Szvv3wc3V6lDw=
 		</data>
 		<key>Frameworks/APSSPSDK.framework/Info.plist</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>Frameworks/GoogleMobileAds.framework/GoogleMobileAds</key>
 		<data>
-		eOEnmN2aPiJC23mPB5rdVvNzG0g=
+		2znCxS1q58IiphPzIXLlzKO7NHg=
 		</data>
 		<key>Frameworks/GoogleMobileAds.framework/Info.plist</key>
 		<data>
@@ -118,7 +118,7 @@
 		</data>
 		<key>Frameworks/UserMessagingPlatform.framework/UserMessagingPlatform</key>
 		<data>
-		x1caNZZHhcUX9yuQIbA+Bppaklo=
+		eLI5CyzInzVyb0Bc76yKwCVguqQ=
 		</data>
 		<key>Frameworks/UserMessagingPlatform.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -175,7 +175,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SotiJnW6UiutkPFLjbpmXLsL46MPFdUltx7rg/IL2n0=
+			PCEAYij3Gt7pC0rK/W3dPf7t2cavpHbyH8e3+Qe/gsM=
 			</data>
 		</dict>
 		<key>Frameworks/APSSPSDK.framework/Info.plist</key>
@@ -329,7 +329,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fC2YaEJnaaOSeHX5wuJHrurNF0zQKElzPXKktSs3owc=
+			NYrOIY2oCdQoSED5U5GgXCit2EgH84bvGcZvj4cukXQ=
 			</data>
 		</dict>
 		<key>Frameworks/GoogleMobileAds.framework/Info.plist</key>
@@ -371,7 +371,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RHdwuZgHrMbHs3D7JtiRA6W6ipvybnw8wbHkg8nisZY=
+			pWC1eGg0ROGWWAZXpQYUR9MPd18WOpFyw82oW5KdrGE=
 			</data>
 		</dict>
 		<key>Frameworks/UserMessagingPlatform.framework/_CodeSignature/CodeResources</key>

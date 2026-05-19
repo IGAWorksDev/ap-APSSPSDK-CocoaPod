@@ -6,7 +6,7 @@
 	<dict>
 		<key>Frameworks/APSSPSDK.framework/APSSPSDK</key>
 		<data>
-		RjhPjor0vRlDJsjgYyr+sqIbpR4=
+		bQOAfMxrahmx7XsvA8JwSBCmXtk=
 		</data>
 		<key>Frameworks/APSSPSDK.framework/Info.plist</key>
 		<data>
@@ -98,7 +98,7 @@
 		</data>
 		<key>Frameworks/Pods_MediationAdFit.framework/Pods_MediationAdFit</key>
 		<data>
-		crWXsd3C52buCFd2RSY8O0y6ZDI=
+		gowF9iv57dcyDCHvd8xxWw2Wry0=
 		</data>
 		<key>Frameworks/Pods_MediationAdFit.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -143,7 +143,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7CLSUuo/es8TmDZonrbXo8epkcwSl6FdXyepV7g36J4=
+			vyIomV5oUUXgxClXHgXLeCdcFe+wHknerijMfRySO0U=
 			</data>
 		</dict>
 		<key>Frameworks/APSSPSDK.framework/Info.plist</key>
@@ -304,7 +304,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			f5GdPWsM+1qVh7svhw4yZriDeXCNpP78hJTEl3Ncswg=
+			gjQczbgHx41vPQujx24J1BDDRKw6ZNPXeFG5zgZtxV8=
 			</data>
 		</dict>
 		<key>Frameworks/Pods_MediationAdFit.framework/_CodeSignature/CodeResources</key>

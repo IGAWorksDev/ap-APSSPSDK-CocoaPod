@@ -1,0 +1,4 @@
+framework module APSSPMediationUnityAds {
+  header "APSSPMediationUnityAds-Swift.h"
+  requires objc
+}

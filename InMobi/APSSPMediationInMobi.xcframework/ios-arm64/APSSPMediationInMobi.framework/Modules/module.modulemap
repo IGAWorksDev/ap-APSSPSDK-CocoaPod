@@ -1,0 +1,4 @@
+framework module APSSPMediationInMobi {
+  header "APSSPMediationInMobi-Swift.h"
+  requires objc
+}

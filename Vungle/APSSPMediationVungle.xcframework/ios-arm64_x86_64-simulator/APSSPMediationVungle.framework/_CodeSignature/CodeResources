@@ -6,7 +6,7 @@
 	<dict>
 		<key>Frameworks/APSSPSDK.framework/APSSPSDK</key>
 		<data>
-		4cspO52pFJkDLBzRdJLRLhbeXGo=
+		utr4XFiaRnFAhe5YE6iTg9nzEmM=
 		</data>
 		<key>Frameworks/APSSPSDK.framework/Info.plist</key>
 		<data>
@@ -102,7 +102,7 @@
 		</data>
 		<key>Frameworks/VungleAdsSDK.framework/VungleAdsSDK</key>
 		<data>
-		38t0abLqTIUZmDQpjiOiZjUVnqg=
+		uuApAZaUTyrvKEQZjoZit9NNbh8=
 		</data>
 		<key>Frameworks/VungleAdsSDK.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -171,7 +171,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			V69Pmmv06Wx7OgS33n3wWXqHimHBy0s0uhBO0J7cpC4=
+			NmekWFLQtzkI+ueeGXQLy0TbosrQZ+dK941D96nvNlU=
 			</data>
 		</dict>
 		<key>Frameworks/APSSPSDK.framework/Info.plist</key>
@@ -339,7 +339,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+QHgif0xV1RBRqB08nkudkrH82/Pd7jwU6w96QOycz4=
+			RLWfoyepUElJuJcXLv/FZfjm4qFTHcyDkTmM9t/La5s=
 			</data>
 		</dict>
 		<key>Frameworks/VungleAdsSDK.framework/_CodeSignature/CodeResources</key>

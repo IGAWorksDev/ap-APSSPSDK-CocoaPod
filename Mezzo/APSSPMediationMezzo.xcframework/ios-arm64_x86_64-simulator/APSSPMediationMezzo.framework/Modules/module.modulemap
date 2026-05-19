@@ -1,0 +1,4 @@
+framework module APSSPMediationMezzo {
+  header "APSSPMediationMezzo-Swift.h"
+  requires objc
+}

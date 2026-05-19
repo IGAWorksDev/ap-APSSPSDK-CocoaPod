@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
   s.name         = "APSSPMediationCauly"
-  s.version      = "3.1.22.0"
+  s.version      = "3.1.22.1"
   s.summary      = "APSSPSDK Mediation Cauly Adapter"
   s.homepage     = "https://github.com/IGAWorksDev/ap-APSSPSDK-CocoaPod"
   s.license      = { "type": "Apache License, Version 2.0", "file": "LICENSE" }
   s.author       = { "mick.kim" => "mick.kim@adpopcorn.com", "odin.song" => "odin.song@adpopcorn.com" }
 
   s.ios.deployment_target = "13.0"
-  s.source       = { :git => "https://github.com/IGAWorksDev/ap-APSSPSDK-CocoaPod.git", :tag => "3.0.0" }
+  s.source       = { :git => "https://github.com/IGAWorksDev/ap-APSSPSDK-CocoaPod.git", :tag => "3.0.2" }
 
   s.vendored_frameworks = "Cauly/APSSPMediationCauly.xcframework"
 
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.swift_versions = ["5.0"]
   s.pod_target_xcconfig = { "OTHER_LDFLAGS" => "-ObjC" }
 
-  s.dependency "APSSPSDK", ">= 3.0.0"
+  s.dependency "APSSPSDK", ">= 3.0.2"
 
   # CaulySDK는 CocoaPods 공식 repo에 미등록. Podfile에서 직접 추가:
   #   pod 'CaulySDK', :git => 'https://github.com/cauly/CaulySDK_iOS.git', :tag => '3.1.22'

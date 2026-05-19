@@ -1,0 +1,4 @@
+framework module APSSPMediationAdForus {
+  header "APSSPMediationAdForus-Swift.h"
+  requires objc
+}

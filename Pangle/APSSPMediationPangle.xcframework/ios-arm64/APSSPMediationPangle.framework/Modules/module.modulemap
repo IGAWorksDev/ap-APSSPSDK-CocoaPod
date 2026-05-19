@@ -1,0 +1,4 @@
+framework module APSSPMediationPangle {
+  header "APSSPMediationPangle-Swift.h"
+  requires objc
+}

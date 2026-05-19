@@ -1,0 +1,4 @@
+framework module APSSPMediationGAM {
+  header "APSSPMediationGAM-Swift.h"
+  requires objc
+}

@@ -1,0 +1,4 @@
+framework module APSSPMediationCSJ {
+  header "APSSPMediationCSJ-Swift.h"
+  requires objc
+}
