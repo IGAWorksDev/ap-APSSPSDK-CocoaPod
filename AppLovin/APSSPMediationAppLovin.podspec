@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.author       = { "mick.kim" => "mick.kim@adpopcorn.com", "odin.song" => "odin.song@adpopcorn.com" }
 
   s.ios.deployment_target = "13.0"
-  s.source       = { :git => "https://github.com/IGAWorksDev/ap-APSSPSDK-CocoaPod.git", :tag => "release_3_0_0" }
+  s.source       = { :git => "https://github.com/IGAWorksDev/ap-APSSPSDK-CocoaPod.git", :tag => "3.0.0" }
 
   s.vendored_frameworks = "AppLovin/APSSPMediationAppLovin.xcframework"
 
