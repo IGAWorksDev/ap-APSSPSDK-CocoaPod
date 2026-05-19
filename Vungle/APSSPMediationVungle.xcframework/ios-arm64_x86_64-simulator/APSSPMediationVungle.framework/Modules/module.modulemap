@@ -1,4 +1,0 @@
-framework module APSSPMediationVungle {
-  header "APSSPMediationVungle-Swift.h"
-  requires objc
-}

@@ -1,4 +1,0 @@
-framework module APSSPMediationMaio {
-  header "APSSPMediationMaio-Swift.h"
-  requires objc
-}

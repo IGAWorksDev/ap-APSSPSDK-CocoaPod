@@ -1,4 +1,0 @@
-framework module APSSPMediationMintegral {
-  header "APSSPMediationMintegral-Swift.h"
-  requires objc
-}

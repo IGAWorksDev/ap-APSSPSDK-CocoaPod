@@ -1,4 +1,0 @@
-framework module APSSPMediationADOP {
-  header "APSSPMediationADOP-Swift.h"
-  requires objc
-}

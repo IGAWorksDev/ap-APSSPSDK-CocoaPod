@@ -1,4 +1,0 @@
-framework module APSSPMediationFBAudienceNetwork {
-  header "APSSPMediationFBAudienceNetwork-Swift.h"
-  requires objc
-}

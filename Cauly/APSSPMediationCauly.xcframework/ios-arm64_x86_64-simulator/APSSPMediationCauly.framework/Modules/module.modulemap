@@ -1,4 +1,0 @@
-framework module APSSPMediationCauly {
-  header "APSSPMediationCauly-Swift.h"
-  requires objc
-}

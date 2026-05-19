@@ -1,4 +1,0 @@
-framework module APSSPMediationNAM {
-  header "APSSPMediationNAM-Swift.h"
-  requires objc
-}

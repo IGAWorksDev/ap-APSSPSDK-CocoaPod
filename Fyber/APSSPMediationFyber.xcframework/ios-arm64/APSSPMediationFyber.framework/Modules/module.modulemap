@@ -1,4 +1,0 @@
-framework module APSSPMediationFyber {
-  header "APSSPMediationFyber-Swift.h"
-  requires objc
-}

@@ -1,4 +1,0 @@
-framework module APSSPMediationMoloco {
-  header "APSSPMediationMoloco-Swift.h"
-  requires objc
-}

@@ -1,4 +1,0 @@
-framework module APSSPMediationFluct {
-  header "APSSPMediationFluct-Swift.h"
-  requires objc
-}
