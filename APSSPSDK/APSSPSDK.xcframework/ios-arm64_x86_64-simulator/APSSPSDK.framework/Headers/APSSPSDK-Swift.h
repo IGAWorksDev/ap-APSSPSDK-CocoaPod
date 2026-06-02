@@ -395,6 +395,10 @@ SWIFT_CLASS("_TtC8APSSPSDK8APSSPAds")
 /// \param tag true 설정 시 아동 대상 광고 정책 적용
 ///
 + (void)tagForChildDirectedTreatment:(BOOL)tag;
+/// GDPR 동의 여부를 설정합니다. EU 사용자가 개인정보 수집에 미동의 시 false로 설정하면 광고 로드가 차단됩니다.
+/// \param available true = 동의, false = 미동의
+///
++ (void)setGdprConsentAvailable:(BOOL)available;
 /// 사용자 나이를 설정합니다. 타겟팅 광고에 활용됩니다.
 /// \param age 사용자 나이
 ///
@@ -820,6 +824,8 @@ SWIFT_CLASS("_TtC8APSSPSDK27APSSPInitializationSettings")
 @property (nonatomic) BOOL adInspectorEnabled;
 /// COPPA 아동 대상 광고 태그 (기본값: false)
 @property (nonatomic) BOOL tagForChildDirectedTreatment;
+/// GDPR 동의 여부 (기본값: true). EU 사용자가 개인정보 수집에 미동의 시 false로 설정하면 광고 로드가 차단됩니다.
+@property (nonatomic) BOOL gdprConsentAvailable;
 - (nonnull instancetype)initWithAppKey:(NSString * _Nonnull)appKey OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -2391,6 +2397,10 @@ SWIFT_CLASS("_TtC8APSSPSDK8APSSPAds")
 /// \param tag true 설정 시 아동 대상 광고 정책 적용
 ///
 + (void)tagForChildDirectedTreatment:(BOOL)tag;
+/// GDPR 동의 여부를 설정합니다. EU 사용자가 개인정보 수집에 미동의 시 false로 설정하면 광고 로드가 차단됩니다.
+/// \param available true = 동의, false = 미동의
+///
++ (void)setGdprConsentAvailable:(BOOL)available;
 /// 사용자 나이를 설정합니다. 타겟팅 광고에 활용됩니다.
 /// \param age 사용자 나이
 ///
@@ -2816,6 +2826,8 @@ SWIFT_CLASS("_TtC8APSSPSDK27APSSPInitializationSettings")
 @property (nonatomic) BOOL adInspectorEnabled;
 /// COPPA 아동 대상 광고 태그 (기본값: false)
 @property (nonatomic) BOOL tagForChildDirectedTreatment;
+/// GDPR 동의 여부 (기본값: true). EU 사용자가 개인정보 수집에 미동의 시 false로 설정하면 광고 로드가 차단됩니다.
+@property (nonatomic) BOOL gdprConsentAvailable;
 - (nonnull instancetype)initWithAppKey:(NSString * _Nonnull)appKey OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");

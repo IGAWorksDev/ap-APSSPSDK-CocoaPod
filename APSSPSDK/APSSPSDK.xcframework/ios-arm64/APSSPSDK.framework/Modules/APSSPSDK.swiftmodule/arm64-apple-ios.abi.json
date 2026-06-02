@@ -20797,6 +20797,36 @@
           },
           {
             "kind": "Function",
+            "name": "setGdprConsentAvailable",
+            "printedName": "setGdprConsentAvailable(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPAds(cm)setGdprConsentAvailable:",
+            "mangledName": "$s8APSSPSDK8APSSPAdsC23setGdprConsentAvailableyySbFZ",
+            "moduleName": "APSSPSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "setAge",
             "printedName": "setAge(_:)",
             "children": [
@@ -21556,6 +21586,106 @@
                 "declKind": "Accessor",
                 "usr": "s:8APSSPSDK27APSSPInitializationSettingsC28tagForChildDirectedTreatmentSbvM",
                 "mangledName": "$s8APSSPSDK27APSSPInitializationSettingsC28tagForChildDirectedTreatmentSbvM",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "gdprConsentAvailable",
+            "printedName": "gdprConsentAvailable",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPInitializationSettings(py)gdprConsentAvailable",
+            "mangledName": "$s8APSSPSDK27APSSPInitializationSettingsC20gdprConsentAvailableSbvp",
+            "moduleName": "APSSPSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPInitializationSettings(im)gdprConsentAvailable",
+                "mangledName": "$s8APSSPSDK27APSSPInitializationSettingsC20gdprConsentAvailableSbvg",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPInitializationSettings(im)setGdprConsentAvailable:",
+                "mangledName": "$s8APSSPSDK27APSSPInitializationSettingsC20gdprConsentAvailableSbvs",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8APSSPSDK27APSSPInitializationSettingsC20gdprConsentAvailableSbvM",
+                "mangledName": "$s8APSSPSDK27APSSPInitializationSettingsC20gdprConsentAvailableSbvM",
                 "moduleName": "APSSPSDK",
                 "implicit": true,
                 "declAttributes": [
@@ -44433,15 +44563,22 @@
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/APSSPAds.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1057,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/APSSPAds.swift",
       "kind": "Array",
-      "offset": 1121,
+      "offset": 1213,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/APSSPAds.swift",
       "kind": "BooleanLiteral",
-      "offset": 1159,
+      "offset": 1251,
       "length": 5,
       "value": "false"
     },
@@ -44500,6 +44637,13 @@
       "offset": 1329,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Initialization\/APSSPInitializationSettings.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1545,
+      "length": 4,
+      "value": "true"
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/HybridBridge\/APSSPWKScriptMessageHandler.swift",
@@ -47227,7 +47371,7 @@
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/ADLoader\/Banner\/BannerAdLoader.swift",
       "kind": "IntegerLiteral",
-      "offset": 792,
+      "offset": 861,
       "length": 1,
       "value": "0"
     },

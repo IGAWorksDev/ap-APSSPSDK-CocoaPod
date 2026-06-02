@@ -564,6 +564,7 @@ public enum APSSPBiddingKey : Swift.String {
   #endif
   @objc public static func setUIDIdentifier(identityType: Swift.Int, identifier: Swift.String)
   @objc public static func tagForChildDirectedTreatment(_ tag: Swift.Bool)
+  @objc public static func setGdprConsentAvailable(_ available: Swift.Bool)
   @objc public static func setAge(_ age: Swift.Int)
   @objc public static func setGender(_ gender: APSSPSDK.APSSPGender)
   @objc public static func setLogType(_ type: APSSPSDK.APSSPLogType)
@@ -578,6 +579,7 @@ public enum APSSPBiddingKey : Swift.String {
   @objc final public var logType: APSSPSDK.APSSPLogType
   @objc final public var adInspectorEnabled: Swift.Bool
   @objc final public var tagForChildDirectedTreatment: Swift.Bool
+  @objc final public var gdprConsentAvailable: Swift.Bool
   @objc public init(appKey: Swift.String)
   @objc deinit
 }
