@@ -6,11 +6,11 @@
 //
 
 import UIKit
-
 import APSSPSDK
 
 
-final public class UnityAdsRewardVideoAdapter: APSSPRewardVideoAdapterProtocol {
+final public class UnityAdsRewardVideoAdapter: APSSPRewardVideoAdapterInappBiddingProtocol {
+    
     public var rootViewController: UIViewController?
 
     private var rewardVideoAd: UnityAdsMediationRewardVideoAd?
@@ -21,6 +21,14 @@ final public class UnityAdsRewardVideoAdapter: APSSPRewardVideoAdapterProtocol {
         let placementId = placementDic[APSSPPlacementKey.unityPlacementId.rawValue] ?? ""
         let gameID = placementDic[APSSPPlacementKey.unityGameId.rawValue] ?? ""
         rewardVideoAd = UnityAdsMediationRewardVideoAd(gameID: gameID, placementId: placementId)
+        self.rewardVideoAd?.delegate = self
+    }
+    
+    public init(inappbiddingPlacementDic: [String: String], rootViewController: UIViewController?) {
+        let placementId = inappbiddingPlacementDic[APSSPBiddingKey.unityPlacementId.rawValue] ?? ""
+        let gameID = inappbiddingPlacementDic[APSSPBiddingKey.unityGameId.rawValue] ?? ""
+        let biddingData = inappbiddingPlacementDic[APSSPBiddingKey.biddingData.rawValue] ?? ""
+        rewardVideoAd = UnityAdsMediationRewardVideoAd(gameID: gameID, placementId: placementId, biddingData: biddingData)
         self.rewardVideoAd?.delegate = self
     }
     
@@ -38,9 +46,10 @@ final public class UnityAdsRewardVideoAdapter: APSSPRewardVideoAdapterProtocol {
         rewardVideoAd?.present(from: from) { completion() }
     }
     
+    public func getBiddingToken() -> String {
+        return rewardVideoAd?.getBiddingToken() ?? ""
+    }
 }
-
-
 
 
 extension UnityAdsRewardVideoAdapter: APSSPRewardVideoAdapterDelegate {

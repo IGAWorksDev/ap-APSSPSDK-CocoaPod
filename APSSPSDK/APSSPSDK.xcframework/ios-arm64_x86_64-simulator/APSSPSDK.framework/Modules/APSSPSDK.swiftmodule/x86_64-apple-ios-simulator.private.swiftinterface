@@ -405,6 +405,7 @@ extension APSSPSDK.APSSPBannerView {
   @objc final public var adAppIconView: UIKit.UIImageView?
   @objc final public var adCTAButton: UIKit.UIButton?
   @objc final public var privacyIconPosition: APSSPSDK.APSSPPrivacyIconPosition
+  @objc final public var privacyIconVisibility: Swift.Bool
   @objc final public var useTemplate: Swift.Bool
   @objc override dynamic public init()
   @objc deinit
@@ -523,6 +524,8 @@ public enum APSSPBiddingKey : Swift.String {
   case pangleAdUnitId
   case fyberPlacementId
   case molocoPlacementId
+  case unityPlacementId
+  case unityGameId
   #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
   #endif

@@ -6,11 +6,10 @@
 //
 
 import UIKit
-
 import APSSPSDK
 
 
-final public class UnityAdsInterstitialAdapter: APSSPInterstitialAdapterProtocol {
+final public class UnityAdsInterstitialAdapter: APSSPInterstitialAdapterInappBiddingProtocol {
 
     public var rootViewController: UIViewController?
     
@@ -23,6 +22,14 @@ final public class UnityAdsInterstitialAdapter: APSSPInterstitialAdapterProtocol
         let placementId = placementDic[APSSPPlacementKey.unityPlacementId.rawValue] ?? ""
         let gameID = placementDic[APSSPPlacementKey.unityGameId.rawValue] ?? ""
         unityAdsMediationInterstitialAd = UnityAdsMediationInterstitialAd(gameID: gameID, placementId: placementId)
+        self.unityAdsMediationInterstitialAd?.delegate = self
+    }
+    
+    public init(inappbiddingPlacementDic: [String: String], rootViewController: UIViewController?) {
+        let placementId = inappbiddingPlacementDic[APSSPBiddingKey.unityPlacementId.rawValue] ?? ""
+        let gameID = inappbiddingPlacementDic[APSSPBiddingKey.unityGameId.rawValue] ?? ""
+        let biddingData = inappbiddingPlacementDic[APSSPBiddingKey.biddingData.rawValue] ?? ""
+        unityAdsMediationInterstitialAd = UnityAdsMediationInterstitialAd(gameID: gameID, placementId: placementId, biddingData: biddingData)
         self.unityAdsMediationInterstitialAd?.delegate = self
     }
     
@@ -40,6 +47,9 @@ final public class UnityAdsInterstitialAdapter: APSSPInterstitialAdapterProtocol
         unityAdsMediationInterstitialAd?.present(from: from) { completion() }
     }
     
+    public func getBiddingToken() -> String {
+        return unityAdsMediationInterstitialAd?.getBiddingToken() ?? ""
+    }
 }
 
 

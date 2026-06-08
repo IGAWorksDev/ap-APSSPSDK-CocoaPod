@@ -5,6 +5,7 @@
 
 import UIKit
 import APSSPSDK
+import IASDKCore
 
 final public class FyberVideoMixAdapter: APSSPVideoMixAdAdapterInappBiddingProtocol {
     public var rootViewController: UIViewController?
@@ -47,7 +48,7 @@ final public class FyberVideoMixAdapter: APSSPVideoMixAdAdapterInappBiddingProto
     }
     
     public func getBiddingToken() -> String {
-        return rewardVideoAdapter?.getBiddingToken() ?? ""
+        return FMPBiddingManager.sharedInstance().biddingToken() ?? ""
     }
 }
 

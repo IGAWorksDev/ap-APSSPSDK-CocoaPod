@@ -1,5 +1,6 @@
 import UIKit
 import APSSPSDK
+import MolocoSDK
 
 public final class MolocoVideoMixAdapter: APSSPVideoMixAdAdapterInappBiddingProtocol {
     public var rootViewController: UIViewController?
@@ -43,7 +44,13 @@ public final class MolocoVideoMixAdapter: APSSPVideoMixAdAdapterInappBiddingProt
     }
 
     public func getBiddingToken() -> String {
-        return interstitialAdapter?.getBiddingToken() ?? rewardVideoAdapter?.getBiddingToken() ?? ""
+        var token = ""
+        let semaphore = DispatchSemaphore(value: 0)
+        Moloco.shared.getBidToken(params: MolocoParams(mediation: "AdPopcornSSP")) { bidToken, _ in
+            token = bidToken ?? ""; semaphore.signal()
+        }
+        _ = semaphore.wait(timeout: .now() + 3)
+        return token
     }
 }
 

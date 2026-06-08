@@ -5,6 +5,7 @@
 
 import UIKit
 import APSSPSDK
+import VungleAdsSDK
 
 final public class VungleVideoMixAdapter: APSSPVideoMixAdAdapterInappBiddingProtocol {
     public var rootViewController: UIViewController?
@@ -52,7 +53,7 @@ final public class VungleVideoMixAdapter: APSSPVideoMixAdAdapterInappBiddingProt
     }
     
     public func getBiddingToken() -> String {
-        return interstitialVideoAdapter?.getBiddingToken() ?? rewardVideoAdapter?.getBiddingToken() ?? ""
+        return VungleAds.getBiddingToken()
     }
 }
 

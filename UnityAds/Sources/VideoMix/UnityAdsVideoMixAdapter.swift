@@ -5,8 +5,9 @@
 
 import UIKit
 import APSSPSDK
+import UnityAds
 
-final public class UnityAdsVideoMixAdapter: APSSPVideoMixAdAdapterProtocol {
+final public class UnityAdsVideoMixAdapter: APSSPVideoMixAdAdapterInappBiddingProtocol {
     public var rootViewController: UIViewController?
     public var videoMixDelegate: APSSPVideoMixAdAdapterDelegate?
     public var videoMixAdType: APSSPVideoMixAdType = .RewardVideo
@@ -20,12 +21,32 @@ final public class UnityAdsVideoMixAdapter: APSSPVideoMixAdAdapterProtocol {
         if let ct = placementDic[APSSPPlacementKey.campaignType.rawValue], let v = Int(ct), let t = APSSPVideoMixAdType(rawValue: v) { videoMixAdType = t }
     }
 
+    public init(inappbiddingPlacementDic: [String: String], rootViewController: UIViewController?) {
+        self.placementDic = inappbiddingPlacementDic; self.rootViewController = rootViewController
+        if let ct = inappbiddingPlacementDic[APSSPPlacementKey.campaignType.rawValue], let v = Int(ct), let t = APSSPVideoMixAdType(rawValue: v) { videoMixAdType = t }
+    }
+
     public func connectVideoMixDelegate(delegate: APSSPVideoMixAdAdapterDelegate) {
         videoMixDelegate = delegate
+        let isBidding = placementDic[APSSPBiddingKey.biddingData.rawValue] != nil
         switch videoMixAdType {
-        case .Interstitial: interstitialAdapter = UnityAdsInterstitialAdapter(placementDic: placementDic, rootViewController: rootViewController, info: [:]); interstitialAdapter?.connectDelegate(delegate: self)
-        case .InterstitialVideo: interstitialVideoAdapter = UnityAdsInterstitialVideoAdapter(placementDic: placementDic, rootViewController: rootViewController, info: [:]); interstitialVideoAdapter?.connectDelegate(delegate: self)
-        case .RewardVideo: rewardVideoAdapter = UnityAdsRewardVideoAdapter(placementDic: placementDic, rootViewController: rootViewController, info: [:]); rewardVideoAdapter?.connectDelegate(delegate: self)
+        case .Interstitial:
+            if isBidding {
+                interstitialAdapter = UnityAdsInterstitialAdapter(inappbiddingPlacementDic: placementDic, rootViewController: rootViewController)
+            } else {
+                interstitialAdapter = UnityAdsInterstitialAdapter(placementDic: placementDic, rootViewController: rootViewController, info: [:])
+            }
+            interstitialAdapter?.connectDelegate(delegate: self)
+        case .InterstitialVideo:
+            interstitialVideoAdapter = UnityAdsInterstitialVideoAdapter(placementDic: placementDic, rootViewController: rootViewController, info: [:])
+            interstitialVideoAdapter?.connectDelegate(delegate: self)
+        case .RewardVideo:
+            if isBidding {
+                rewardVideoAdapter = UnityAdsRewardVideoAdapter(inappbiddingPlacementDic: placementDic, rootViewController: rootViewController)
+            } else {
+                rewardVideoAdapter = UnityAdsRewardVideoAdapter(placementDic: placementDic, rootViewController: rootViewController, info: [:])
+            }
+            rewardVideoAdapter?.connectDelegate(delegate: self)
         @unknown default:
             break
         }
@@ -40,6 +61,10 @@ final public class UnityAdsVideoMixAdapter: APSSPVideoMixAdAdapterProtocol {
         @unknown default:
             break
         }
+    }
+    
+    public func getBiddingToken() -> String {
+        return UnityAds.getToken() ?? ""
     }
 }
 

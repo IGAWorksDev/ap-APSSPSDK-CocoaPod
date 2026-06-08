@@ -50,7 +50,8 @@ final public class PangleVideoMixAdapter: APSSPVideoMixAdAdapterInappBiddingProt
     }
     
     public func getBiddingToken() -> String {
-        return interstitialVideoAdapter?.getBiddingToken() ?? rewardVideoAdapter?.getBiddingToken() ?? ""
+//        return PAGSdk.getBiddingToken(nil) ?? ""
+        return ""
     }
 }
 

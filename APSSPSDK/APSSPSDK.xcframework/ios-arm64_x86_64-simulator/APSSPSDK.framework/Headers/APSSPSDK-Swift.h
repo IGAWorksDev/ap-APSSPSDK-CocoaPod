@@ -1347,6 +1347,7 @@ SWIFT_CLASS("_TtC8APSSPSDK21APSSPNativeAdRenderer")
 @property (nonatomic, strong) UIImageView * _Nullable adAppIconView;
 @property (nonatomic, strong) UIButton * _Nullable adCTAButton;
 @property (nonatomic) enum APSSPPrivacyIconPosition privacyIconPosition;
+@property (nonatomic) BOOL privacyIconVisibility;
 @property (nonatomic) BOOL useTemplate;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -3349,6 +3350,7 @@ SWIFT_CLASS("_TtC8APSSPSDK21APSSPNativeAdRenderer")
 @property (nonatomic, strong) UIImageView * _Nullable adAppIconView;
 @property (nonatomic, strong) UIButton * _Nullable adCTAButton;
 @property (nonatomic) enum APSSPPrivacyIconPosition privacyIconPosition;
+@property (nonatomic) BOOL privacyIconVisibility;
 @property (nonatomic) BOOL useTemplate;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
