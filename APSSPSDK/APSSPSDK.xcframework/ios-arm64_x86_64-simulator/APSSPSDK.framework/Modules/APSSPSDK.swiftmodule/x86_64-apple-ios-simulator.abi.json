@@ -28736,6 +28736,29 @@
           },
           {
             "kind": "Function",
+            "name": "close",
+            "printedName": "close()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPModalAd(im)close",
+            "mangledName": "$s8APSSPSDK12APSSPModalAdC5closeyyF",
+            "moduleName": "APSSPSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "present",
             "printedName": "present(from:)",
             "children": [
@@ -45944,7 +45967,7 @@
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/ModalAd\/APSSPModalAd.swift",
       "kind": "StringLiteral",
-      "offset": 6890,
+      "offset": 7546,
       "length": 53,
       "value": "\"com.adpopcorn.modalad.doNotShowTodayPlacementIdList\""
     },

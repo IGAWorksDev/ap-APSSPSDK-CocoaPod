@@ -1171,6 +1171,8 @@ SWIFT_CLASS("_TtC8APSSPSDK12APSSPModalAd")
 ///   </li>
 /// </ul>
 - (void)loadRequest;
+/// 매체에서 직접 모달 광고를 닫을 때 사용
+- (void)close;
 - (BOOL)presentFrom:(UIViewController * _Nonnull)viewController;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");

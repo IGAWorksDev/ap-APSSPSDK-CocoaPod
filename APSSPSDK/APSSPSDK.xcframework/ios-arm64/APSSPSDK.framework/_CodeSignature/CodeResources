@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/APSSPSDK-Swift.h</key>
 		<data>
-		1UvidRKZ3P6aLu6RVBTHkXOmtVM=
+		E5DoJVw9Dl1gijt0LRZrJ08iles=
 		</data>
 		<key>Headers/AdPopcornSSP_SDK.h</key>
 		<data>
@@ -18,19 +18,19 @@
 		</data>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		zq0aSGUxftDGhNcqfO/5HD8kwUY=
+		kdO/yxBfXATOWMDsLhSbGwxs5aA=
 		</data>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		0qYDv/kh/ELdVEYg3jbgKpW3snI=
+		vm5D1Tb3N6jeLmDbykDcfQ1XHPM=
 		</data>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		mwzYeb+gPLr4eiPoGELzY6ZctYs=
+		iD2At1X+1XIPcUn0kK/FUwAT5uI=
 		</data>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		0qYDv/kh/ELdVEYg3jbgKpW3snI=
+		vm5D1Tb3N6jeLmDbykDcfQ1XHPM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -43,7 +43,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			KC0wPBFUvokl2F/7cfSpmZowuqRKgsBKEzDGVmVoC2M=
+			9A3RUi6Vz9EzdEIWNMgb50ySHRkH/C5E2ahhTOJNJ2w=
 			</data>
 		</dict>
 		<key>Headers/AdPopcornSSP_SDK.h</key>
@@ -57,28 +57,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fYbsjD3gPlnhPU8v12+i5EmjSjO692o20aHzchvklvc=
+			oBKz4MEpMP9nfVpPB2aR4mhkFawTXxNU+Ajp1bFrZDE=
 			</data>
 		</dict>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HCxFrInS6Zu2Hv5gQ5o+E0tHPpRBanomFrgKsj+2zwQ=
+			WAG2u4RctpYJSuE2JCCQg6N0zhRqY267OYEFQ+c8if0=
 			</data>
 		</dict>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bDCpV5D8V28AKdrsALMmzdVdowImKR1Rr9onPsTd/Fo=
+			Hn93SnGGPo7hvM0i3JS+ErkqIyZXkOKDXCLlkIAGwJQ=
 			</data>
 		</dict>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HCxFrInS6Zu2Hv5gQ5o+E0tHPpRBanomFrgKsj+2zwQ=
+			WAG2u4RctpYJSuE2JCCQg6N0zhRqY267OYEFQ+c8if0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
