@@ -41,6 +41,12 @@ final class ADOPMediationBannerView: UIView {
     }
     
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("ADOP Banner placementId is empty")
+            delegate?.bannerViewFailed(bannerView: self, error: .nextMediation, errorMessage: "placementId is empty")
+            return
+        }
+        
         // viewModel fetch 를 끝낸 후 받아와 지는 데이터
         let adSize = adSizeFor(cgSize: CGSize(width: width, height: height))
         bannerView = AdManagerBannerView(adSize: adSize)

@@ -60,6 +60,12 @@ final class VungleMediationNativeAdView: UIView {
     }
     
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("Vungle Native placementId is empty")
+            delegate?.nativeLoadFail(error: .nextMediation, errorMessage: "placementId is empty")
+            return
+        }
+        
         guard let rootViewController else {
             APLogger.error("NativeAd rootViewController is nil")
             delegate?.nativeLoadFail(error: .nextMediation, errorMessage: "rootViewController is nil")

@@ -24,6 +24,8 @@ final class MolocoMediationNativeAdView: NSObject {
     private var biddingData: String?
     private weak var rootViewController: UIViewController?
     private var molocoRenderer: APSSPMolocoNativeAdRenderer?
+    private var impressionTimer: Timer?
+    private var isImpressed = false
 
     init(adUnitId: String, rootViewController: UIViewController?, render: AnyObject?, biddingData: String? = nil) {
         self.adUnitId = adUnitId
@@ -37,6 +39,12 @@ final class MolocoMediationNativeAdView: NSObject {
     }
 
     func load() {
+        guard !adUnitId.isEmpty else {
+            APLogger.error("Moloco Native adUnitId is empty")
+            delegate?.nativeLoadFail(error: .nextMediation, errorMessage: "adUnitId is empty")
+            return
+        }
+        
         Task { @MainActor in
             let params = MolocoCreateAdParams(adUnit: adUnitId, mediation: "AdPopcornSSP")
             nativeAd = Moloco.shared.createNativeAd(params: params)
@@ -46,6 +54,7 @@ final class MolocoMediationNativeAdView: NSObject {
     }
 
     func stop() {
+        stopImpressionTimer()
         nativeAd?.delegate = nil
         nativeAd?.destroy()
         nativeAd = nil
@@ -88,11 +97,60 @@ final class MolocoMediationNativeAdView: NSObject {
         }
     }
     
-    func reportImpression() {
+    // MARK: - Impression Tracking
+    
+    private func startImpressionTracking() {
+        guard !isImpressed else { return }
+        impressionTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
+            self?.checkViewability()
+        }
+    }
+    
+    private func checkViewability() {
+        guard !isImpressed,
+              let adView = molocoRenderer?.nativeAdView,
+              adView.window != nil,
+              !adView.isHidden,
+              adView.alpha > 0,
+              isViewActuallyVisible(adView) else { return }
+        
+        isImpressed = true
+        stopImpressionTimer()
         nativeAd?.handleImpression()
     }
     
-    func reportClick() {
+    private func isViewActuallyVisible(_ view: UIView) -> Bool {
+        guard let window = view.window else { return false }
+        var visibleRect = view.convert(view.bounds, to: window)
+        guard visibleRect.width > 0, visibleRect.height > 0 else { return false }
+        
+        var current: UIView? = view.superview
+        while let sv = current {
+            if sv.clipsToBounds || sv is UIScrollView {
+                let svRect = sv.convert(sv.bounds, to: window)
+                visibleRect = visibleRect.intersection(svRect)
+                if visibleRect.isNull || visibleRect.height <= 0 { return false }
+            }
+            current = sv.superview
+        }
+        return window.bounds.intersects(visibleRect)
+    }
+    
+    private func stopImpressionTimer() {
+        impressionTimer?.invalidate()
+        impressionTimer = nil
+    }
+    
+    // MARK: - Click Tracking
+    
+    private func setupClickTracking() {
+        guard let contentView = molocoRenderer?.nativeAdView else { return }
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleAdTapped))
+        contentView.addGestureRecognizer(tap)
+        contentView.isUserInteractionEnabled = true
+    }
+    
+    @objc private func handleAdTapped() {
         nativeAd?.handleClick()
     }
 }
@@ -101,6 +159,8 @@ extension MolocoMediationNativeAdView: MolocoNativeAdDelegate {
     func didLoad(ad: any MolocoAd) {
         DispatchQueue.main.async { [weak self] in
             self?.setupData()
+            self?.startImpressionTracking()
+            self?.setupClickTracking()
             self?.delegate?.nativeLoadSuccess()
         }
     }

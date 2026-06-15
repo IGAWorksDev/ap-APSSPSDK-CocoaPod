@@ -1944,14 +1944,6 @@ SWIFT_CLASS("_TtC8APSSPSDK27APSSPWKScriptMessageHandler")
 - (void)apsspCustomAdLoadFail:(APSSPCustomAd * _Nonnull)customAd error:(enum APSSPNetworkError)error;
 @end
 
-@interface APSSPWKScriptMessageHandler (SWIFT_EXTENSION(APSSPSDK)) <APSSPInterstitialVideoAdDelegate>
-- (void)apsspInterstitialVideoAdLoadSuccessWithInterstitialVideoAd:(APSSPInterstitialVideoAd * _Nonnull)interstitialVideoAd;
-- (void)apsspInterstitialVideoAdLoadFailWithInterstitialVideoAd:(APSSPInterstitialVideoAd * _Nonnull)interstitialVideoAd error:(enum APSSPNetworkError)error;
-- (void)apsspInterstitialVideoAdShowSuccessWithInterstitialVideoAd:(APSSPInterstitialVideoAd * _Nonnull)interstitialVideoAd;
-- (void)apsspInterstitialVideoAdShowFailWithInterstitialVideoAd:(APSSPInterstitialVideoAd * _Nonnull)interstitialVideoAd error:(enum APSSPNetworkError)error;
-- (void)apsspInterstitialVideoAdClosedWithInterstitialVideoAd:(APSSPInterstitialVideoAd * _Nonnull)interstitialVideoAd;
-@end
-
 @interface APSSPWKScriptMessageHandler (SWIFT_EXTENSION(APSSPSDK)) <APSSPInterstitialAdDelegate>
 - (void)apsspInterstitialAdLoadSuccessWithInterstitialAd:(APSSPInterstitialAd * _Nonnull)interstitialAd;
 - (void)apsspInterstitialAdLoadFailWithInterstitialAd:(APSSPInterstitialAd * _Nonnull)interstitialAd error:(enum APSSPNetworkError)error;
@@ -1961,13 +1953,13 @@ SWIFT_CLASS("_TtC8APSSPSDK27APSSPWKScriptMessageHandler")
 - (void)apsspInterstitialAdClosedWithInterstitialAd:(APSSPInterstitialAd * _Nonnull)interstitialAd;
 @end
 
-@interface APSSPWKScriptMessageHandler (SWIFT_EXTENSION(APSSPSDK)) <APSSPRewardVideoAdDelegate>
-- (void)apsspRewardVideoAdLoadSuccessWithRewardVideoAd:(APSSPRewardVideoAd * _Nonnull)rewardVideoAd;
-- (void)apsspRewardVideoAdLoadFailWithRewardVideoAd:(APSSPRewardVideoAd * _Nonnull)rewardVideoAd error:(enum APSSPNetworkError)error;
-- (void)apsspRewardVideoAdShowSuccessWithRewardVideoAd:(APSSPRewardVideoAd * _Nonnull)rewardVideoAd;
-- (void)apsspRewardVideoAdShowFailWithRewardVideoAd:(APSSPRewardVideoAd * _Nonnull)rewardVideoAd error:(enum APSSPNetworkError)error;
-- (void)apsspRewardVideoAdPlayCompletedWithRewardVideoAd:(APSSPRewardVideoAd * _Nonnull)rewardVideoAd adNetworkNo:(NSInteger)adNetworkNo completed:(BOOL)completed;
-- (void)apsspRewardVideoAdClosedWithRewardVideoAd:(APSSPRewardVideoAd * _Nonnull)rewardVideoAd;
+@interface APSSPWKScriptMessageHandler (SWIFT_EXTENSION(APSSPSDK)) <APSSPInterstitialVideoAdDelegate>
+- (void)apsspInterstitialVideoAdLoadSuccessWithInterstitialVideoAd:(APSSPInterstitialVideoAd * _Nonnull)interstitialVideoAd;
+- (void)apsspInterstitialVideoAdLoadFailWithInterstitialVideoAd:(APSSPInterstitialVideoAd * _Nonnull)interstitialVideoAd error:(enum APSSPNetworkError)error;
+- (void)apsspInterstitialVideoAdShowSuccessWithInterstitialVideoAd:(APSSPInterstitialVideoAd * _Nonnull)interstitialVideoAd;
+- (void)apsspInterstitialVideoAdShowFailWithInterstitialVideoAd:(APSSPInterstitialVideoAd * _Nonnull)interstitialVideoAd error:(enum APSSPNetworkError)error;
+- (void)apsspInterstitialVideoAdClosedWithInterstitialVideoAd:(APSSPInterstitialVideoAd * _Nonnull)interstitialVideoAd;
+- (void)apsspInterstitialVideoAdClickedWithInterstitialVideoAd:(APSSPInterstitialVideoAd * _Nonnull)interstitialVideoAd;
 @end
 
 @interface APSSPWKScriptMessageHandler (SWIFT_EXTENSION(APSSPSDK)) <APSSPVideoMixAdDelegate>
@@ -1977,6 +1969,16 @@ SWIFT_CLASS("_TtC8APSSPSDK27APSSPWKScriptMessageHandler")
 - (void)apsspVideoMixAdShowFailWithVideoMixAd:(APSSPVideoMixAd * _Nonnull)videoMixAd;
 - (void)apsspVideoMixAdPlayCompletedWithVideoMixAd:(APSSPVideoMixAd * _Nonnull)videoMixAd adNetworkNo:(NSInteger)adNetworkNo completed:(BOOL)completed;
 - (void)apsspVideoMixAdClosedWithVideoMixAd:(APSSPVideoMixAd * _Nonnull)videoMixAd videoMixAdType:(enum APSSPVideoMixAdType)videoMixAdType;
+@end
+
+@interface APSSPWKScriptMessageHandler (SWIFT_EXTENSION(APSSPSDK)) <APSSPRewardVideoAdDelegate>
+- (void)apsspRewardVideoAdLoadSuccessWithRewardVideoAd:(APSSPRewardVideoAd * _Nonnull)rewardVideoAd;
+- (void)apsspRewardVideoAdLoadFailWithRewardVideoAd:(APSSPRewardVideoAd * _Nonnull)rewardVideoAd error:(enum APSSPNetworkError)error;
+- (void)apsspRewardVideoAdShowSuccessWithRewardVideoAd:(APSSPRewardVideoAd * _Nonnull)rewardVideoAd;
+- (void)apsspRewardVideoAdShowFailWithRewardVideoAd:(APSSPRewardVideoAd * _Nonnull)rewardVideoAd error:(enum APSSPNetworkError)error;
+- (void)apsspRewardVideoAdPlayCompletedWithRewardVideoAd:(APSSPRewardVideoAd * _Nonnull)rewardVideoAd adNetworkNo:(NSInteger)adNetworkNo completed:(BOOL)completed;
+- (void)apsspRewardVideoAdClosedWithRewardVideoAd:(APSSPRewardVideoAd * _Nonnull)rewardVideoAd;
+- (void)apsspRewardVideoAdClickedWithRewardVideoAd:(APSSPRewardVideoAd * _Nonnull)rewardVideoAd;
 @end
 
 @interface APSSPWKScriptMessageHandler (SWIFT_EXTENSION(APSSPSDK)) <APSSPRewardAdPlusDelegate>

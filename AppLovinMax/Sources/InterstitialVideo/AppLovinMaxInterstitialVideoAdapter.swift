@@ -19,8 +19,9 @@ final public class AppLovinMaxInterstitialVideoAdapter: APSSPInterstitialVideoAd
     public var rootViewController: UIViewController?
     
     public init(placementDic: [String: String], rootViewController: UIViewController?, info: [String : Any?]) {
-        let placementId = placementDic[APSSPPlacementKey.appLovinUnitId.rawValue] ?? ""
-        interstitialVideoAd = AppLovinMaxMediationInterstitialVideoAd(placementId: placementId)
+        let placementId = placementDic[APSSPPlacementKey.appLovinMaxUnitId.rawValue] ?? ""
+        let price = placementDic[APSSPPlacementKey.price.rawValue] ?? ""
+        interstitialVideoAd = AppLovinMaxMediationInterstitialVideoAd(placementId: placementId, price: price)
         self.interstitialVideoAd?.delegate = self
     }
     

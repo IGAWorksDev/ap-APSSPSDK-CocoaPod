@@ -57,7 +57,9 @@ extension AppLovinMediationInterstitialAd: ALAdLoadDelegate, ALAdDisplayDelegate
         delegate?.interstitialClicked(message: "AppLovin Interstitial Click")
     }
     
-    func ad(_ ad: ALAd, wasHiddenIn view: UIView) { }
+    func ad(_ ad: ALAd, wasHiddenIn view: UIView) {
+        delegate?.interstitialClosed(message: "AppLovin Interstitial Closed")
+    }
 
     func videoPlaybackBegan(in ad: ALAd) { }
     

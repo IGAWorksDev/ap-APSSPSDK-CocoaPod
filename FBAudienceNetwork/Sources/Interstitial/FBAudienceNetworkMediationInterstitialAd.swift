@@ -36,6 +36,12 @@ final class FBAudienceNetworkMediationInterstitialAd: NSObject {
     }
     
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("FBAudienceNetwork Interstitial placementId is empty")
+            delegate?.interstitialLoadFail(error: .nextMediation, errorMessage: "placementId is empty")
+            return
+        }
+        
         interstitial = FBInterstitialAd(placementID: placementId)
         interstitial?.delegate = self
 

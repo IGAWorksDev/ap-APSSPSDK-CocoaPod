@@ -18,8 +18,9 @@ final public class AppLovinMaxRewardVideoAdapter: APSSPRewardVideoAdapterProtoco
     public var delegate: APSSPRewardVideoAdapterDelegate?
     
     public init(placementDic: [String: String], rootViewController: UIViewController?, info: [String : Any?]) {
-        let placementId = placementDic[APSSPPlacementKey.appLovinUnitId.rawValue] ?? ""
-        rewardVideoAd = AppLovinMaxMediationRewardVideoAd(placementId: placementId, rootViewController: rootViewController)
+        let placementId = placementDic[APSSPPlacementKey.appLovinMaxUnitId.rawValue] ?? ""
+        let price = placementDic[APSSPPlacementKey.price.rawValue] ?? ""
+        rewardVideoAd = AppLovinMaxMediationRewardVideoAd(placementId: placementId, price: price, rootViewController: rootViewController)
         self.rewardVideoAd?.delegate = self
     }
     

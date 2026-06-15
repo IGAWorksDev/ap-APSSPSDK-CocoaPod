@@ -5,7 +5,7 @@
 
 import UIKit
 import APSSPSDK
-// import InMobiSDK
+import InMobiSDK
 
 
 final class InMobiMediationBannerView: UIView {
@@ -14,7 +14,7 @@ final class InMobiMediationBannerView: UIView {
 
     private let placementId: String
 
-    // private var bannerAd: IMBanner?
+    private var bannerAd: IMBanner?
 
     private var rootViewController: UIViewController?
 
@@ -33,7 +33,12 @@ final class InMobiMediationBannerView: UIView {
     }
 
     func load() {
-        // InMobi Banner는 320x50만 지원
+        guard !placementId.isEmpty else {
+            APLogger.error("InMobi Banner placementId is empty")
+            delegate?.bannerViewFailed(bannerView: self, error: .nextMediation, errorMessage: "placementId is empty")
+            return
+        }
+        
         guard bannerType == .banner320x50 else {
             APLogger.error("InMobi Banner only supports 320x50")
             delegate?.bannerViewFailed(bannerView: self, error: .nextMediation, errorMessage: "InMobi Banner only supports 320x50")
@@ -43,35 +48,39 @@ final class InMobiMediationBannerView: UIView {
         let pid = Int64(placementId) ?? 0
         APLogger.debug("Start InMobi Banner load, placementId: \(pid)")
 
-        // let banner = IMBanner(frame: CGRect(x: 0, y: 0, width: 320, height: 50), placementId: pid)
-        // banner.delegate = self
-        // bannerAd = banner
-        // addSubview(banner)
-        // banner.load()
+        let banner = IMBanner(frame: CGRect(x: 0, y: 0, width: 320, height: 50), placementId: pid)
+        banner.delegate = self
+        bannerAd = banner
+        addSubview(banner)
+        banner.load()
     }
 
     func stop() {
         if !subviews.isEmpty {
             subviews.first?.removeFromSuperview()
         }
-        // bannerAd?.delegate = nil
-        // bannerAd = nil
+        bannerAd?.delegate = nil
+        bannerAd = nil
     }
 }
 
 
 // MARK: - IMBannerDelegate
-extension InMobiMediationBannerView {
-    // func banner(_ banner: IMBanner, didReceiveWithMetaInfo info: IMAdMetaInfo) {
-    //     delegate?.bannerViewSuccess(bannerView: self)
-    // }
-    //
-    // func bannerAd(_ bannerAd: IMBanner, didFailToLoadWithError error: IMRequestStatus) {
-    //     APLogger.error("InMobi Banner Error: \(error.localizedDescription)")
-    //     delegate?.bannerViewFailed(bannerView: self, error: .nextMediation, errorMessage: nil)
-    // }
-    //
-    // func bannerAdWasClicked(_ bannerAd: IMBanner) {
-    //     delegate?.bannerViewClicked(message: "InMobi Banner Clicked")
-    // }
+extension InMobiMediationBannerView: IMBannerDelegate {
+    func banner(_ banner: IMBanner, didReceiveWithMetaInfo info: IMAdMetaInfo) {
+        delegate?.bannerViewSuccess(bannerView: self)
+    }
+
+    func banner(_ banner: IMBanner, didFailToLoadWithError error: IMRequestStatus) {
+        APLogger.error("InMobi Banner Error: \(error.localizedDescription)")
+        delegate?.bannerViewFailed(bannerView: self, error: .nextMediation, errorMessage: error.localizedDescription)
+    }
+
+    func banner(_ banner: IMBanner, didInteractWithParams params: [String: Any]?) {
+        delegate?.bannerViewClicked(message: "InMobi Banner Clicked")
+    }
+
+    func bannerDidFinishLoading(_ banner: IMBanner) {
+        delegate?.bannerViewImpression(message: "InMobi Banner Impression")
+    }
 }

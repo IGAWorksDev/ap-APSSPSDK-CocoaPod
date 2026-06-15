@@ -56,6 +56,12 @@ final class VungleMediationBannerView: UIView {
     }
     
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("Vungle Banner placementId is empty")
+            delegate?.bannerViewFailed(bannerView: self, error: .nextMediation, errorMessage: "placementId is empty")
+            return
+        }
+        
         switch bannerType {
         case .banner320x50:
             bannerAd = VungleBanner(placementId: placementId, size: BannerSize.regular)

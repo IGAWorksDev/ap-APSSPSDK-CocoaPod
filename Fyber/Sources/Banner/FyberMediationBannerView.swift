@@ -30,6 +30,12 @@ final class FyberMediationBannerView: UIView {
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("Fyber Banner placementId is empty")
+            delegate?.bannerViewFailed(bannerView: self, error: .nextMediation, errorMessage: "placementId is empty")
+            return
+        }
+        
         let adRequest = IAAdRequest.build { builder in
             builder.useSecureConnections = true
             builder.spotID = self.placementId

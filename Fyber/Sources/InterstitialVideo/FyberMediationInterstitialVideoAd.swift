@@ -35,6 +35,12 @@ final class FyberMediationInterstitialVideoAd: NSObject {
     }
 
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("Fyber InterstitialVideo placementId is empty")
+            delegate?.interstitialVideoLoadFail(error: .nextMediation, errorMessage: "placementId is empty")
+            return
+        }
+        
         let adRequest = IAAdRequest.build { builder in
             builder.useSecureConnections = true
             builder.spotID = self.placementId

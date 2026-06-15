@@ -21,6 +21,12 @@ final class MolocoMediationBannerView: UIView {
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 
     func load() {
+        guard !adUnitId.isEmpty else {
+            APLogger.error("Moloco Banner adUnitId is empty")
+            delegate?.bannerViewFailed(bannerView: self, error: .nextMediation, errorMessage: "adUnitId is empty")
+            return
+        }
+        
         guard let rootViewController else {
             delegate?.bannerViewFailed(bannerView: self, error: .nextMediation, errorMessage: "rootViewController is nil")
             return
@@ -68,7 +74,9 @@ extension MolocoMediationBannerView: MolocoBannerDelegate {
         delegate?.bannerViewClicked(message: "Moloco Banner clicked")
     }
 
-    func didShow(ad: any MolocoAd) { }
+    func didShow(ad: any MolocoAd) {
+        delegate?.bannerViewImpression(message: "Moloco Banner Impression")
+    }
     func failToShow(ad: any MolocoAd, with error: Error?) { }
     func didHide(ad: any MolocoAd) { }
 }

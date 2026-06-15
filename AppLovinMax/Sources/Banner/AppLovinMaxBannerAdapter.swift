@@ -21,7 +21,7 @@ final public class AppLovinMaxBannerAdapter: APSSPBannerAdapterProtocol {
     public init(placementDic: [String: String], bannerType: APSSPBannerSize, rootViewController: UIViewController?, info: [String : Any?]) {
         let placementId = placementDic[APSSPPlacementKey.appLovinMaxUnitId.rawValue] ?? ""
         let price = placementDic[APSSPPlacementKey.price.rawValue] ?? ""
-        self.bannerView = AppLovinMaxMediationBannerView(placementId: placementId, bannerType: bannerType, rootViewController: rootViewController)
+        self.bannerView = AppLovinMaxMediationBannerView(placementId: placementId, price: price, bannerType: bannerType, rootViewController: rootViewController)
         self.rootViewController = rootViewController
         bannerView.delegate = self
     }

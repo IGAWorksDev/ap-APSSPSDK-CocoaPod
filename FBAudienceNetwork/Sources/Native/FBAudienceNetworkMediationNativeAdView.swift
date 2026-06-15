@@ -84,6 +84,12 @@ final class FBAudienceNetworkMediationNativeAdView: UIView {
     }
     
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("FBAudienceNetwork Native placementId is empty")
+            delegate?.nativeLoadFail(error: .nextMediation, errorMessage: "placementId is empty")
+            return
+        }
+        
         if nativeBannerRenderer != nil {
             let nativeBannerAd = FBNativeBannerAd(placementID: placementId)
             self.nativeBannerAd = nativeBannerAd

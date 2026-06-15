@@ -44,6 +44,12 @@ final class FyberMediationRewardVideoAd: NSObject {
     }
     
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("Fyber RewardVideo placementId is empty")
+            delegate?.rewardVideoLoadFail(error: .nextMediation, errorMessage: "placementId is empty")
+            return
+        }
+        
         guard let rootViewController else {
             APLogger.error("Fyber must have rootviewController")
             delegate?.rewardVideoLoadFail(error: .nextMediation, errorMessage: "rootViewController is nil")
@@ -56,6 +62,11 @@ final class FyberMediationRewardVideoAd: NSObject {
             builder.timeout = 10
         }
         
+        guard let adRequest else {
+            self.delegate?.rewardVideoLoadFail(error: .nextMediation, errorMessage: "Fyber RewardVideo IAAdRequest build failed")
+            return
+        }
+        
         guard let viewUnitController: IAVideoContentController = IAVideoContentController.build({ builder in
             builder.videoContentDelegate = self
         }) else { return }
@@ -66,7 +77,7 @@ final class FyberMediationRewardVideoAd: NSObject {
         }) else { return }
         
         guard let adspot: IAAdSpot = IAAdSpot.build ({ builder in
-            builder.adRequest = adRequest!
+            builder.adRequest = adRequest
             builder.addSupportedUnitController(fullscreenUnitController)
         }) else { return }
         

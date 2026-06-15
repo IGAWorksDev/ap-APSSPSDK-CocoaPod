@@ -5,7 +5,7 @@
 
 import UIKit
 import APSSPSDK
-// import InMobiSDK
+import InMobiSDK
 
 
 final class InMobiMediationInterstitialAd: NSObject {
@@ -14,7 +14,7 @@ final class InMobiMediationInterstitialAd: NSObject {
 
     private let placementId: String
 
-    // private var interstitialAd: IMInterstitial?
+    private var interstitialAd: IMInterstitial?
 
 
     init(placementId: String) {
@@ -22,45 +22,51 @@ final class InMobiMediationInterstitialAd: NSObject {
     }
 
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("InMobi Interstitial placementId is empty")
+            delegate?.interstitialLoadFail(error: .nextMediation, errorMessage: "placementId is empty")
+            return
+        }
+        
         let pid = Int64(placementId) ?? 0
         APLogger.debug("Start InMobi Interstitial load, placementId: \(pid)")
 
-        // interstitialAd = IMInterstitial(placementId: pid)
-        // interstitialAd?.delegate = self
-        // interstitialAd?.load()
+        interstitialAd = IMInterstitial(placementId: pid)
+        interstitialAd?.delegate = self
+        interstitialAd?.load()
     }
 
     func present(from: UIViewController) {
-        // interstitialAd?.show(from: from)
+        interstitialAd?.show(from: from)
     }
 }
 
 
 // MARK: - IMInterstitialDelegate
-extension InMobiMediationInterstitialAd {
-    // func interstitialDidFinishLoading(_ interstitial: IMInterstitial) {
-    //     delegate?.interstitialLoadSuccess()
-    // }
-    //
-    // func interstitial(_ interstitial: IMInterstitial, didFailToLoadWithError error: IMRequestStatus) {
-    //     APLogger.error("InMobi Interstitial Error: \(error.localizedDescription)")
-    //     delegate?.interstitialLoadFail(error: .nextMediation, errorMessage: error.localizedDescription)
-    // }
-    //
-    // func interstitialWillPresent(_ interstitial: IMInterstitial) {
-    //     delegate?.interstitialShowSuccess(message: "InMobi Interstitial is show")
-    // }
-    //
-    // func interstitial(_ interstitial: IMInterstitial, didFailToPresentWithError error: IMRequestStatus) {
-    //     APLogger.error("InMobi Interstitial show fail: \(error.localizedDescription)")
-    //     delegate?.interstitialShowFail(message: "InMobi Interstitial show Fail")
-    // }
-    //
-    // func interstitialDidDismiss(_ interstitial: IMInterstitial) {
-    //     delegate?.interstitialClosed(message: "InMobi Interstitial is closed")
-    // }
-    //
-    // func interstitialAdWasClicked(_ interstitial: IMInterstitial) {
-    //     delegate?.interstitialClicked(message: "InMobi Interstitial Clicked")
-    // }
+extension InMobiMediationInterstitialAd: IMInterstitialDelegate {
+    func interstitialDidFinishLoading(_ interstitial: IMInterstitial) {
+        delegate?.interstitialLoadSuccess()
+    }
+
+    func interstitial(_ interstitial: IMInterstitial, didFailToLoadWithError error: IMRequestStatus) {
+        APLogger.error("InMobi Interstitial Error: \(error.localizedDescription)")
+        delegate?.interstitialLoadFail(error: .nextMediation, errorMessage: error.localizedDescription)
+    }
+
+    func interstitialWillPresent(_ interstitial: IMInterstitial) {
+        delegate?.interstitialShowSuccess(message: "InMobi Interstitial show")
+    }
+
+    func interstitial(_ interstitial: IMInterstitial, didFailToPresentWithError error: IMRequestStatus) {
+        APLogger.error("InMobi Interstitial show fail: \(error.localizedDescription)")
+        delegate?.interstitialShowFail(message: "InMobi Interstitial show Fail")
+    }
+
+    func interstitialDidDismiss(_ interstitial: IMInterstitial) {
+        delegate?.interstitialClosed(message: "InMobi Interstitial closed")
+    }
+
+    func interstitial(_ interstitial: IMInterstitial, didInteractWithParams params: [String: Any]?) {
+        delegate?.interstitialClicked(message: "InMobi Interstitial Clicked")
+    }
 }

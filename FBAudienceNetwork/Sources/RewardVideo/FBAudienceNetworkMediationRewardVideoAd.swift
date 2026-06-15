@@ -36,9 +36,16 @@ final class FBAudienceNetworkMediationRewardVideoAd: NSObject {
           return
         }
         rewardedVideoAd.show(fromRootViewController: from)
+        delegate?.rewardVideoShowSuccess(message: "FBAudienceNetwork RewardVideo show")
     }
     
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("FBAudienceNetwork RewardVideo placementId is empty")
+            delegate?.rewardVideoLoadFail(error: .nextMediation, errorMessage: "placementId is empty")
+            return
+        }
+        
         rewardedVideoAd = FBRewardedVideoAd(placementID: placementId)
         rewardedVideoAd?.delegate = self
         

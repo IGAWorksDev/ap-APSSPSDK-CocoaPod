@@ -14,6 +14,12 @@ final class MolocoMediationRewardVideoAd: NSObject {
     }
 
     @MainActor func load() {
+        guard !adUnitId.isEmpty else {
+            APLogger.error("Moloco RewardVideo adUnitId is empty")
+            delegate?.rewardVideoLoadFail(error: .nextMediation, errorMessage: "adUnitId is empty")
+            return
+        }
+        
         let params = MolocoCreateAdParams(adUnit: adUnitId, mediation: "AdPopcornSSP")
         rewardedAd = Moloco.shared.createRewarded(params: params)
         rewardedAd?.rewardedDelegate = self

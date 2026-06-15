@@ -16,12 +16,16 @@ final class AppLovinMaxMediationInterstitialVideoAd: NSObject {
     var delegate: APSSPInterstitialVideoAdapterDelegate?
     
     private let placementId: String
+    private let price: String
     
     private var interstitialVideoAd: MAInterstitialAd?
     
+    private let priceParam = "jC7Fp"
+    private let disableAutoRetriesParam = "disable_auto_retries"
     
-    init(placementId: String) {
+    init(placementId: String, price: String) {
         self.placementId = placementId
+        self.price = price
     }
     
     func present(from: UIViewController, completion: @escaping () -> Void) {
@@ -32,11 +36,16 @@ final class AppLovinMaxMediationInterstitialVideoAd: NSObject {
     }
     
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("AppLovinMax InterstitialVideo Ad Unit ID is empty")
+            delegate?.interstitialVideoLoadFail(error: .nextMediation, errorMessage: "Ad Unit ID is empty")
+            return
+        }
+        
         interstitialVideoAd = MAInterstitialAd(adUnitIdentifier: placementId)
         interstitialVideoAd?.delegate = self
-
-        interstitialVideoAd?.setExtraParameterForKey("jC7Fp", value: "«value»")
-        // Load the first ad
+        interstitialVideoAd?.setExtraParameterForKey(disableAutoRetriesParam, value: "true")
+        interstitialVideoAd?.setExtraParameterForKey(priceParam, value: price)
         interstitialVideoAd?.load()
     }
 }
@@ -65,5 +74,7 @@ extension AppLovinMaxMediationInterstitialVideoAd : MAAdDelegate {
         delegate?.interstitialVideoLoadFail(error: .nextMediation, errorMessage: error.description)
     }
     
-    func didHide(_ ad: MAAd) { }
+    func didHide(_ ad: MAAd) {
+        delegate?.interstitialVideoClosed(message: "AppLovinMax interstitialVideoAd Closed")
+    }
 }

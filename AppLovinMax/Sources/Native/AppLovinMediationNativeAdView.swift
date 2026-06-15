@@ -30,12 +30,15 @@ final class AppLovinMediationNativeAdView: UIView {
     var nativeAdView: UIView?
     
     private let placementId: String
-    
+    private let price: String
     private let rootViewController: UIViewController?
     
+    private let priceParam = "jC7Fp"
+    private let disableAutoRetriesParam = "disable_auto_retries"
     
-    init(placementId: String, rootViewController: UIViewController?, render: AnyObject) {
+    init(placementId: String, price: String, rootViewController: UIViewController?, render: AnyObject) {
         self.placementId = placementId
+        self.price = price
         self.rootViewController = rootViewController
         super.init(frame: .zero)
         
@@ -51,6 +54,12 @@ final class AppLovinMediationNativeAdView: UIView {
     }
     
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("AppLovinMax Native Ad Unit ID is empty")
+            delegate?.nativeLoadFail(error: .nextMediation, errorMessage: "Ad Unit ID is empty")
+            return
+        }
+        
         guard let rootViewController else {
             APLogger.error("NativeAd rootViewController is nil")
             delegate?.nativeLoadFail(error: .nextMediation, errorMessage: "rootViewController is nil")
@@ -65,8 +74,8 @@ final class AppLovinMediationNativeAdView: UIView {
         
         nativeAdLoader = MANativeAdLoader(adUnitIdentifier: placementId)
         nativeAdLoader?.nativeAdDelegate = self
-        
-        nativeAdLoader?.setExtraParameterForKey("jC7Fp", value: "value")      // DynamicBiding 처리!
+        nativeAdLoader?.setExtraParameterForKey(disableAutoRetriesParam, value: "true")
+        nativeAdLoader?.setExtraParameterForKey(priceParam, value: price)
         APLogger.debug("Start AppLovin Native load, UnitID: \(placementId)")
         nativeAdLoader?.loadAd(into: adView)
     }

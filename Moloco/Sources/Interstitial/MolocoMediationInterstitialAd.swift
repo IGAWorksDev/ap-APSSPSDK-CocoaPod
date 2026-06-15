@@ -14,6 +14,12 @@ final class MolocoMediationInterstitialAd: NSObject {
     }
 
     @MainActor func load() {
+        guard !adUnitId.isEmpty else {
+            APLogger.error("Moloco Interstitial adUnitId is empty")
+            delegate?.interstitialLoadFail(error: .nextMediation, errorMessage: "adUnitId is empty")
+            return
+        }
+        
         let params = MolocoCreateAdParams(adUnit: adUnitId, mediation: "AdPopcornSSP")
         interstitialAd = Moloco.shared.createInterstitial(params: params)
         interstitialAd?.interstitialDelegate = self

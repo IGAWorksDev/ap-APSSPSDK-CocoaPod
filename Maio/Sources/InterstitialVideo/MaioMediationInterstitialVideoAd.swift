@@ -8,14 +8,14 @@
 import UIKit
 
 import APSSPSDK
-// import Maio
+import Maio
 
 
 final class MaioMediationInterstitialVideoAd: NSObject {
     
     var delegate: APSSPInterstitialVideoAdapterDelegate?
     
-    // private var interstitialAd: MaioInterstitial?
+    private var interstitialAd: MaioInterstitial?
     
     private let zoneId: String
     
@@ -36,40 +36,40 @@ final class MaioMediationInterstitialVideoAd: NSObject {
         
         APLogger.debug("Start Maio InterstitialVideo load, zoneId: \(zoneId)")
         
-        // let request = MaioRequest(zoneId: zoneId, testMode: false)
-        // interstitialAd = MaioInterstitial.loadAd(with: request, callback: self)
+        let request = MaioRequest(zoneId: zoneId, testMode: false)
+        interstitialAd = MaioInterstitial.loadAd(request: request, callback: self)
     }
     
     func present(from: UIViewController, completion: @escaping () -> Void) {
-        // guard let interstitialAd else {
-        //     delegate?.interstitialVideoShowFail(message: "Maio InterstitialVideo ShowFail - No Ad Loaded")
-        //     return
-        // }
-        // interstitialAd.show(withViewContext: from, callback: self)
+        guard let interstitialAd else {
+            delegate?.interstitialVideoShowFail(message: "Maio InterstitialVideo ShowFail - No Ad Loaded")
+            return
+        }
+        interstitialAd.show(viewContext: from, callback: self)
     }
 }
 
 
 // MARK: - MaioInterstitialLoadCallback, MaioInterstitialShowCallback
-extension MaioMediationInterstitialVideoAd {
+extension MaioMediationInterstitialVideoAd: MaioInterstitialLoadCallback, MaioInterstitialShowCallback {
     
-    // func didLoad(_ ad: MaioInterstitial) {
-    //     APLogger.debug("Maio InterstitialVideo didLoad")
-    //     delegate?.interstitialVideoLoadSuccess()
-    // }
+    func didLoad(_ ad: MaioInterstitial) {
+        APLogger.debug("Maio InterstitialVideo didLoad")
+        delegate?.interstitialVideoLoadSuccess()
+    }
     
-    // func didFail(_ ad: MaioInterstitial, errorCode: Int) {
-    //     APLogger.error("Maio InterstitialVideo didFail: \(errorCode)")
-    //     delegate?.interstitialVideoLoadFail(error: .nextMediation, errorMessage: nil)
-    // }
+    func didFail(_ ad: MaioInterstitial, errorCode: Int) {
+        APLogger.error("Maio InterstitialVideo didFail: \(errorCode)")
+        delegate?.interstitialVideoLoadFail(error: .nextMediation, errorMessage: "Maio InterstitialVideo error: \(errorCode)")
+    }
     
-    // func didOpen(_ ad: MaioInterstitial) {
-    //     APLogger.debug("Maio InterstitialVideo didOpen")
-    //     delegate?.interstitialVideoShowSuccess(message: "Maio InterstitialVideo ShowSuccess")
-    // }
+    func didOpen(_ ad: MaioInterstitial) {
+        APLogger.debug("Maio InterstitialVideo didOpen")
+        delegate?.interstitialVideoShowSuccess(message: "Maio InterstitialVideo ShowSuccess")
+    }
     
-    // func didClose(_ ad: MaioInterstitial) {
-    //     APLogger.debug("Maio InterstitialVideo didClose")
-    //     delegate?.interstitialVideoClosed(message: "Maio InterstitialVideo Closed")
-    // }
+    func didClose(_ ad: MaioInterstitial) {
+        APLogger.debug("Maio InterstitialVideo didClose")
+        delegate?.interstitialVideoClosed(message: "Maio InterstitialVideo Closed")
+    }
 }

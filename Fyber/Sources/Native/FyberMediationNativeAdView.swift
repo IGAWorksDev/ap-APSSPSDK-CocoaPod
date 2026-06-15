@@ -40,6 +40,12 @@ final class FyberMediationNativeAdView: NSObject {
     }
     
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("Fyber Native placementId is empty")
+            delegate?.nativeLoadFail(error: .nextMediation, errorMessage: "placementId is empty")
+            return
+        }
+        
         // Fyber Native는 bidding only
         guard let biddingData else {
             APLogger.error("Fyber Native only provides bidding")

@@ -22,8 +22,9 @@ final public class AppLovinMaxNativeAdapter: APSSPNativeAdapterProtocol {
     
 
     public init(placementDic: [String: String], rootViewController: UIViewController?, render: AnyObject, info: [String : Any?]) {
-        let placementId = placementDic[APSSPPlacementKey.appLovinUnitId.rawValue] ?? ""
-        self.nativeAdView = AppLovinMediationNativeAdView(placementId: placementId, rootViewController: rootViewController, render: render)
+        let placementId = placementDic[APSSPPlacementKey.appLovinMaxUnitId.rawValue] ?? ""
+        let price = placementDic[APSSPPlacementKey.price.rawValue] ?? ""
+        self.nativeAdView = AppLovinMediationNativeAdView(placementId: placementId, price: price, rootViewController: rootViewController, render: render)
         nativeAdView.delegate = self
     }
 

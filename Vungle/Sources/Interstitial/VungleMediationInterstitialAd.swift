@@ -30,6 +30,12 @@ final class VungleMediationInterstitialAd: NSObject {
     }
     
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("Vungle Interstitial placementId is empty")
+            delegate?.interstitialLoadFail(error: .nextMediation, errorMessage: "placementId is empty")
+            return
+        }
+        
         self.interstitialAd = VungleInterstitial(placementId: placementId)
         self.interstitialAd?.delegate = self
         APLogger.debug("Start Vungle Interstitial load,  placementId: \(placementId)")

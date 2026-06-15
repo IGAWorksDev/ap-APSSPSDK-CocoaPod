@@ -49,6 +49,12 @@ final class InMobiMediationNativeAdView: UIView {
     }
 
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("InMobi Native placementId is empty")
+            delegate?.nativeLoadFail(error: .nextMediation, errorMessage: "placementId is empty")
+            return
+        }
+        
         guard rootViewController != nil else {
             APLogger.error("NativeAd rootViewController is nil")
             delegate?.nativeLoadFail(error: .nextMediation, errorMessage: "rootViewController is nil")

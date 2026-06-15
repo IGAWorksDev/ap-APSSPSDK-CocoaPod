@@ -16,14 +16,17 @@ final class AppLovinMaxMediationRewardVideoAd: NSObject {
     var delegate: APSSPRewardVideoAdapterDelegate?
     
     private let placementId: String
-    
+    private let price: String
     private let rootViewController: UIViewController?
     
     private var rewardvideoAd: MARewardedAd?
     
+    private let priceParam = "jC7Fp"
+    private let disableAutoRetriesParam = "disable_auto_retries"
     
-    init(placementId: String, rootViewController: UIViewController?) {
+    init(placementId: String, price: String, rootViewController: UIViewController?) {
         self.placementId = placementId
+        self.price = price
         self.rootViewController = rootViewController
     }
     
@@ -37,12 +40,16 @@ final class AppLovinMaxMediationRewardVideoAd: NSObject {
     }
     
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("AppLovinMax RewardVideo Ad Unit ID is empty")
+            delegate?.rewardVideoLoadFail(error: .nextMediation, errorMessage: "Ad Unit ID is empty")
+            return
+        }
+        
         rewardvideoAd = MARewardedAd.shared(withAdUnitIdentifier: placementId)
         rewardvideoAd?.delegate = self
-
-        rewardvideoAd?.setExtraParameterForKey("jC7Fp", value: "«value»")
-
-        // Load the first ad
+        rewardvideoAd?.setExtraParameterForKey(disableAutoRetriesParam, value: "true")
+        rewardvideoAd?.setExtraParameterForKey(priceParam, value: price)
         rewardvideoAd?.load()
     }
         
@@ -76,5 +83,7 @@ extension AppLovinMaxMediationRewardVideoAd: MARewardedAdDelegate {
         delegate?.rewardVideoLoadFail(error: .nextMediation, errorMessage: error.description)
     }
 
-    func didHide(_ ad: MAAd) { }
+    func didHide(_ ad: MAAd) {
+        delegate?.rewardVideoClosed(message: "AppLovinMax RewardVideoAd Closed")
+    }
 }

@@ -35,11 +35,18 @@ final class GAMMediationRewardVideoAd: NSObject {
         rewardedAd.present(from: from) {
             let reward = rewardedAd.adReward
             print("GAM Reward received with currency \(reward.amount), amount \(reward.amount.doubleValue)")
+            self.delegate?.rewardVideoCompleted()
             completion()
         }
     }
     
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("GAM RewardVideo placementId is empty")
+            delegate?.rewardVideoLoadFail(error: .nextMediation, errorMessage: "placementId is empty")
+            return
+        }
+        
         RewardedAd.load(with: placementId,
                            request: AdManagerRequest())
         { [self] ad, error in
@@ -59,12 +66,18 @@ final class GAMMediationRewardVideoAd: NSObject {
 extension GAMMediationRewardVideoAd: FullScreenContentDelegate {
     public func ad(_ ad: FullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
         APLogger.error("GAM RewardVideo Error: \(error.localizedDescription)")
-        delegate?.rewardVideoLoadFail(error: .nextMediation, errorMessage: error.localizedDescription)
+        delegate?.rewardVideoShowFail(message: "GAM RewardVideo show fail")
     }
 
     public func adWillPresentFullScreenContent(_ ad: FullScreenPresentingAd) {
+        delegate?.rewardVideoShowSuccess(message: "GAM RewardVideo show")
     }
 
     public func adDidDismissFullScreenContent(_ ad: FullScreenPresentingAd) {
+        delegate?.rewardVideoClosed(message: "GAM RewardVideo closed")
+    }
+
+    public func adDidRecordClick(_ ad: FullScreenPresentingAd) {
+        delegate?.rewardVideoClicked(message: "GAM RewardVideo clicked")
     }
 }

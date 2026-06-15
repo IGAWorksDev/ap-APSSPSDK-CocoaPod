@@ -20,8 +20,9 @@ final public class AppLovinMaxInterstitialAdapter: APSSPInterstitialAdapterProto
 
     
     public init(placementDic: [String: String], rootViewController: UIViewController?, info: [String : Any?]) {
-        let placementId = placementDic[APSSPPlacementKey.appLovinUnitId.rawValue] ?? ""
-        interstitialAd = AppLovinMaxMediationInterstitialAd(placementId: placementId)
+        let placementId = placementDic[APSSPPlacementKey.appLovinMaxUnitId.rawValue] ?? ""
+        let price = placementDic[APSSPPlacementKey.price.rawValue] ?? ""
+        interstitialAd = AppLovinMaxMediationInterstitialAd(placementId: placementId, price: price)
         self.interstitialAd?.delegate = self
     }
     

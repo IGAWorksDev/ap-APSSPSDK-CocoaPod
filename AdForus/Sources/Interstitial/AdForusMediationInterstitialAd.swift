@@ -33,6 +33,12 @@ final class AdForusMediationInterstitialAd: NSObject {
     }
     
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("AdForus Interstitial placementId is empty")
+            delegate?.interstitialLoadFail(error: .nextMediation, errorMessage: "placementId is empty")
+            return
+        }
+        
         let request = Request()
         InterstitialAd.load(with: placementId,
                                request: request,

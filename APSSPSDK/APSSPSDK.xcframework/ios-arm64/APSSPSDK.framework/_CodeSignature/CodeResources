@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/APSSPSDK-Swift.h</key>
 		<data>
-		E5DoJVw9Dl1gijt0LRZrJ08iles=
+		bjIFoDgcYfsX2TLWPBWpos2D+oA=
 		</data>
 		<key>Headers/AdPopcornSSP_SDK.h</key>
 		<data>
@@ -18,11 +18,11 @@
 		</data>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		kdO/yxBfXATOWMDsLhSbGwxs5aA=
+		FglWpe7iLf91406m82OOitiibb0=
 		</data>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		vm5D1Tb3N6jeLmDbykDcfQ1XHPM=
+		eGdI1oZOKxUwzKBPxNNym7k3THI=
 		</data>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		vm5D1Tb3N6jeLmDbykDcfQ1XHPM=
+		eGdI1oZOKxUwzKBPxNNym7k3THI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -43,7 +43,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9A3RUi6Vz9EzdEIWNMgb50ySHRkH/C5E2ahhTOJNJ2w=
+			BBmct39IfJN+AskOlBdXXO/GJ7uQsOOM8bSq5I8LM8s=
 			</data>
 		</dict>
 		<key>Headers/AdPopcornSSP_SDK.h</key>
@@ -57,14 +57,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			oBKz4MEpMP9nfVpPB2aR4mhkFawTXxNU+Ajp1bFrZDE=
+			XYrt3QWGwZm/AobRtcwUCYjirmL7jRQ4ymf5XEYQFN4=
 			</data>
 		</dict>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WAG2u4RctpYJSuE2JCCQg6N0zhRqY267OYEFQ+c8if0=
+			7ZCKQX6K9orwFVnbDtIfqxRi0SAHZPWUYLPjFY6TCas=
 			</data>
 		</dict>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -78,7 +78,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WAG2u4RctpYJSuE2JCCQg6N0zhRqY267OYEFQ+c8if0=
+			7ZCKQX6K9orwFVnbDtIfqxRi0SAHZPWUYLPjFY6TCas=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -50,6 +50,12 @@ final class AdForusMediationNativeAdView: UIView {
     }
     
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("AdForus Native placementId is empty")
+            delegate?.nativeLoadFail(error: .nextMediation, errorMessage: "placementId is empty")
+            return
+        }
+        
         guard let adForusRenderer else {
             APLogger.error("AdForusNativeAdRenderer doesn't connected")
             delegate?.nativeLoadFail(error: .delegateError, errorMessage: "delegate is nil")
@@ -120,6 +126,7 @@ final class AdForusMediationNativeAdView: UIView {
 extension AdForusMediationNativeAdView: NativeAdLoaderDelegate, NativeAdDelegate {
     public func adLoader(_ adLoader: AdLoader, didFailToReceiveAdWithError error: Error) {
         APLogger.error("AdForus Native Error: \(error.localizedDescription)")
+        delegate?.nativeLoadFail(error: .nextMediation, errorMessage: error.localizedDescription)
     }
     
     public func adLoaderDidFinishLoading(_ adLoader: AdLoader) {
@@ -129,5 +136,13 @@ extension AdForusMediationNativeAdView: NativeAdLoaderDelegate, NativeAdDelegate
     public func adLoader(_ adLoader: AdLoader, didReceive nativeAd: NativeAd) {
         self.nativeAd = nativeAd
         setupNativeAd()
+    }
+
+    public func nativeAdDidRecordClick(_ nativeAd: NativeAd) {
+        delegate?.nativeClicked(message: "AdForus Native clicked")
+    }
+
+    public func nativeAdDidRecordImpression(_ nativeAd: NativeAd) {
+        delegate?.nativeImpression(message: "AdForus Native impression")
     }
 }

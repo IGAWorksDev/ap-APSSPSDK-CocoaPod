@@ -8,12 +8,14 @@
 import UIKit
 
 import APSSPSDK
-//import PAGAdSDK
+import PAGAdSDK
 
 
 final class PangleAdsMediationInterstitialVideoAd: NSObject {
     
     var delegate: APSSPInterstitialVideoAdapterDelegate?
+    
+    private var interstitialAd: PAGLInterstitialAd?
     
     private let appID: String
     
@@ -28,28 +30,44 @@ final class PangleAdsMediationInterstitialVideoAd: NSObject {
     }
     
     public func present(from: UIViewController, completion: @escaping () -> Void) {
-//        interstitialAd?.present(fromRootViewController: from)
+        interstitialAd?.present(fromRootViewController: from)
     }
     
     func load() {
-//        let request = PAGLInterstitialRequest()
-//        if let biddingData {
-//            request.adString = biddingData
-//        }
-//        PAGLInterstitialAd.load(withSlotID: placementId, request: request) { [weak self] interstitialAd, error in
-//            if let error {
-//                APLogger.error("Pangle InterstitialVideo Error: \(error.localizedDescription)")
-//                self?.delegate?.interstitialVideoLoadFail(error: .nextMediation, errorMessage: nil)
-//                return
-//            }
-//            self?.interstitialAd = interstitialAd
-//            self?.interstitialAd?.delegate = self
-//            self?.delegate?.interstitialVideoLoadSuccess()
-//        }
+        let request = PAGInterstitialRequest()
+        if let biddingData {
+            request.adString = biddingData
+        }
+        PAGLInterstitialAd.load(withSlotID: placementId, request: request) { [weak self] interstitialAd, error in
+            if let error {
+                APLogger.error("Pangle InterstitialVideo Error: \(error.localizedDescription)")
+                self?.delegate?.interstitialVideoLoadFail(error: .nextMediation, errorMessage: error.localizedDescription)
+                return
+            }
+            self?.interstitialAd = interstitialAd
+            self?.interstitialAd?.delegate = self
+            self?.delegate?.interstitialVideoLoadSuccess()
+        }
     }
     
     func getBiddingToken() -> String {
-//        return PAGSdk.getBiddingToken(nil) ?? ""
         return ""
+    }
+}
+
+
+// MARK: - PAGLInterstitialAdDelegate
+extension PangleAdsMediationInterstitialVideoAd: PAGLInterstitialAdDelegate {
+    
+    func adDidShow(_ ad: PAGAdProtocol) {
+        delegate?.interstitialVideoShowSuccess(message: "Pangle InterstitialVideo show")
+    }
+    
+    func adDidClick(_ ad: PAGAdProtocol) {
+        delegate?.interstitialVideoClicked(message: "Pangle InterstitialVideo clicked")
+    }
+    
+    func adDidDismiss(_ ad: PAGAdProtocol) {
+        delegate?.interstitialVideoClosed(message: "Pangle InterstitialVideo closed")
     }
 }

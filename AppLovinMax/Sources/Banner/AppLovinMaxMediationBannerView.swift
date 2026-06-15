@@ -20,11 +20,15 @@ final class AppLovinMaxMediationBannerView: UIView {
     weak private var rootViewController: UIViewController?
     
     private let placementId: String
-    
+    private let price: String
     private let bannerType: APSSPBannerSize
     
-    init(placementId: String, bannerType: APSSPBannerSize, rootViewController: UIViewController?) {
+    private let priceParam = "jC7Fp"
+    private let disableAutoRetriesParam = "disable_auto_retries"
+    
+    init(placementId: String, price: String, bannerType: APSSPBannerSize, rootViewController: UIViewController?) {
         self.placementId = placementId
+        self.price = price
         self.bannerType = bannerType
         self.rootViewController = rootViewController
         super.init(frame: CGRect(x: 0, y: 0, width: self.bannerType.width, height: self.bannerType.height))
@@ -38,6 +42,11 @@ final class AppLovinMaxMediationBannerView: UIView {
     }
     
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("AppLovinMax Banner Ad Unit ID is empty")
+            delegate?.bannerViewFailed(bannerView: self, error: .nextMediation, errorMessage: "Ad Unit ID is empty")
+            return
+        }
         
         bannerView = MAAdView(adUnitIdentifier: placementId) // appKey?
         bannerView.delegate = self
@@ -55,7 +64,8 @@ final class AppLovinMaxMediationBannerView: UIView {
             bannerView.frame = CGRectMake(0, 0, bannerType.width, bannerType.height)
         }
         setupLayout()
-        bannerView.setExtraParameterForKey("jC7Fp", value: "«value»")
+        bannerView.setExtraParameterForKey(disableAutoRetriesParam, value: "true")
+        bannerView.setExtraParameterForKey(priceParam, value: price)
         bannerView.loadAd()
     }
     

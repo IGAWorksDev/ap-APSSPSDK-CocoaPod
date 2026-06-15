@@ -53,6 +53,11 @@ final class ADOPMediationNativeAdView: UIView {
     }
     
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("ADOP Native placementId is empty")
+            delegate?.nativeLoadFail(error: .nextMediation, errorMessage: "placementId is empty")
+            return
+        }
         
         guard let admobRenderer else {
             APLogger.error("ADOPNativeAdRenderer dosen't connected")
@@ -145,16 +150,23 @@ final class ADOPMediationNativeAdView: UIView {
 extension ADOPMediationNativeAdView: NativeAdLoaderDelegate, NativeAdDelegate {
     public func adLoader(_ adLoader: AdLoader, didFailToReceiveAdWithError error: Error) {
         APLogger.error("ADOP Native Error: \(error.localizedDescription)")
-        
+        delegate?.nativeLoadFail(error: .nextMediation, errorMessage: error.localizedDescription)
     }
     
     public func adLoaderDidFinishLoading(_ adLoader: AdLoader) {
         delegate?.nativeLoadSuccess()
     }
     
-    
     public func adLoader(_ adLoader: AdLoader, didReceive nativeAd: NativeAd) {
         self.nativeAd = nativeAd
         setupAdmob()
+    }
+
+    public func nativeAdDidRecordClick(_ nativeAd: NativeAd) {
+        delegate?.nativeClicked(message: "ADOP Native clicked")
+    }
+
+    public func nativeAdDidRecordImpression(_ nativeAd: NativeAd) {
+        delegate?.nativeImpression(message: "ADOP Native impression")
     }
 }

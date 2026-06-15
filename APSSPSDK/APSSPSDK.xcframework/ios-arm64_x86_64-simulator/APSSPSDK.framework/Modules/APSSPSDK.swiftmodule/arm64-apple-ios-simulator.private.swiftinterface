@@ -492,6 +492,7 @@ public enum APSSPPlacementKey : Swift.String {
   case mintegralRewardId
   case clientId
   case vunglePlacementId
+  case applovinSdkKey
   case appLovinUnitId
   case appLovinMaxUnitId
   case price
@@ -632,6 +633,7 @@ extension APSSPSDK.APSSPWKScriptMessageHandler : APSSPSDK.APSSPInterstitialVideo
   @objc final public func apsspInterstitialVideoAdShowSuccess(interstitialVideoAd: APSSPSDK.APSSPInterstitialVideoAd)
   @objc final public func apsspInterstitialVideoAdShowFail(interstitialVideoAd: APSSPSDK.APSSPInterstitialVideoAd, error: APSSPSDK.APSSPNetworkError)
   @objc final public func apsspInterstitialVideoAdClosed(interstitialVideoAd: APSSPSDK.APSSPInterstitialVideoAd)
+  @objc final public func apsspInterstitialVideoAdClicked(interstitialVideoAd: APSSPSDK.APSSPInterstitialVideoAd)
 }
 extension APSSPSDK.APSSPWKScriptMessageHandler : APSSPSDK.APSSPRewardVideoAdDelegate {
   @objc final public func apsspRewardVideoAdLoadSuccess(rewardVideoAd: APSSPSDK.APSSPRewardVideoAd)
@@ -640,6 +642,7 @@ extension APSSPSDK.APSSPWKScriptMessageHandler : APSSPSDK.APSSPRewardVideoAdDele
   @objc final public func apsspRewardVideoAdShowFail(rewardVideoAd: APSSPSDK.APSSPRewardVideoAd, error: APSSPSDK.APSSPNetworkError)
   @objc final public func apsspRewardVideoAdPlayCompleted(rewardVideoAd: APSSPSDK.APSSPRewardVideoAd, adNetworkNo: Swift.Int, completed: Swift.Bool)
   @objc final public func apsspRewardVideoAdClosed(rewardVideoAd: APSSPSDK.APSSPRewardVideoAd)
+  @objc final public func apsspRewardVideoAdClicked(rewardVideoAd: APSSPSDK.APSSPRewardVideoAd)
 }
 extension APSSPSDK.APSSPWKScriptMessageHandler : APSSPSDK.APSSPVideoMixAdDelegate {
   @objc final public func apsspVideoMixAdLoadSuccess(videoMixAd: APSSPSDK.APSSPVideoMixAd, videoMixAdType: APSSPSDK.APSSPVideoMixAdType)

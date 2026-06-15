@@ -36,12 +36,17 @@ final class ADOPMediationRewardVideoAd: NSObject {
          rewardedInterstitialAd.present(from: from) {
            let reward = rewardedInterstitialAd.adReward
            print("Reward received with currency \(reward.amount), amount \(reward.amount.doubleValue)")
+             self.delegate?.rewardVideoCompleted()
              completion()
-           // TODO: Reward the user.
          }
     }
     
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("ADOP RewardVideo placementId is empty")
+            delegate?.rewardVideoLoadFail(error: .nextMediation, errorMessage: "placementId is empty")
+            return
+        }
         
         RewardedAd.load(with: placementId,
                            request: Request())
@@ -60,19 +65,20 @@ final class ADOPMediationRewardVideoAd: NSObject {
 
 
 extension ADOPMediationRewardVideoAd: FullScreenContentDelegate {
-    /// Tells the delegate that the ad failed to present full screen content.
     public func ad(_ ad: FullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
         APLogger.error("ADOP RewardVideo Error: \(error.localizedDescription)")
-        delegate?.rewardVideoLoadFail(error: .nextMediation, errorMessage: error.localizedDescription)
+        delegate?.rewardVideoShowFail(message: "ADOP RewardVideo show fail")
     }
 
-    /// Tells the delegate that the ad will present full screen content.
     public func adWillPresentFullScreenContent(_ ad: FullScreenPresentingAd) {
-      print("Ad will present full screen content.")
+        delegate?.rewardVideoShowSuccess(message: "ADOP RewardVideo show")
     }
 
-    /// Tells the delegate that the ad dismissed full screen content.
     public func adDidDismissFullScreenContent(_ ad: FullScreenPresentingAd) {
-      print("Ad did dismiss full screen content.")
+        delegate?.rewardVideoClosed(message: "ADOP RewardVideo closed")
+    }
+
+    public func adDidRecordClick(_ ad: FullScreenPresentingAd) {
+        delegate?.rewardVideoClicked(message: "ADOP RewardVideo clicked")
     }
 }

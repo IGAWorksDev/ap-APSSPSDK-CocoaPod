@@ -33,6 +33,12 @@ final class AdMobMediationInterstitialAd: NSObject {
     }
     
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("AdMob Interstitial placementId is empty")
+            delegate?.interstitialLoadFail(error: .nextMediation, errorMessage: "placementId is empty")
+            return
+        }
+        
         let request = AdManagerRequest()
         AdManagerInterstitialAd.load(with: placementId,
                                request: request,

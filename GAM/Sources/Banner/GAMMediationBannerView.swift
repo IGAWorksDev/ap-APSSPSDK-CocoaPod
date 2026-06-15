@@ -41,6 +41,12 @@ final class GAMMediationBannerView: UIView {
     }
     
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("GAM Banner placementId is empty")
+            delegate?.bannerViewFailed(bannerView: self, error: .nextMediation, errorMessage: "placementId is empty")
+            return
+        }
+        
         let adSize = adSizeFor(cgSize: CGSize(width: width, height: height))
         bannerView = AdManagerBannerView(adSize: adSize)
         bannerView.delegate = self

@@ -68,10 +68,16 @@ extension AppLovinMediationRewardVideoAd: ALAdLoadDelegate, ALAdDisplayDelegate,
         delegate?.rewardVideoClicked(message: "AppLovin RewardVideo Click")
     }
     
-    func ad(_ ad: ALAd, wasHiddenIn view: UIView) { }
+    func ad(_ ad: ALAd, wasHiddenIn view: UIView) {
+        delegate?.rewardVideoClosed(message: "AppLovin RewardVideo Closed")
+    }
 
     func videoPlaybackBegan(in ad: ALAd) { }
     
-    func videoPlaybackEnded(in ad: ALAd, atPlaybackPercent percentPlayed: NSNumber, fullyWatched wasFullyWatched: Bool) { }
+    func videoPlaybackEnded(in ad: ALAd, atPlaybackPercent percentPlayed: NSNumber, fullyWatched wasFullyWatched: Bool) {
+        if wasFullyWatched {
+            delegate?.rewardVideoCompleted()
+        }
+    }
     
 }

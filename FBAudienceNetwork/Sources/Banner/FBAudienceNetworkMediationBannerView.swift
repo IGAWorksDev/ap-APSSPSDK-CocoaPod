@@ -55,6 +55,12 @@ final class FBAudienceNetworkMediationBannerView: UIView {
     }
     
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("FBAudienceNetwork Banner placementId is empty")
+            delegate?.bannerViewFailed(bannerView: self, error: .nextMediation, errorMessage: "placementId is empty")
+            return
+        }
+        
         switch bannerType {
         case .banner320x50:
             bannerView = FBAdView(placementID: placementId, adSize: kFBAdSizeHeight50Banner, rootViewController: rootviewController)

@@ -50,6 +50,12 @@ final class GAMMediationNativeAdView: UIView {
     }
     
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("GAM Native placementId is empty")
+            delegate?.nativeLoadFail(error: .nextMediation, errorMessage: "placementId is empty")
+            return
+        }
+        
         guard let gamRenderer else {
             APLogger.error("GAMNativeAdRenderer doesn't connected")
             delegate?.nativeLoadFail(error: .delegateError, errorMessage: "delegate is nil")
@@ -121,6 +127,7 @@ final class GAMMediationNativeAdView: UIView {
 extension GAMMediationNativeAdView: NativeAdLoaderDelegate, NativeAdDelegate {
     public func adLoader(_ adLoader: AdLoader, didFailToReceiveAdWithError error: Error) {
         APLogger.error("GAM Native Error: \(error.localizedDescription)")
+        delegate?.nativeLoadFail(error: .nextMediation, errorMessage: error.localizedDescription)
     }
     
     public func adLoaderDidFinishLoading(_ adLoader: AdLoader) {
@@ -130,5 +137,13 @@ extension GAMMediationNativeAdView: NativeAdLoaderDelegate, NativeAdDelegate {
     public func adLoader(_ adLoader: AdLoader, didReceive nativeAd: NativeAd) {
         self.nativeAd = nativeAd
         setupNativeAd()
+    }
+
+    public func nativeAdDidRecordClick(_ nativeAd: NativeAd) {
+        delegate?.nativeClicked(message: "GAM Native clicked")
+    }
+
+    public func nativeAdDidRecordImpression(_ nativeAd: NativeAd) {
+        delegate?.nativeImpression(message: "GAM Native impression")
     }
 }

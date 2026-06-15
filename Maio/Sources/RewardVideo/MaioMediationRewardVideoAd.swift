@@ -8,14 +8,14 @@
 import UIKit
 
 import APSSPSDK
-// import Maio
+import Maio
 
 
 final class MaioMediationRewardVideoAd: NSObject {
     
     var delegate: APSSPRewardVideoAdapterDelegate?
     
-    // private var rewardedAd: MaioRewarded?
+    private var rewardedAd: MaioRewarded?
     
     private let zoneId: String
     
@@ -36,45 +36,45 @@ final class MaioMediationRewardVideoAd: NSObject {
         
         APLogger.debug("Start Maio RewardVideo load, zoneId: \(zoneId)")
         
-        // let request = MaioRequest(zoneId: zoneId, testMode: false)
-        // rewardedAd = MaioRewarded.loadAd(with: request, callback: self)
+        let request = MaioRequest(zoneId: zoneId, testMode: false)
+        rewardedAd = MaioRewarded.loadAd(request: request, callback: self)
     }
     
     func present(from: UIViewController, completion: @escaping () -> Void) {
-        // guard let rewardedAd else {
-        //     delegate?.rewardVideoShowFail(message: "Maio RewardVideo ShowFail - No Ad Loaded")
-        //     return
-        // }
-        // rewardedAd.show(withViewContext: from, callback: self)
+        guard let rewardedAd else {
+            delegate?.rewardVideoShowFail(message: "Maio RewardVideo ShowFail - No Ad Loaded")
+            return
+        }
+        rewardedAd.show(viewContext: from, callback: self)
     }
 }
 
 
 // MARK: - MaioRewardedLoadCallback, MaioRewardedShowCallback
-extension MaioMediationRewardVideoAd {
+extension MaioMediationRewardVideoAd: MaioRewardedLoadCallback, MaioRewardedShowCallback {
     
-    // func didLoad(_ ad: MaioRewarded) {
-    //     APLogger.debug("Maio RewardVideo didLoad")
-    //     delegate?.rewardVideoLoadSuccess()
-    // }
+    func didLoad(_ ad: MaioRewarded) {
+        APLogger.debug("Maio RewardVideo didLoad")
+        delegate?.rewardVideoLoadSuccess()
+    }
     
-    // func didFail(_ ad: MaioRewarded, errorCode: Int) {
-    //     APLogger.error("Maio RewardVideo didFail: \(errorCode)")
-    //     delegate?.rewardVideoLoadFail(error: .nextMediation, errorMessage: nil)
-    // }
+    func didFail(_ ad: MaioRewarded, errorCode: Int) {
+        APLogger.error("Maio RewardVideo didFail: \(errorCode)")
+        delegate?.rewardVideoLoadFail(error: .nextMediation, errorMessage: "Maio error code: \(errorCode)")
+    }
     
-    // func didOpen(_ ad: MaioRewarded) {
-    //     APLogger.debug("Maio RewardVideo didOpen")
-    //     delegate?.rewardVideoShowSuccess(message: "Maio RewardVideo ShowSuccess")
-    // }
+    func didOpen(_ ad: MaioRewarded) {
+        APLogger.debug("Maio RewardVideo didOpen")
+        delegate?.rewardVideoShowSuccess(message: "Maio RewardVideo ShowSuccess")
+    }
     
-    // func didClose(_ ad: MaioRewarded) {
-    //     APLogger.debug("Maio RewardVideo didClose")
-    //     delegate?.rewardVideoClosed(message: "Maio RewardVideo Closed")
-    // }
+    func didClose(_ ad: MaioRewarded) {
+        APLogger.debug("Maio RewardVideo didClose")
+        delegate?.rewardVideoClosed(message: "Maio RewardVideo Closed")
+    }
     
-    // func didReward(_ ad: MaioRewarded, reward: RewardData) {
-    //     APLogger.debug("Maio RewardVideo didReward")
-    //     delegate?.rewardVideoCompleted()
-    // }
+    func didReward(_ ad: MaioRewarded, reward: RewardData) {
+        APLogger.debug("Maio RewardVideo didReward")
+        delegate?.rewardVideoCompleted()
+    }
 }

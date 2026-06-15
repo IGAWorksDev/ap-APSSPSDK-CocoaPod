@@ -37,6 +37,12 @@ final class VungleMediationRewardVideoAd: NSObject {
     }
     
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("Vungle RewardVideo placementId is empty")
+            delegate?.rewardVideoLoadFail(error: .nextMediation, errorMessage: "placementId is empty")
+            return
+        }
+        
         self.rewardedAd = VungleRewarded(placementId: placementId)
         self.rewardedAd?.delegate = self
         APLogger.debug("Start Vungle rewardvideo load,  UnitID: \(placementId)")
@@ -71,6 +77,10 @@ extension VungleMediationRewardVideoAd: VungleRewardedDelegate {
     
     func rewardedAdDidClick(_ rewarded: VungleRewarded) {
         delegate?.rewardVideoClicked(message: "Vungle RewardVideo is click")
+    }
+    
+    func rewardedAdDidRewardUser(_ rewarded: VungleRewarded) {
+        delegate?.rewardVideoCompleted()
     }
     
     func rewardedAdDidClose(_ rewarded: VungleRewarded) {

@@ -18835,6 +18835,46 @@
           },
           {
             "kind": "Var",
+            "name": "applovinSdkKey",
+            "printedName": "applovinSdkKey",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(APSSPSDK.APSSPPlacementKey.Type) -> APSSPSDK.APSSPPlacementKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "APSSPPlacementKey",
+                    "printedName": "APSSPSDK.APSSPPlacementKey",
+                    "usr": "s:8APSSPSDK17APSSPPlacementKeyO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "APSSPSDK.APSSPPlacementKey.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "APSSPPlacementKey",
+                        "printedName": "APSSPSDK.APSSPPlacementKey",
+                        "usr": "s:8APSSPSDK17APSSPPlacementKeyO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8APSSPSDK17APSSPPlacementKeyO011applovinSdkC0yA2CmF",
+            "mangledName": "$s8APSSPSDK17APSSPPlacementKeyO011applovinSdkC0yA2CmF",
+            "moduleName": "APSSPSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "appLovinUnitId",
             "printedName": "appLovinUnitId",
             "children": [
@@ -18868,10 +18908,7 @@
             "declKind": "EnumElement",
             "usr": "s:8APSSPSDK17APSSPPlacementKeyO14appLovinUnitIdyA2CmF",
             "mangledName": "$s8APSSPSDK17APSSPPlacementKeyO14appLovinUnitIdyA2CmF",
-            "moduleName": "APSSPSDK",
-            "declAttributes": [
-              "RawDocComment"
-            ]
+            "moduleName": "APSSPSDK"
           },
           {
             "kind": "Var",
@@ -23295,6 +23332,36 @@
           },
           {
             "kind": "Function",
+            "name": "apsspInterstitialVideoAdClicked",
+            "printedName": "apsspInterstitialVideoAdClicked(interstitialVideoAd:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "APSSPInterstitialVideoAd",
+                "printedName": "APSSPSDK.APSSPInterstitialVideoAd",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPInterstitialVideoAd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@APSSPSDK@objc(cs)APSSPWKScriptMessageHandler(im)apsspInterstitialVideoAdClickedWithInterstitialVideoAd:",
+            "mangledName": "$s8APSSPSDK27APSSPWKScriptMessageHandlerC31apsspInterstitialVideoAdClicked012interstitialgH0yAA017APSSPInterstitialgH0C_tF",
+            "moduleName": "APSSPSDK",
+            "objc_name": "apsspInterstitialVideoAdClickedWithInterstitialVideoAd:",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "apsspRewardVideoAdLoadSuccess",
             "printedName": "apsspRewardVideoAdLoadSuccess(rewardVideoAd:)",
             "children": [
@@ -23489,6 +23556,36 @@
             "mangledName": "$s8APSSPSDK27APSSPWKScriptMessageHandlerC24apsspRewardVideoAdClosed06rewardgH0yAA011APSSPRewardgH0C_tF",
             "moduleName": "APSSPSDK",
             "objc_name": "apsspRewardVideoAdClosedWithRewardVideoAd:",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "apsspRewardVideoAdClicked",
+            "printedName": "apsspRewardVideoAdClicked(rewardVideoAd:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "APSSPRewardVideoAd",
+                "printedName": "APSSPSDK.APSSPRewardVideoAd",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPRewardVideoAd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@APSSPSDK@objc(cs)APSSPWKScriptMessageHandler(im)apsspRewardVideoAdClickedWithRewardVideoAd:",
+            "mangledName": "$s8APSSPSDK27APSSPWKScriptMessageHandlerC25apsspRewardVideoAdClicked06rewardgH0yAA011APSSPRewardgH0C_tF",
+            "moduleName": "APSSPSDK",
+            "objc_name": "apsspRewardVideoAdClickedWithRewardVideoAd:",
             "declAttributes": [
               "Final",
               "ObjC",
@@ -44464,173 +44561,180 @@
       "kind": "StringLiteral",
       "offset": 2528,
       "length": 16,
+      "value": "\"AppLovinSdkKey\""
+    },
+    {
+      "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/InAppThirdpartyInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 2571,
+      "length": 16,
       "value": "\"AppLovinUnitId\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/InAppThirdpartyInfo.swift",
       "kind": "StringLiteral",
-      "offset": 2574,
+      "offset": 2617,
       "length": 19,
       "value": "\"AppLovinMaxUnitId\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/InAppThirdpartyInfo.swift",
       "kind": "StringLiteral",
-      "offset": 2611,
+      "offset": 2654,
       "length": 7,
       "value": "\"price\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/InAppThirdpartyInfo.swift",
       "kind": "StringLiteral",
-      "offset": 2671,
+      "offset": 2714,
       "length": 16,
       "value": "\"AppLovinZoneId\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/InAppThirdpartyInfo.swift",
       "kind": "StringLiteral",
-      "offset": 2724,
+      "offset": 2767,
       "length": 13,
       "value": "\"FyberSpotId\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/InAppThirdpartyInfo.swift",
       "kind": "StringLiteral",
-      "offset": 2775,
+      "offset": 2818,
       "length": 13,
       "value": "\"PangleAppId\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/InAppThirdpartyInfo.swift",
       "kind": "StringLiteral",
-      "offset": 2818,
+      "offset": 2861,
       "length": 19,
       "value": "\"PanglePlacementId\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/InAppThirdpartyInfo.swift",
       "kind": "StringLiteral",
-      "offset": 2877,
+      "offset": 2920,
       "length": 18,
       "value": "\"NamPublisherCode\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/InAppThirdpartyInfo.swift",
       "kind": "StringLiteral",
-      "offset": 2917,
+      "offset": 2960,
       "length": 11,
       "value": "\"NamUnitId\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/InAppThirdpartyInfo.swift",
       "kind": "StringLiteral",
-      "offset": 2972,
+      "offset": 3015,
       "length": 19,
       "value": "\"InMobiPlacementId\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/InAppThirdpartyInfo.swift",
       "kind": "StringLiteral",
-      "offset": 3026,
+      "offset": 3069,
       "length": 12,
       "value": "\"MaioZoneId\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/InAppThirdpartyInfo.swift",
       "kind": "StringLiteral",
-      "offset": 3079,
+      "offset": 3122,
       "length": 14,
       "value": "\"CampaignType\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/InAppThirdpartyInfo.swift",
       "kind": "StringLiteral",
-      "offset": 3125,
+      "offset": 3168,
       "length": 10,
       "value": "\"CsjAppId\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/InAppThirdpartyInfo.swift",
       "kind": "StringLiteral",
-      "offset": 3157,
+      "offset": 3200,
       "length": 11,
       "value": "\"CsjCodeId\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/InAppThirdpartyInfo.swift",
       "kind": "StringLiteral",
-      "offset": 3206,
+      "offset": 3249,
       "length": 14,
       "value": "\"FluctGroupId\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/InAppThirdpartyInfo.swift",
       "kind": "StringLiteral",
-      "offset": 3244,
+      "offset": 3287,
       "length": 13,
       "value": "\"FluctUnitId\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/InAppThirdpartyInfo.swift",
       "kind": "StringLiteral",
-      "offset": 3298,
+      "offset": 3341,
       "length": 16,
       "value": "\"MolocoAdUnitId\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/InAppThirdpartyInfo.swift",
       "kind": "StringLiteral",
-      "offset": 3413,
+      "offset": 3456,
       "length": 14,
       "value": "\"Bidding_Data\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/InAppThirdpartyInfo.swift",
       "kind": "StringLiteral",
-      "offset": 3475,
+      "offset": 3518,
       "length": 29,
       "value": "\"fb_Inappbidding_placementid\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/InAppThirdpartyInfo.swift",
       "kind": "StringLiteral",
-      "offset": 3548,
+      "offset": 3591,
       "length": 33,
       "value": "\"Vungle_Inappbidding_PlacementId\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/InAppThirdpartyInfo.swift",
       "kind": "StringLiteral",
-      "offset": 3622,
+      "offset": 3665,
       "length": 33,
       "value": "\"Pangle_Inappbidding_PlacementId\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/InAppThirdpartyInfo.swift",
       "kind": "StringLiteral",
-      "offset": 3697,
+      "offset": 3740,
       "length": 32,
       "value": "\"Fyber_Inappbidding_PlacementId\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/InAppThirdpartyInfo.swift",
       "kind": "StringLiteral",
-      "offset": 3773,
+      "offset": 3816,
       "length": 33,
       "value": "\"Moloco_Inappbidding_PlacementId\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/InAppThirdpartyInfo.swift",
       "kind": "StringLiteral",
-      "offset": 3851,
+      "offset": 3894,
       "length": 32,
       "value": "\"Unity_Inappbidding_PlacementId\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/InAppThirdpartyInfo.swift",
       "kind": "StringLiteral",
-      "offset": 3907,
+      "offset": 3950,
       "length": 27,
       "value": "\"Unity_Inappbidding_GameId\""
     },
@@ -46429,175 +46533,189 @@
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/HybridBridge\/APSSPWKScriptEventName.swift",
       "kind": "StringLiteral",
-      "offset": 945,
+      "offset": 946,
+      "length": 28,
+      "value": "\"OnInterstitialVideoClicked\""
+    },
+    {
+      "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/HybridBridge\/APSSPWKScriptEventName.swift",
+      "kind": "StringLiteral",
+      "offset": 1018,
       "length": 27,
       "value": "\"OnInterstitialVideoClosed\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/HybridBridge\/APSSPWKScriptEventName.swift",
       "kind": "StringLiteral",
-      "offset": 1039,
+      "offset": 1112,
       "length": 26,
       "value": "\"OnRewardVideoLoadSuccess\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/HybridBridge\/APSSPWKScriptEventName.swift",
       "kind": "StringLiteral",
-      "offset": 1105,
+      "offset": 1178,
       "length": 23,
       "value": "\"OnRewardVideoLoadFail\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/HybridBridge\/APSSPWKScriptEventName.swift",
       "kind": "StringLiteral",
-      "offset": 1171,
+      "offset": 1244,
       "length": 26,
       "value": "\"OnRewardVideoShowSuccess\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/HybridBridge\/APSSPWKScriptEventName.swift",
       "kind": "StringLiteral",
-      "offset": 1237,
+      "offset": 1310,
       "length": 23,
       "value": "\"OnRewardVideoShowFail\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/HybridBridge\/APSSPWKScriptEventName.swift",
       "kind": "StringLiteral",
-      "offset": 1305,
+      "offset": 1372,
+      "length": 22,
+      "value": "\"OnRewardVideoClicked\""
+    },
+    {
+      "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/HybridBridge\/APSSPWKScriptEventName.swift",
+      "kind": "StringLiteral",
+      "offset": 1439,
       "length": 28,
       "value": "\"OnRewardVideoPlayCompleted\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/HybridBridge\/APSSPWKScriptEventName.swift",
       "kind": "StringLiteral",
-      "offset": 1371,
+      "offset": 1505,
       "length": 21,
       "value": "\"OnRewardVideoClosed\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/HybridBridge\/APSSPWKScriptEventName.swift",
       "kind": "StringLiteral",
-      "offset": 1453,
+      "offset": 1587,
       "length": 23,
       "value": "\"OnVideoMixLoadSuccess\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/HybridBridge\/APSSPWKScriptEventName.swift",
       "kind": "StringLiteral",
-      "offset": 1513,
+      "offset": 1647,
       "length": 20,
       "value": "\"OnVideoMixLoadFail\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/HybridBridge\/APSSPWKScriptEventName.swift",
       "kind": "StringLiteral",
-      "offset": 1573,
+      "offset": 1707,
       "length": 23,
       "value": "\"OnVideoMixShowSuccess\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/HybridBridge\/APSSPWKScriptEventName.swift",
       "kind": "StringLiteral",
-      "offset": 1633,
+      "offset": 1767,
       "length": 20,
       "value": "\"OnVideoMixShowFail\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/HybridBridge\/APSSPWKScriptEventName.swift",
       "kind": "StringLiteral",
-      "offset": 1695,
+      "offset": 1829,
       "length": 25,
       "value": "\"OnVideoMixPlayCompleted\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/HybridBridge\/APSSPWKScriptEventName.swift",
       "kind": "StringLiteral",
-      "offset": 1755,
+      "offset": 1889,
       "length": 18,
       "value": "\"OnVideoMixClosed\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/HybridBridge\/APSSPWKScriptEventName.swift",
       "kind": "StringLiteral",
-      "offset": 1841,
+      "offset": 1975,
       "length": 26,
       "value": "\"OnClosedRewardAdPlusPage\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/HybridBridge\/APSSPWKScriptEventName.swift",
       "kind": "StringLiteral",
-      "offset": 1911,
+      "offset": 2045,
       "length": 27,
       "value": "\"OnRewardAdPlusEventResult\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/HybridBridge\/APSSPWKScriptEventName.swift",
       "kind": "StringLiteral",
-      "offset": 1986,
+      "offset": 2120,
       "length": 31,
       "value": "\"OnRewardAdPlusUserMediaStatus\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/HybridBridge\/APSSPWKScriptEventName.swift",
       "kind": "StringLiteral",
-      "offset": 2069,
+      "offset": 2203,
       "length": 35,
       "value": "\"OnRewardAdPlusUserPlacementStatus\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/HybridBridge\/APSSPWKScriptEventName.swift",
       "kind": "StringLiteral",
-      "offset": 2156,
+      "offset": 2290,
       "length": 13,
       "value": "\"placementId\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/HybridBridge\/APSSPWKScriptEventName.swift",
       "kind": "StringLiteral",
-      "offset": 2197,
+      "offset": 2331,
       "length": 11,
       "value": "\"errorCode\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/HybridBridge\/APSSPWKScriptEventName.swift",
       "kind": "StringLiteral",
-      "offset": 2240,
+      "offset": 2374,
       "length": 15,
       "value": "\"resultMessage\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/HybridBridge\/APSSPWKScriptEventName.swift",
       "kind": "StringLiteral",
-      "offset": 2286,
+      "offset": 2420,
       "length": 14,
       "value": "\"campaignType\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/HybridBridge\/APSSPWKScriptEventName.swift",
       "kind": "StringLiteral",
-      "offset": 2332,
+      "offset": 2466,
       "length": 15,
       "value": "\"totalBoxCount\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/HybridBridge\/APSSPWKScriptEventName.swift",
       "kind": "StringLiteral",
-      "offset": 2380,
+      "offset": 2514,
       "length": 16,
       "value": "\"dailyUserLimit\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/HybridBridge\/APSSPWKScriptEventName.swift",
       "kind": "StringLiteral",
-      "offset": 2429,
+      "offset": 2563,
       "length": 16,
       "value": "\"dailyUserCount\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/HybridBridge\/APSSPWKScriptEventName.swift",
       "kind": "StringLiteral",
-      "offset": 2483,
+      "offset": 2617,
       "length": 21,
       "value": "\"placementStatusList\""
     },
