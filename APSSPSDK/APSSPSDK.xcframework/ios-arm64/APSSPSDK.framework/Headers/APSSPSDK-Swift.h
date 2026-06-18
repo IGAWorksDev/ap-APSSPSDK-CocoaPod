@@ -1155,6 +1155,8 @@ SWIFT_CLASS("_TtC8APSSPSDK12APSSPModalAd")
 @property (nonatomic) NSInteger adGravity;
 /// 배경(블러) 터치 시 광고 닫기 여부 (기본: false)
 @property (nonatomic) BOOL closeOnBackgroundTap;
+/// 닫기 버튼 텍스트 색상 (기본: white)
+@property (nonatomic, strong) UIColor * _Nonnull closeBtnTextColor;
 /// 모달 광고 객체를 생성합니다.
 /// \param appKey 앱 키
 ///

@@ -21,6 +21,8 @@ final public class NAMModalAdapter: NSObject, APSSPModalAdapterProtocol {
     private var adLoader: GFPAdLoader?
     private var bannerView: GFPBannerView?
     private var closeLabel: UILabel?
+    private var closeBtnTextColor: UIColor
+    
 
     required public init(placementDic: [String: String], rootViewController: UIViewController?, info: [String: Any?]) {
         self.unitID = placementDic[APSSPPlacementKey.namUnitId.rawValue] ?? ""
@@ -28,6 +30,7 @@ final public class NAMModalAdapter: NSObject, APSSPModalAdapterProtocol {
         self.modalRootView = info["modalRootView"] as? UIView
         self.adGravity = info["adGravity"] as? Int ?? 0
         self.closeBtnType = info["closeBtnType"] as? Int ?? 0
+        self.closeBtnTextColor = info["closeBtnTextColor"] as? UIColor ?? .white
         super.init()
     }
 
@@ -85,7 +88,7 @@ final public class NAMModalAdapter: NSObject, APSSPModalAdapterProtocol {
         // 닫기 버튼
         let label = UILabel()
         label.text = closeBtnType == 1 ? "오늘 그만 보기" : "광고 닫기"
-        label.textColor = .white
+        label.textColor = closeBtnTextColor
         label.textAlignment = .right
         label.font = .systemFont(ofSize: 14)
         label.isUserInteractionEnabled = true

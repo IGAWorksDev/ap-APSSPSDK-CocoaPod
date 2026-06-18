@@ -28867,6 +28867,106 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "closeBtnTextColor",
+            "printedName": "closeBtnTextColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPModalAd(py)closeBtnTextColor",
+            "mangledName": "$s8APSSPSDK12APSSPModalAdC17closeBtnTextColorSo7UIColorCvp",
+            "moduleName": "APSSPSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPModalAd(im)closeBtnTextColor",
+                "mangledName": "$s8APSSPSDK12APSSPModalAdC17closeBtnTextColorSo7UIColorCvg",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPModalAd(im)setCloseBtnTextColor:",
+                "mangledName": "$s8APSSPSDK12APSSPModalAdC17closeBtnTextColorSo7UIColorCvs",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8APSSPSDK12APSSPModalAdC17closeBtnTextColorSo7UIColorCvM",
+                "mangledName": "$s8APSSPSDK12APSSPModalAdC17closeBtnTextColorSo7UIColorCvM",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(appKey:placementId:viewController:)",
@@ -46171,14 +46271,14 @@
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/ModalAd\/APSSPModalAd.swift",
       "kind": "BooleanLiteral",
-      "offset": 2786,
+      "offset": 2898,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/ModalAd\/APSSPModalAd.swift",
       "kind": "StringLiteral",
-      "offset": 8255,
+      "offset": 8423,
       "length": 53,
       "value": "\"com.adpopcorn.modalad.doNotShowTodayPlacementIdList\""
     },

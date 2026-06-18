@@ -70,6 +70,12 @@ final class NAMMediationBannerView: UIView {
     }
     
     func load() {
+        guard !unitID.isEmpty else {
+            APLogger.error("NAM Banner unitID is empty")
+            delegate?.bannerViewFailed(bannerView: self, error: .nextMediation, errorMessage: "unitID is empty")
+            return
+        }
+        
         let adParam = GFPAdParam()
 //        adParam.yearOfBirth = 1990
 //        adParam.gender = .male

@@ -66,6 +66,12 @@ final class NAMMediationNativeAdView: UIView {
     }
     
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("NAM Native placementId is empty")
+            delegate?.nativeLoadFail(error: .nextMediation, errorMessage: "placementId is empty")
+            return
+        }
+        
         let adParam = GFPAdParam()
         
         guard let rootViewController else {
