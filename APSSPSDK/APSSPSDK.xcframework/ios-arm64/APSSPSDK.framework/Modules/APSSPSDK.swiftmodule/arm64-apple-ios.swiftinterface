@@ -796,6 +796,7 @@ extension APSSPSDK.APSSPWKScriptMessageHandler : APSSPSDK.APSSPVideoMixAdDelegat
   @objc final public var backgroundColor: UIKit.UIColor
   @objc final public var closeBtnType: Swift.Int
   @objc final public var adGravity: Swift.Int
+  @objc final public var closeOnBackgroundTap: Swift.Bool
   @objc public init(appKey: Swift.String, placementId: Swift.String, viewController: UIKit.UIViewController)
   @objc deinit
   @objc final public func loadRequest()

@@ -1153,6 +1153,8 @@ SWIFT_CLASS("_TtC8APSSPSDK12APSSPModalAd")
 @property (nonatomic) NSInteger closeBtnType;
 /// 광고 위치 (0: 하단, 1: 중앙)
 @property (nonatomic) NSInteger adGravity;
+/// 배경(블러) 터치 시 광고 닫기 여부 (기본: false)
+@property (nonatomic) BOOL closeOnBackgroundTap;
 /// 모달 광고 객체를 생성합니다.
 /// \param appKey 앱 키
 ///
@@ -3160,6 +3162,8 @@ SWIFT_CLASS("_TtC8APSSPSDK12APSSPModalAd")
 @property (nonatomic) NSInteger closeBtnType;
 /// 광고 위치 (0: 하단, 1: 중앙)
 @property (nonatomic) NSInteger adGravity;
+/// 배경(블러) 터치 시 광고 닫기 여부 (기본: false)
+@property (nonatomic) BOOL closeOnBackgroundTap;
 /// 모달 광고 객체를 생성합니다.
 /// \param appKey 앱 키
 ///
