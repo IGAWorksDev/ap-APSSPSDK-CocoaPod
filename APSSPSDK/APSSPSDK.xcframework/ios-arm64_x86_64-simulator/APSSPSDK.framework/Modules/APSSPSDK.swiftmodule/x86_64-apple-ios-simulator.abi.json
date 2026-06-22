@@ -42932,51 +42932,58 @@
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/Banner\/APSSPBannerView.swift",
       "kind": "BooleanLiteral",
-      "offset": 5780,
+      "offset": 5898,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/Banner\/APSSPBannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 12346,
+      "offset": 12598,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/Banner\/APSSPBannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 12361,
+      "offset": 12613,
       "length": 8,
       "value": "1"
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/Banner\/APSSPBannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 12383,
+      "offset": 12635,
       "length": 6,
       "value": "2"
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/Banner\/APSSPBannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 12403,
+      "offset": 12655,
       "length": 12,
       "value": "3"
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/Banner\/APSSPBannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 12429,
+      "offset": 12681,
       "length": 13,
       "value": "4"
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/Banner\/APSSPBannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 12456,
+      "offset": 12708,
       "length": 6,
       "value": "5"
+    },
+    {
+      "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/Banner\/APSSPBannerContentView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 518,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Advertisements\/Interstitial\/APSSPInterstitialAd.swift",
@@ -45095,35 +45102,35 @@
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/APSSPAds.swift",
       "kind": "IntegerLiteral",
-      "offset": 856,
+      "offset": 857,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/APSSPAds.swift",
       "kind": "IntegerLiteral",
-      "offset": 986,
+      "offset": 987,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/APSSPAds.swift",
       "kind": "BooleanLiteral",
-      "offset": 1057,
+      "offset": 1058,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/APSSPAds.swift",
       "kind": "Array",
-      "offset": 1213,
+      "offset": 1214,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/APSSPAds.swift",
       "kind": "BooleanLiteral",
-      "offset": 1251,
+      "offset": 1252,
       "length": 5,
       "value": "false"
     },

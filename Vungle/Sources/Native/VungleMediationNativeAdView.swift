@@ -105,6 +105,7 @@ final class VungleMediationNativeAdView: UIView {
             APLogger.error("vungle renderer nativeAdView, mediaView, downloadBtn, iconView is nil")
             delegate?.nativeLoadFail(error: .nextMediation, errorMessage: "Vungle renderer views are nil")
             return }
+        mediaView.delegate = self
         nativeAd?.adOptionsPosition = .topRight
         nativeAd?.registerViewForInteraction(view: nativeAdView,
                                              mediaView: mediaView,
@@ -144,3 +145,27 @@ extension VungleMediationNativeAdView: VungleNativeDelegate {
           delegate?.nativeClicked(message: "Vungle NativeView is clicked")
       }
  }
+
+
+// MARK: - MediaViewDelegate
+extension VungleMediationNativeAdView: MediaViewDelegate {
+    func mediaViewVideoDidPlay(_ mediaView: MediaView) {
+        APLogger.debug("Vungle Native video did play")
+    }
+
+    func mediaViewVideoDidPause(_ mediaView: MediaView) {
+        APLogger.debug("Vungle Native video did pause")
+    }
+
+    func mediaViewVideoDidEnd(_ mediaView: MediaView) {
+        APLogger.debug("Vungle Native video did end")
+    }
+
+    func mediaViewVideoDidMute(_ mediaView: MediaView) {
+        APLogger.debug("Vungle Native video did mute")
+    }
+
+    func mediaViewVideoDidUnmute(_ mediaView: MediaView) {
+        APLogger.debug("Vungle Native video did unmute")
+    }
+}
