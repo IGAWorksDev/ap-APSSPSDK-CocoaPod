@@ -775,6 +775,7 @@ typedef SWIFT_ENUM(NSInteger, APSSPInitKey, open) {
   APSSPInitKeyCsjAppId = 8,
   APSSPInitKeyMolocoAppkey = 9,
   APSSPInitKeyAppLovinKey = 10,
+  APSSPInitKeyInMobiAccountId = 11,
 };
 
 /// ObjC에서 APSSPInitKey의 key 문자열에 접근하기 위한 헬퍼 클래스
@@ -1111,6 +1112,85 @@ typedef SWIFT_ENUM(NSInteger, APSSPMediationProvider, open) {
   APSSPMediationProviderAdMob = 2,
 };
 
+@class UILabel;
+@class UIButton;
+@class UIImageView;
+/// <h1>APSSPMediationViewBinder</h1>
+/// 통합형 네이티브 광고의 레이아웃 매핑 클래스.
+/// 매체 개발자가 하나의 ViewBinder에 UIView 참조를 설정하면,
+/// 모든 미디에이션 업체의 네이티브 광고가 동일한 레이아웃에 표시됩니다.
+/// <h2>사용 예시</h2>
+/// \code
+/// let binder = APSSPMediationViewBinder()
+/// binder.containerView = nativeAdContainerView
+/// binder.titleLabel = titleLabel
+/// binder.bodyLabel = bodyLabel
+/// binder.ctaButton = ctaButton
+/// binder.iconImageView = iconImageView
+/// binder.mediaContainerView = mediaContainerView
+/// binder.advertiserLabel = advertiserLabel
+/// binder.adChoiceContainerView = adChoiceContainerView
+///
+/// \endcodenote:
+/// <code>containerView</code>는 광고 전체를 감싸는 최상위 뷰입니다.
+/// 미디에이션 업체 SDK가 click tracking을 위해 이 뷰를 등록합니다.
+/// note:
+/// <code>mediaContainerView</code>에 업체별 MediaView(GADMediaView, FBMediaView 등)가 동적으로 삽입됩니다.
+SWIFT_CLASS("_TtC8APSSPSDK24APSSPMediationViewBinder")
+@interface APSSPMediationViewBinder : NSObject
+/// 광고 전체를 감싸는 컨테이너 뷰 (클릭 영역 등록용)
+@property (nonatomic, weak) UIView * _Nullable containerView;
+/// 광고 제목을 표시할 라벨
+@property (nonatomic, weak) UILabel * _Nullable titleLabel;
+/// 광고 본문(설명)을 표시할 라벨
+@property (nonatomic, weak) UILabel * _Nullable bodyLabel;
+/// CTA(Call To Action) 버튼
+@property (nonatomic, weak) UIButton * _Nullable ctaButton;
+/// 광고주 아이콘 이미지 뷰
+@property (nonatomic, weak) UIImageView * _Nullable iconImageView;
+/// 업체별 MediaView가 삽입될 컨테이너 뷰
+@property (nonatomic, weak) UIView * _Nullable mediaContainerView;
+/// 메인 이미지 뷰 (자사 등 동영상 없는 업체에서 사용)
+@property (nonatomic, weak) UIImageView * _Nullable mainImageView;
+/// 광고주명 라벨
+@property (nonatomic, weak) UILabel * _Nullable advertiserLabel;
+/// 별점 뷰 (UIImageView 또는 커스텀 뷰)
+@property (nonatomic, weak) UIView * _Nullable starRatingView;
+/// 가격 라벨
+@property (nonatomic, weak) UILabel * _Nullable priceLabel;
+/// 스토어명 라벨 (App Store 등)
+@property (nonatomic, weak) UILabel * _Nullable storeLabel;
+/// 로고 이미지 뷰
+@property (nonatomic, weak) UIImageView * _Nullable logoImageView;
+/// “Sponsored” 등 광고 표시 라벨
+@property (nonatomic, weak) UILabel * _Nullable sponsoredLabel;
+/// 소셜 컨텍스트 라벨 (FAN 등)
+@property (nonatomic, weak) UILabel * _Nullable socialContextLabel;
+/// AdChoice/Privacy 아이콘이 삽입될 컨테이너 뷰
+/// FAN, NAM, AppLovin MAX, InMobi, Mintegral 등 업체별 AdChoice/Options 뷰가 이 컨테이너에 동적 삽입됩니다.
+@property (nonatomic, weak) UIView * _Nullable adChoiceContainerView;
+/// AdFit — 프로필명 라벨
+@property (nonatomic, weak) UILabel * _Nullable adFitProfileNameLabel;
+/// AdFit — 프로필 아이콘 이미지 뷰
+@property (nonatomic, weak) UIImageView * _Nullable adFitProfileIconView;
+/// 통합형 네이티브 광고 ViewBinder를 생성합니다.
+/// 생성 후 필요한 프로퍼티를 개별 설정합니다.
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// 모든 옵셔널 뷰에 대해 Key가 전달되지 않은 항목을 숨김 처리합니다.
+/// 사용 가능한 키:
+/// <code>"mainImage"</code>, <code>"advertiser"</code>, <code>"starRating"</code>, <code>"price"</code>, <code>"store"</code>, <code>"logo"</code>, <code>"sponsored"</code>, <code>"socialContext"</code>, <code>"adChoice"</code>,
+/// <code>"adFitProfileName"</code>, <code>"adFitProfileIcon"</code>
+/// \param visibleKeys 표시할 필드의 키 Set. 이 Set에 없는 옵셔널 뷰는 <code>isHidden = true</code>로 설정됩니다.
+///
+- (void)hideOptionalViewsWithExcept:(NSSet<NSString *> * _Nonnull)visibleKeys;
+/// 모든 옵셔널 뷰를 숨김 처리합니다.
+- (void)hideAllOptionalViews;
+/// mediaContainerView의 기존 서브뷰를 제거하고 새로운 MediaView를 삽입합니다.
+/// \param mediaView 삽입할 업체별 MediaView
+///
+- (void)insertMediaView:(UIView * _Nonnull)mediaView;
+@end
+
 @protocol APSSPModalAdDelegate;
 /// <h1>APSSPModalAd</h1>
 /// 모달(팝업) 형태의 광고를 로드하고 표시하는 클래스
@@ -1305,6 +1385,93 @@ SWIFT_CLASS("_TtC8APSSPSDK13APSSPNativeAd")
 - (void)bindAdPopcornRendererWithAdPopcornRender:(APSSPNativeAdRenderer * _Nonnull)adPopcornRender;
 @end
 
+enum APSSPPrivacyIconPosition : NSInteger;
+/// <h1>APSSPNativeAdConfig</h1>
+/// 통합형 네이티브 광고의 동작 옵션을 설정하는 클래스.
+/// 각 미디에이션 업체별로 다른 옵션(privacyIcon, NAM adChoice, AdFit bizBoard 등)을
+/// 하나의 Config 객체로 통합하여 관리합니다.
+/// <h2>사용 예시</h2>
+/// \code
+/// let config = APSSPNativeAdConfig()
+/// config.privacyIconPosition = .topRight
+/// config.privacyIconVisibility = true
+/// config.namAdChoicePosition = .topRight
+/// nativeAd.setConfig(config)
+///
+/// \endcodenote:
+/// 설정하지 않은 옵션은 기본값으로 동작합니다.
+SWIFT_CLASS("_TtC8APSSPSDK19APSSPNativeAdConfig")
+@interface APSSPNativeAdConfig : NSObject
+/// Privacy 아이콘 표시 여부 (기본값: true)
+@property (nonatomic) BOOL privacyIconVisibility;
+/// Privacy 아이콘 위치 (기본값: .topRight)
+@property (nonatomic) enum APSSPPrivacyIconPosition privacyIconPosition;
+/// Privacy 아이콘 너비 (기본값: 15)
+@property (nonatomic) CGFloat privacyIconWidth;
+/// Privacy 아이콘 높이 (기본값: 15)
+@property (nonatomic) CGFloat privacyIconHeight;
+/// Privacy 아이콘 마진 (기본값: top 2, left 2, bottom 2, right 2)
+@property (nonatomic) UIEdgeInsets privacyIconMargin;
+/// Privacy 아이콘 cornerRadius (기본값: 0)
+@property (nonatomic) CGFloat privacyIconCornerRadius;
+/// 자사 템플릿 배경색 (기본값: #F8F8F8)
+@property (nonatomic, strong) UIColor * _Nonnull templateBackgroundColor;
+/// 자사 템플릿에서 privacy 아이콘 위치 (기본값: .bottomLeft)
+@property (nonatomic) enum APSSPPrivacyIconPosition templatePrivacyIconPosition;
+/// 자사 템플릿 privacy 아이콘 cornerRadius (기본값: 0)
+@property (nonatomic) CGFloat templatePrivacyIconCornerRadius;
+/// 자사 템플릿 메인 이미지 cornerRadius (기본값: 0)
+@property (nonatomic) CGFloat templateMainImageCornerRadius;
+/// 자사 템플릿 아이콘 이미지 cornerRadius (기본값: 0)
+@property (nonatomic) CGFloat templateIconImageCornerRadius;
+/// 자사 템플릿 privacy 아이콘 좌우 마진 (기본값: 0)
+@property (nonatomic) CGFloat templatePrivacyIconLRMargin;
+/// 자사 템플릿 privacy 아이콘 상하 마진 (기본값: 0)
+@property (nonatomic) CGFloat templatePrivacyIconTBMargin;
+/// NAM 광고 요청 타임아웃 (밀리초, 기본값: 60000)
+@property (nonatomic) NSInteger namTimeoutMillis;
+/// NAM AdChoice 위치 (기본값: 1 = TOP_RIGHT)
+/// <ul>
+///   <li>
+///     0: TOP_LEFT
+///   </li>
+///   <li>
+///     1: TOP_RIGHT
+///   </li>
+///   <li>
+///     2: BOTTOM_LEFT
+///   </li>
+///   <li>
+///     3: BOTTOM_RIGHT
+///   </li>
+/// </ul>
+@property (nonatomic) enum APSSPPrivacyIconPosition namAdChoicePosition;
+/// NAM 백그라운드 관찰 활성화 여부 (기본값: false)
+@property (nonatomic) BOOL namActivateObservingOnBackground;
+/// NAM 미디어 배경 블러 활성화 여부 (기본값: false)
+@property (nonatomic) BOOL namEnableMediaBackgroundBlur;
+/// NAM GfpDedupeManager 설정 (광고 중복 노출 방지)
+@property (nonatomic, strong) id _Nullable namDedupeManager;
+/// AdFit 테스트 모드 (기본값: false)
+@property (nonatomic) BOOL adFitTestMode;
+/// AdFit BizBoard 사용 여부 (기본값: false)
+@property (nonatomic) BOOL adFitBizBoard;
+/// AdFit 비디오 자동 재생 정책 (기본값: 0 = WIFI_ONLY)
+/// <ul>
+///   <li>
+///     0: WIFI_ONLY
+///   </li>
+///   <li>
+///     1: ALWAYS
+///   </li>
+///   <li>
+///     2: NEVER
+///   </li>
+/// </ul>
+@property (nonatomic) NSInteger adFitVideoAutoPlayPolicy;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 /// <h1>APSSPNativeAdDelegate</h1>
 /// 네이티브 광고의 로드, 클릭, 노출, 숨김 이벤트를 수신하는 delegate 프로토콜
 SWIFT_PROTOCOL("_TtP8APSSPSDK21APSSPNativeAdDelegate_")
@@ -1339,10 +1506,6 @@ SWIFT_PROTOCOL("_TtP8APSSPSDK19APSSPNativeRenderer_")
 @end
 
 @class APSSPNativeAdView;
-@class UILabel;
-@class UIImageView;
-@class UIButton;
-enum APSSPPrivacyIconPosition : NSInteger;
 SWIFT_CLASS("_TtC8APSSPSDK21APSSPNativeAdRenderer")
 @interface APSSPNativeAdRenderer : NSObject <APSSPNativeRenderer>
 @property (nonatomic, strong) UIView * _Nullable contentView;
@@ -1799,6 +1962,101 @@ typedef SWIFT_ENUM(NSInteger, APSSPSplashAdStatus, open) {
   APSSPSplashAdStatusStop = 2,
 };
 
+@protocol APSSPUnifiedNativeAdDelegate;
+/// <h1>APSSPUnifiedNativeAd</h1>
+/// 통합형 네이티브 광고를 로드하고 표시하는 뷰.
+/// 하나의 <code>APSSPMediationViewBinder</code>만 설정하면, 모든 미디에이션 업체의 네이티브 광고가
+/// 동일한 레이아웃에 표시됩니다.
+/// <h2>사용 예시</h2>
+/// \code
+/// let nativeAd = APSSPUnifiedNativeAd(placementId: "YOUR_PLACEMENT_ID", rootViewController: self)
+/// nativeAd.delegate = self
+///
+/// let binder = APSSPMediationViewBinder()
+/// binder.containerView = containerView
+/// binder.titleLabel = titleLabel
+/// binder.bodyLabel = bodyLabel
+/// binder.ctaButton = ctaButton
+/// binder.iconImageView = iconImageView
+/// binder.mediaContainerView = mediaContainer
+///
+/// nativeAd.setViewBinder(binder)
+/// nativeAd.load()
+///
+/// \endcodenote:
+/// <code>setViewBinder(_:)</code>는 <code>load()</code> 호출 전에 반드시 설정해야 합니다.
+/// note:
+/// 기존 <code>APSSPNativeAd</code>와 공존하며, 기존 API는 변경 없이 유지됩니다.
+SWIFT_CLASS("_TtC8APSSPSDK20APSSPUnifiedNativeAd")
+@interface APSSPUnifiedNativeAd : UIView
+/// 통합형 네이티브 광고 이벤트를 수신할 delegate
+@property (nonatomic, weak) id <APSSPUnifiedNativeAdDelegate> _Nullable delegate;
+/// 앱 키 (미설정 시 SDK 초기화 시 설정한 appKey 사용)
+@property (nonatomic, copy) NSString * _Nullable appKey;
+/// 네이티브 광고 PlacementID
+@property (nonatomic, readonly, copy) NSString * _Nonnull placementId;
+/// 네이티브 광고 expire 여부 (load 성공 후 6시간 경과 시 만료)
+@property (nonatomic, readonly) BOOL isExpired;
+/// 현재 광고 상태 snapshot
+@property (nonatomic, readonly, strong) APSSPNativeAdStatusInfo * _Nonnull adStatus;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// 통합형 네이티브 광고 객체를 생성합니다.
+/// \param appKey 앱 키 (optional, 미설정 시 SDK 초기화 시 appKey 사용)
+///
+/// \param placementId 네이티브 광고 PlacementID
+///
+/// \param rootViewController 광고 클릭 시 화면 전환에 사용할 뷰 컨트롤러 (optional)
+///
+- (nonnull instancetype)initWithAppKey:(NSString * _Nullable)appKey placementId:(NSString * _Nonnull)placementId rootViewController:(UIViewController * _Nullable)rootViewController OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+/// 통합형 네이티브 광고에 ViewBinder를 설정합니다.
+/// note:
+/// <code>load()</code> 호출 전에 반드시 설정해야 합니다.
+/// \param binder UI 요소가 매핑된 <code>APSSPMediationViewBinder</code>
+///
+- (void)setViewBinder:(APSSPMediationViewBinder * _Nonnull)binder;
+/// 통합형 네이티브 광고의 동작 옵션을 설정합니다.
+/// note:
+/// 설정하지 않으면 기본값으로 동작합니다.
+/// \param config 업체별 동작 옵션이 포함된 <code>APSSPNativeAdConfig</code>
+///
+- (void)setConfig:(APSSPNativeAdConfig * _Nonnull)config;
+/// 통합형 네이티브 광고를 로드합니다.
+/// <ul>
+///   <li>
+///     ViewBinder가 설정되지 않은 경우 로드 실패(<code>delegateError</code>)가 발생합니다.
+///   </li>
+///   <li>
+///     로드 결과는 delegate의 <code>unifiedNativeAdLoadSuccess</code> / <code>unifiedNativeAdLoadFail</code>로 전달됩니다.
+///   </li>
+/// </ul>
+- (void)load;
+/// 통합형 네이티브 광고를 중지하고 리소스를 해제합니다.
+- (void)stop;
+/// 기본 네이티브 UI 이외의 버튼에서 클릭 이벤트 발생 시, 수동으로 클릭 처리
+- (void)manualClickEvent;
+/// 광고 요청 결과가 No Ad일 경우, view 영역을 hidden 시킬지 여부 (기본값: true)
+- (void)noAdViewHidden:(BOOL)hidden;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+/// <h1>APSSPUnifiedNativeAdDelegate</h1>
+/// 통합형 네이티브 광고의 로드, 클릭, 노출, 숨김 이벤트를 수신하는 delegate 프로토콜.
+SWIFT_PROTOCOL("_TtP8APSSPSDK28APSSPUnifiedNativeAdDelegate_")
+@protocol APSSPUnifiedNativeAdDelegate <NSObject>
+@optional
+/// 통합형 네이티브 광고 로드 성공 시 호출
+- (void)unifiedNativeAdLoadSuccessWithNativeAd:(APSSPUnifiedNativeAd * _Nonnull)nativeAd;
+/// 통합형 네이티브 광고 로드 실패 시 호출
+- (void)unifiedNativeAdLoadFailWithNativeAd:(APSSPUnifiedNativeAd * _Nonnull)nativeAd error:(enum APSSPNetworkError)error;
+/// 통합형 네이티브 광고 클릭 시 호출
+- (void)unifiedNativeAdClickedWithNativeAd:(APSSPUnifiedNativeAd * _Nonnull)nativeAd;
+/// 통합형 네이티브 광고 노출(impression) 시 호출
+- (void)unifiedNativeAdImpressionWithNativeAd:(APSSPUnifiedNativeAd * _Nonnull)nativeAd;
+/// 통합형 네이티브 광고 숨김 시 호출
+- (void)unifiedNativeAdHiddenWithNativeAd:(APSSPUnifiedNativeAd * _Nonnull)nativeAd;
+@end
+
 @protocol APSSPVideoMixAdDelegate;
 /// <h1>APSSPVideoMixAd</h1>
 /// 비디오 믹스 광고를 로드하고 표시하는 클래스. 리워드 비디오 또는 전면 비디오 중 서버에서 자동 선택하여 노출합니다.
@@ -1891,12 +2149,14 @@ SWIFT_PROTOCOL("_TtP8APSSPSDK23APSSPVideoMixAdDelegate_")
 - (void)apsspVideoMixAdClosedWithVideoMixAd:(APSSPVideoMixAd * _Nonnull)videoMixAd videoMixAdType:(enum APSSPVideoMixAdType)videoMixAdType;
 /// 비디오 시청 완료 시 호출. completed=true면 보상 지급 가능 (리워드 타입인 경우)
 - (void)apsspVideoMixAdPlayCompletedWithVideoMixAd:(APSSPVideoMixAd * _Nonnull)videoMixAd adNetworkNo:(NSInteger)adNetworkNo completed:(BOOL)completed;
+/// 비디오 믹스 광고 클릭 시 호출
+- (void)apsspVideoMixAdClickedWithVideoMixAd:(APSSPVideoMixAd * _Nonnull)videoMixAd;
 @end
 
 typedef SWIFT_ENUM(NSInteger, APSSPVideoMixAdType, open) {
   APSSPVideoMixAdTypeInterstitial = 2,
-  APSSPVideoMixAdTypeInterstitialVideo = 4,
-  APSSPVideoMixAdTypeRewardVideo = 6,
+  APSSPVideoMixAdTypeRewardVideo = 4,
+  APSSPVideoMixAdTypeInterstitialVideo = 6,
 };
 
 @protocol APSSPWKScriptNativeEventDelegate;

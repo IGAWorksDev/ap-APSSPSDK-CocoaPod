@@ -1,4 +1,0 @@
-framework module APSSPSDK {
-  header "APSSPSDK-Swift.h"
-  requires objc
-}
