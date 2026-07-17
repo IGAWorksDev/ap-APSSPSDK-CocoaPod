@@ -12,6 +12,7 @@ Pod::Spec.new do |s|
   s.source_files = "Pangle/Sources/**/*.swift"
 
   s.requires_arc = true
+  s.static_framework = true
   s.swift_versions = ["5.0"]
   s.pod_target_xcconfig = { "OTHER_LDFLAGS" => "-ObjC" }
 
