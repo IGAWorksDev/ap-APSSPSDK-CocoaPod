@@ -15,6 +15,12 @@ public final class APSSPAdFitNativeAdRenderer: NSObject, APSSPNativeRenderer {
     @objc public var contentView: UIView?
     @objc public var adfitNativewAdView: UIView?
     @objc public var useBizBoardTemplate: Bool = false
+    
+    /// BizBoard info 아이콘 위치 조정 (AdFitNativeAd.infoIconXxxConstant에 매핑)
+    @objc public var bizBoardInfoIconTopConstant: CGFloat = 0
+    @objc public var bizBoardInfoIconBottomConstant: CGFloat = 0
+    @objc public var bizBoardInfoIconLeftConstant: CGFloat = 0
+    @objc public var bizBoardInfoIconRightConstant: CGFloat = -16
 }
 
 
@@ -59,6 +65,12 @@ final class AdFitMediationNativeAdView: UIView {
     }
     
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("AdFit Native placementId is empty")
+            delegate?.nativeLoadFail(error: .nextMediation, errorMessage: "placementId is empty")
+            return
+        }
+        
         if isReactNativeMode {
             loadReactNative()
             return
@@ -118,7 +130,10 @@ extension AdFitMediationNativeAdView: AdFitNativeAdLoaderDelegate, AdFitNativeAd
         
         if adfitRenderer.useBizBoardTemplate {
             // BizBoard 템플릿: SDK 내부에서 생성하여 bind
-            nativeAd.infoIconRightConstant = -16
+            nativeAd.infoIconTopConstant = adfitRenderer.bizBoardInfoIconTopConstant
+            nativeAd.infoIconBottomConstant = adfitRenderer.bizBoardInfoIconBottomConstant
+            nativeAd.infoIconLeftConstant = adfitRenderer.bizBoardInfoIconLeftConstant
+            nativeAd.infoIconRightConstant = adfitRenderer.bizBoardInfoIconRightConstant
             nativeAd.bind(bizboardTemplate)
             nativeAd.rootViewController = rootViewController
             nativeAd.delegate = self

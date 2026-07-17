@@ -20,6 +20,12 @@ final class CSJMediationNativeAdView: UIView, BUCustomEventProtocol {
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("CSJ Native placementId is empty")
+            delegate?.nativeLoadFail(error: .nextMediation, errorMessage: "placementId is empty")
+            return
+        }
+        
         let slot = BUAdSlot()
         slot.id = placementId
         slot.adType = .feed

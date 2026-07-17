@@ -34,5 +34,7 @@ public final class AppLovinMaxInitializationAdapter: APSSPInitializationProtocol
         ALSdk.shared().initialize(with: initConfig) { _ in
             completion(true, nil)
         }
+//        ALSdk.shared().showMediationDebugger()
+//        ALSdk.shared().settings.isVerboseLoggingEnabled = true
     }
 }

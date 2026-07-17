@@ -51,6 +51,12 @@ final class CaulyMediationBannerView: UIView {
     }
     
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("Cauly Banner placementId is empty")
+            delegate?.bannerViewFailed(bannerView: self, error: .nextMediation, errorMessage: "placementId is empty")
+            return
+        }
+        
         let caulySetting = CaulyAdSetting.global();
         switch bannerType {
         case .banner320x50:

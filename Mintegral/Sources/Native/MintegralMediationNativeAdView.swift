@@ -9,6 +9,7 @@ import UIKit
 
 import APSSPSDK
 import MTGSDK
+import MTGSDKBidding
 
 @objc
 public final class APSSPMintegralNativeAdRenderer: NSObject, APSSPNativeRenderer {
@@ -44,6 +45,7 @@ final class MintegralMediationNativeAdView: UIView {
     var mintegralRenderer: APSSPMintegralNativeAdRenderer?
     
     var nativeAdLoader: MTGNativeAdManager?
+    var bidNativeAdLoader: MTGBidNativeAdManager?
     
 //    var nativeAd: MAAd?
     
@@ -54,12 +56,14 @@ final class MintegralMediationNativeAdView: UIView {
     private let unitID: String
     
     private let rootViewController: UIViewController?
+    private var biddingData: String?
     
     
-    init(placementId: String?, unitID: String, rootViewController: UIViewController?, render: AnyObject) {
+    init(placementId: String?, unitID: String, rootViewController: UIViewController?, render: AnyObject, biddingData: String? = nil) {
         self.placementId = placementId
         self.unitID = unitID
         self.rootViewController = rootViewController
+        self.biddingData = biddingData
         super.init(frame: .zero)
         
         guard let render = render as? APSSPMintegralNativeAdRenderer else { return }
@@ -75,26 +79,49 @@ final class MintegralMediationNativeAdView: UIView {
     }
     
     func load() {
+        guard !unitID.isEmpty else {
+            APLogger.error("Mintegral Native unitID is empty")
+            delegate?.nativeLoadFail(error: .nextMediation, errorMessage: "unitID is empty")
+            return
+        }
+        
         guard let rootViewController else {
             APLogger.error("NativeAd rootViewController is nil")
             delegate?.nativeLoadFail(error: .nextMediation, errorMessage: "rootViewController is nil")
             return
         }
         
-        nativeAdLoader = MTGNativeAdManager(placementId: placementId,
-                                            unitID: unitID,
-                                            fbPlacementId: nil,
-                                            forNumAdsRequested: 1,
-                                            presenting: rootViewController)
+        APLogger.debug("Start Mintegral Native load, placementId: \(placementId ?? "nil"), UnitID: \(unitID), bidding: \(biddingData != nil)")
         
-        nativeAdLoader?.delegate = self
-        APLogger.debug("Start Mintegral Native load,  placementId: \(placementId), UnitID: \(unitID)")
-        nativeAdLoader?.loadAds()
+        if let biddingData, !biddingData.isEmpty {
+            // Bidding: MTGBidNativeAdManager 사용
+            bidNativeAdLoader = MTGBidNativeAdManager(placementId: placementId,
+                                                      unitID: unitID,
+                                                      presenting: rootViewController)
+            bidNativeAdLoader?.delegate = self
+            bidNativeAdLoader?.load(withBidToken: biddingData)
+        } else {
+            // Waterfall: MTGNativeAdManager 사용
+            var templates: [Any] = []
+               if let template = MTGTemplate(type: .MTGAD_TEMPLATE_BIG_IMAGE, adsNum: 1) {
+                   templates.append(template)
+               }
+            nativeAdLoader = MTGNativeAdManager(placementId: placementId,
+                                                unitID: unitID,
+                                                supportedTemplates: templates,
+                                                autoCacheImage: false,
+                                                adCategory: .MTGAD_CATEGORY_ALL,
+                                                presenting: rootViewController)
+            nativeAdLoader?.delegate = self
+            nativeAdLoader?.loadAds()
+        }
     }
     
     func stop() {
         nativeAdLoader?.delegate = nil
         nativeAdLoader = nil
+        bidNativeAdLoader?.delegate = nil
+        bidNativeAdLoader = nil
         nativeAdView?.removeFromSuperview()
         nativeAdView = nil
     }
@@ -105,7 +132,7 @@ final class MintegralMediationNativeAdView: UIView {
 }
 
 
-extension MintegralMediationNativeAdView: MTGNativeAdManagerDelegate, MTGMediaViewDelegate {
+extension MintegralMediationNativeAdView: MTGNativeAdManagerDelegate, MTGBidNativeAdManagerDelegate, MTGMediaViewDelegate {
     func nativeAdsLoaded(_ nativeAds: [Any]?, nativeManager: MTGNativeAdManager) {
         guard let campaign = nativeAds?.first as? MTGCampaign,
               let renderer = mintegralRenderer else {
@@ -170,7 +197,11 @@ extension MintegralMediationNativeAdView: MTGNativeAdManagerDelegate, MTGMediaVi
         
         // registerView
         if let adUIView = renderer.nativeAdView {
-            nativeAdLoader?.registerView(forInteraction: adUIView, withClickableViews: clickableViews, with: campaign)
+            if let bidLoader = bidNativeAdLoader {
+                bidLoader.registerView(forInteraction: adUIView, withClickableViews: clickableViews, with: campaign)
+            } else {
+                nativeAdLoader?.registerView(forInteraction: adUIView, withClickableViews: clickableViews, with: campaign)
+            }
         }
         
         delegate?.nativeLoadSuccess()

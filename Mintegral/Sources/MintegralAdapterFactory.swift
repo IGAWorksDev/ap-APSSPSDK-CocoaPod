@@ -28,4 +28,18 @@ public final class MintegralAdapterFactory: NSObject, APSSPAdapterFactory {
     public static func makeNativeAdapter(placementDic: [String: String], rootViewController: UIViewController?, render: AnyObject, info: [String: Any]) -> AnyObject? {
         return MintegralNativeAdapter(placementDic: placementDic, rootViewController: rootViewController, render: render, info: info)
     }
+
+    public static func makeUnifiedNativeAdapter(placementDic: [String: String], rootViewController: UIViewController?, viewBinder: APSSPMediationViewBinder, config: APSSPNativeAdConfig?, info: [String: Any]) -> AnyObject? {
+        return MintegralUnifiedNativeAdapter(placementDic: placementDic, rootViewController: rootViewController, viewBinder: viewBinder, config: config, info: info)
+    }
+
+    // MARK: - Bidding
+
+    public static func makeBiddingNativeAdapter(placementDic: [String: String], rootViewController: UIViewController?, render: AnyObject, info: [String: Any]) -> AnyObject? {
+        return MintegralNativeAdapter(inappbiddingPlacementDic: placementDic, rootViewController: rootViewController, render: render, info: info)
+    }
+
+    public static func makeBiddingUnifiedNativeAdapter(placementDic: [String: String], rootViewController: UIViewController?, viewBinder: APSSPMediationViewBinder, config: APSSPNativeAdConfig?, info: [String: Any]) -> AnyObject? {
+        return MintegralUnifiedNativeAdapter(inappBiddingPlacementDic: placementDic, rootViewController: rootViewController, viewBinder: viewBinder, config: config, info: info)
+    }
 }

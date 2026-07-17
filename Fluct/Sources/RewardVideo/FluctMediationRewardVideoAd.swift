@@ -13,6 +13,12 @@ final class FluctMediationRewardVideoAd: NSObject {
     }
 
     func load() {
+        guard !unitId.isEmpty else {
+            APLogger.error("Fluct RewardVideo unitId is empty")
+            delegate?.rewardVideoLoadFail(error: .nextMediation, errorMessage: "unitId is empty")
+            return
+        }
+        
         FSSRewardedVideo.shared.delegate = self
         FSSRewardedVideo.shared.load(withGroupId: groupId, unitId: unitId)
     }

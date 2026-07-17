@@ -38,6 +38,12 @@ final class UnityAdsMediationInterstitialAd: NSObject {
     }
     
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("UnityAds Interstitial placementId is empty")
+            delegate?.interstitialLoadFail(error: .nextMediation, errorMessage: "placementId is empty")
+            return
+        }
+        
         if UnityAds.isInitialized() {
             loadAd()
         } else {

@@ -26,6 +26,12 @@ final class CSJMediationFullscreenAd: NSObject {
     }
 
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("CSJ Fullscreen placementId is empty")
+            delegate?.loadFail(errorMessage: "placementId is empty")
+            return
+        }
+        
         fullscreenAd = BUNativeExpressFullscreenVideoAd(slotID: placementId)
         fullscreenAd?.delegate = self
         fullscreenAd?.loadData()

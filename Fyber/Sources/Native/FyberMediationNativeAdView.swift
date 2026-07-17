@@ -16,6 +16,7 @@ public final class APSSPFyberNativeAdRenderer: NSObject, APSSPNativeRenderer {
     @objc public var descriptionLabel: UILabel?
     @objc public var ctaButton: UIButton?
     @objc public var iconImageView: UIImageView?
+    @objc public var mediaContainerView: UIView?
 }
 
 
@@ -30,6 +31,7 @@ final class FyberMediationNativeAdView: NSObject {
     private var biddingData: String?
     
     private var nativeAdSpot: IANativeAdSpot?
+    private var nativeAdAssets: IANativeAdAssets?
     
     var fyberRenderer: APSSPFyberNativeAdRenderer?
     
@@ -79,9 +81,88 @@ final class FyberMediationNativeAdView: NSObject {
                 return
             }
             
-            // TODO: renderer에 nativeAdAssets 바인딩 (adTitle, adDescription, callToActionText, appIcon, mediaView)
+            // nativeAdAssets를 strong으로 보유 (gesture target이 해제되지 않도록)
+            self.nativeAdAssets = nativeAdAssets
+            
+            // renderer에 nativeAdAssets 바인딩
             APLogger.debug("Fyber Native Success")
-            self.fyberRenderer?.contentView = self.fyberRenderer?.nativeAdView
+            
+            if let renderer = self.fyberRenderer {
+                renderer.titleLabel?.text = nativeAdAssets.adTitle
+                renderer.descriptionLabel?.text = nativeAdAssets.adDescription
+                renderer.ctaButton?.setTitle(nativeAdAssets.callToActionText, for: .normal)
+                
+                // Icon
+                if let iconView = nativeAdAssets.appIcon, let imageView = renderer.iconImageView {
+                    iconView.translatesAutoresizingMaskIntoConstraints = false
+                    imageView.superview?.insertSubview(iconView, aboveSubview: imageView)
+                    NSLayoutConstraint.activate([
+                        iconView.topAnchor.constraint(equalTo: imageView.topAnchor),
+                        iconView.leadingAnchor.constraint(equalTo: imageView.leadingAnchor),
+                        iconView.trailingAnchor.constraint(equalTo: imageView.trailingAnchor),
+                        iconView.bottomAnchor.constraint(equalTo: imageView.bottomAnchor)
+                    ])
+                    imageView.isHidden = true
+                }
+                
+                // MediaView → mediaContainerView에 삽입
+                let mediaView = nativeAdAssets.mediaView
+                mediaView.isUserInteractionEnabled = true
+                if let mediaContainer = renderer.mediaContainerView {
+                    mediaView.translatesAutoresizingMaskIntoConstraints = false
+                    mediaContainer.subviews.forEach { $0.removeFromSuperview() }
+                    mediaContainer.addSubview(mediaView)
+                    NSLayoutConstraint.activate([
+                        mediaView.topAnchor.constraint(equalTo: mediaContainer.topAnchor),
+                        mediaView.leadingAnchor.constraint(equalTo: mediaContainer.leadingAnchor),
+                        mediaView.trailingAnchor.constraint(equalTo: mediaContainer.trailingAnchor),
+                        mediaView.bottomAnchor.constraint(equalTo: mediaContainer.bottomAnchor)
+                    ])
+                } else if let nativeAdView = renderer.nativeAdView {
+                    // mediaContainerView 없으면 nativeAdView 뒤에 깔기
+                    mediaView.translatesAutoresizingMaskIntoConstraints = false
+                    nativeAdView.insertSubview(mediaView, at: 0)
+                    NSLayoutConstraint.activate([
+                        mediaView.topAnchor.constraint(equalTo: nativeAdView.topAnchor),
+                        mediaView.leadingAnchor.constraint(equalTo: nativeAdView.leadingAnchor),
+                        mediaView.trailingAnchor.constraint(equalTo: nativeAdView.trailingAnchor),
+                        mediaView.bottomAnchor.constraint(equalTo: nativeAdView.bottomAnchor)
+                    ])
+                }
+                
+                // registerViewForInteraction
+                // rootView는 실제 화면에 표시되고 있는 공통 superview를 사용
+                // (renderer.nativeAdView는 Fyber SDK가 removeFromSuperview 할 수 있으므로 사용 불가)
+                let rootView: UIView
+                if let titleSuperview = renderer.titleLabel?.superview, titleSuperview.window != nil {
+                    rootView = titleSuperview
+                } else if let nativeAdView = renderer.nativeAdView {
+                    rootView = nativeAdView
+                } else {
+                    self.delegate?.nativeLoadFail(error: .nextMediation, errorMessage: "No valid rootView for Fyber")
+                    return
+                }
+                
+                rootView.tag = 8  // root
+                nativeAdAssets.mediaView.tag = 2  // mediaView
+                renderer.titleLabel?.tag = 1
+                renderer.descriptionLabel?.tag = 5
+                renderer.ctaButton?.tag = 7
+                renderer.iconImageView?.tag = 4
+                    
+                var clickableViews: [UIView] = []
+                if let title = renderer.titleLabel { clickableViews.append(title) }
+                if let desc = renderer.descriptionLabel { clickableViews.append(desc) }
+                if let cta = renderer.ctaButton { clickableViews.append(cta) }
+                    
+                nativeAdAssets.registerViewForInteraction(rootView: rootView,
+                                                          mediaView: nativeAdAssets.mediaView,
+                                                          iconView: nativeAdAssets.appIcon ?? renderer.iconImageView,
+                                                          clickableViews: clickableViews)
+                
+                renderer.contentView = renderer.nativeAdView
+            }
+            
             self.delegate?.nativeLoadSuccess()
         }
     }

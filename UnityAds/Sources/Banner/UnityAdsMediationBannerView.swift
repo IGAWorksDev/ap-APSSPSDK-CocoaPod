@@ -37,6 +37,12 @@ final class UnityAdsMediationBannerView: UIView {
     }
     
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("UnityAds Banner placementId is empty")
+            delegate?.bannerViewFailed(bannerView: self, error: .nextMediation, errorMessage: "placementId is empty")
+            return
+        }
+        
         if UnityAds.isInitialized() {
             loadBanner()
         } else {

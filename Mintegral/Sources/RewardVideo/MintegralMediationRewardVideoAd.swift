@@ -48,6 +48,12 @@ final class MintegralMediationRewardVideoAd: NSObject {
     }
     
     func load() {
+        guard !unitID.isEmpty else {
+            APLogger.error("Mintegral RewardVideo unitID is empty")
+            delegate?.rewardVideoLoadFail(error: .nextMediation, errorMessage: "unitID is empty")
+            return
+        }
+        
         APLogger.debug("Start Mintegral RewardVideo load,  placementId: \(placementId), unitId: \(unitID), rewardID: \(rewardID)")
         rewardVideoAd.loadVideo(withPlacementId: placementId, unitId: unitID, delegate: self)
     }

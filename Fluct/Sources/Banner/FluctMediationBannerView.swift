@@ -19,6 +19,12 @@ final class FluctMediationBannerView: UIView {
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 
     func load() {
+        guard !unitId.isEmpty else {
+            APLogger.error("Fluct Banner unitId is empty")
+            delegate?.bannerViewFailed(bannerView: self, error: .nextMediation, errorMessage: "unitId is empty")
+            return
+        }
+        
         let adSize: FSSAdSize
         switch bannerType {
         case .banner300x250: adSize = FSSAdSize300x250

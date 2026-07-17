@@ -19,6 +19,12 @@ final class CSJMediationBannerView: UIView {
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("CSJ Banner placementId is empty")
+            delegate?.bannerViewFailed(bannerView: self, error: .nextMediation, errorMessage: "placementId is empty")
+            return
+        }
+        
         let adSize: CGSize = (bannerType == .banner300x250) ? CGSize(width: 300, height: 250) : CGSize(width: 320, height: 50)
         guard let rootViewController else {
             delegate?.bannerViewFailed(bannerView: self, error: .nextMediation, errorMessage: "rootViewController is nil")

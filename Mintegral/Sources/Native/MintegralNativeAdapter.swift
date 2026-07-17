@@ -6,11 +6,12 @@
 //
 
 import UIKit
-
+import MTGSDK
+import MTGSDKBidding
 import APSSPSDK
 
 
-final public class MintegralNativeAdapter: APSSPNativeAdapterProtocol {
+final public class MintegralNativeAdapter: APSSPNativeAdapterInappBiddingProtocol {
     
     public var render: AnyObject?
     
@@ -20,6 +21,8 @@ final public class MintegralNativeAdapter: APSSPNativeAdapterProtocol {
     
     private var nativeAdView: MintegralMediationNativeAdView
     
+    
+    // MARK: - Waterfall 초기화
 
     public init(placementDic: [String: String], rootViewController: UIViewController?, render: AnyObject, info: [String : Any?]) {
         let placementId = placementDic[APSSPPlacementKey.mintegralPlacementId.rawValue]
@@ -27,7 +30,25 @@ final public class MintegralNativeAdapter: APSSPNativeAdapterProtocol {
         self.nativeAdView = MintegralMediationNativeAdView(placementId: placementId, unitID: unitID, rootViewController: rootViewController, render: render)
         nativeAdView.delegate = self
     }
+    
+    // MARK: - InApp Bidding 초기화
+    
+    public required init(inappbiddingPlacementDic: [String: String], rootViewController: UIViewController?, render: AnyObject, info: [String: Any?]) {
+        let placementId = inappbiddingPlacementDic[APSSPBiddingKey.mintegralPlacementId.rawValue]
+        let unitID = inappbiddingPlacementDic[APSSPPlacementKey.mintegralUnitId.rawValue] ?? ""
+        let biddingData = inappbiddingPlacementDic[APSSPBiddingKey.biddingData.rawValue] ?? ""
+        self.nativeAdView = MintegralMediationNativeAdView(placementId: placementId, unitID: unitID, rootViewController: rootViewController, render: render, biddingData: biddingData)
+        nativeAdView.delegate = self
+    }
+    
+    // MARK: - Bidding Token
+    
+    public func getBiddingToken() -> String {
+        return MTGBiddingSDK.buyerUID() ?? ""
+    }
 
+    // MARK: - Protocol Methods
+    
     public func connectDelegate(delegate: APSSPNativeViewAdapterDelegate) {
         self.delegate = delegate
         nativeAdView.delegate = self

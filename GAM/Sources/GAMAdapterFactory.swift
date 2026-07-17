@@ -34,4 +34,8 @@ public final class GAMAdapterFactory: NSObject, APSSPAdapterFactory {
     public static func makeVideoMixAdapter(placementDic: [String: String], rootViewController: UIViewController?, info: [String: Any]) -> AnyObject? {
         return GAMVideoMixAdapter(placementDic: placementDic, rootViewController: rootViewController, info: info)
     }
+
+    public static func makeUnifiedNativeAdapter(placementDic: [String: String], rootViewController: UIViewController?, viewBinder: APSSPMediationViewBinder, config: APSSPNativeAdConfig?, info: [String: Any]) -> AnyObject? {
+        return GAMUnifiedNativeAdapter(placementDic: placementDic, rootViewController: rootViewController, viewBinder: viewBinder, config: config, info: info)
+    }
 }

@@ -51,9 +51,6 @@ final class VungleMediationNativeAdView: UIView {
         guard let render = render as? APSSPVungleNativeAdRenderer else { return }
         vungleRenderer = render
     }
-
-    deinit {
-    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -73,7 +70,7 @@ final class VungleMediationNativeAdView: UIView {
         }
         
         nativeAd = VungleNative(placementId: placementId)
-        nativeAd?.delegate = self
+        nativeAd?.delegate = self   
 
         APLogger.debug("Start Vungle Native load,  UnitID: \(placementId)")
         
@@ -85,13 +82,14 @@ final class VungleMediationNativeAdView: UIView {
     }
     
     func stop() {
-//        namRenderer?.namNativewAdView?.isHidden = true
-        self.nativeAd?.unregisterView()
+        if nativeAd != nil, vungleRenderer?.nativeAdView?.window != nil {
+            nativeAd?.unregisterView()
+        }
         self.nativeAd?.delegate = nil
         self.nativeAd = nil
     }
     
-        func setupData() {
+    func setupData() {
         guard let vungleRenderer else { return }
         vungleRenderer.titleLbl?.text = self.nativeAd?.title
         vungleRenderer.ratingLbl?.text = "Rating: \(nativeAd?.adStarRating ?? 0)"
@@ -109,7 +107,7 @@ final class VungleMediationNativeAdView: UIView {
         nativeAd?.adOptionsPosition = .topRight
         nativeAd?.registerViewForInteraction(view: nativeAdView,
                                              mediaView: mediaView,
-                                             iconImageView: vungleRenderer.iconView,
+                                             iconImageView: iconView,
                                              viewController: rootViewController,
                                              clickableViews: [iconView,
                                                               downloadBtn,
@@ -124,6 +122,7 @@ final class VungleMediationNativeAdView: UIView {
 
 extension VungleMediationNativeAdView: VungleNativeDelegate {
     func nativeAdDidLoad(_ native: VungleNative) {
+        setupData()
         delegate?.nativeLoadSuccess()
       }
       

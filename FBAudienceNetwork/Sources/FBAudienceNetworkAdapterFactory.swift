@@ -26,7 +26,7 @@ public final class FBAudienceNetworkAdapterFactory: NSObject, APSSPAdapterFactor
         return FBAudienceNetworkVideoMixAdapter(placementDic: placementDic, rootViewController: rootViewController, info: info)
     }
 
-    // MARK: - Bidding (IS, IV, RV만 bidding init 지원)
+    // MARK: - Bidding (IS, IV, RV, Native)
 
     public static func makeBiddingInterstitialAdapter(placementDic: [String: String], rootViewController: UIViewController?) -> AnyObject? {
         return FBAudienceNetworkInterstitialAdapter(inappbiddingPlacementDic: placementDic, rootViewController: rootViewController)
@@ -38,5 +38,17 @@ public final class FBAudienceNetworkAdapterFactory: NSObject, APSSPAdapterFactor
 
     public static func makeBiddingRewardVideoAdapter(placementDic: [String: String], rootViewController: UIViewController?) -> AnyObject? {
         return FBAudienceNetworkRewardVideoAdapter(inappbiddingPlacementDic: placementDic, rootViewController: rootViewController)
+    }
+
+    public static func makeBiddingNativeAdapter(placementDic: [String: String], rootViewController: UIViewController?, render: AnyObject, info: [String: Any]) -> AnyObject? {
+        return FBAudienceNetworkNativeAdapter(inappbiddingPlacementDic: placementDic, rootViewController: rootViewController, render: render, info: info)
+    }
+
+    public static func makeUnifiedNativeAdapter(placementDic: [String: String], rootViewController: UIViewController?, viewBinder: APSSPMediationViewBinder, config: APSSPNativeAdConfig?, info: [String: Any]) -> AnyObject? {
+        return FBAudienceNetworkUnifiedNativeAdapter(placementDic: placementDic, rootViewController: rootViewController, viewBinder: viewBinder, config: config, info: info)
+    }
+
+    public static func makeBiddingUnifiedNativeAdapter(placementDic: [String: String], rootViewController: UIViewController?, viewBinder: APSSPMediationViewBinder, config: APSSPNativeAdConfig?, info: [String: Any]) -> AnyObject? {
+        return FBAudienceNetworkUnifiedNativeAdapter(inappBiddingPlacementDic: placementDic, rootViewController: rootViewController, viewBinder: viewBinder, config: config, info: info)
     }
 }

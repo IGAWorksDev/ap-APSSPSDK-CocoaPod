@@ -32,7 +32,7 @@ final class AppLovinMediationRewardVideoAd: NSObject {
             // Show call not using a reward delegate
             ALIncentivizedInterstitialAd.shared().adDisplayDelegate = self
             ALIncentivizedInterstitialAd.shared().adVideoPlaybackDelegate = self
-            ALIncentivizedInterstitialAd.show()
+            ALIncentivizedInterstitialAd.load()
 
         }
         else {

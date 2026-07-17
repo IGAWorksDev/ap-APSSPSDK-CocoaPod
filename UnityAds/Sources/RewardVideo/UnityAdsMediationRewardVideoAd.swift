@@ -37,6 +37,12 @@ final class UnityAdsMediationRewardVideoAd: NSObject {
     }
     
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("UnityAds RewardVideo placementId is empty")
+            delegate?.rewardVideoLoadFail(error: .nextMediation, errorMessage: "placementId is empty")
+            return
+        }
+        
         if UnityAds.isInitialized() {
             loadAd()
         } else {

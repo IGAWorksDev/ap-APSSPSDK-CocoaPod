@@ -14,6 +14,12 @@ final class FluctMediationInterstitialAd: NSObject {
     }
 
     func load() {
+        guard !unitId.isEmpty else {
+            APLogger.error("Fluct Interstitial unitId is empty")
+            delegate?.interstitialLoadFail(error: .nextMediation, errorMessage: "unitId is empty")
+            return
+        }
+        
         let setting = FSSVideoInterstitialSetting()
         interstitialAd = FSSVideoInterstitial(groupId: groupId, unitId: unitId, setting: setting)
         interstitialAd?.delegate = self

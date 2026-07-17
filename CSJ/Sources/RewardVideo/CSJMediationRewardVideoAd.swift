@@ -12,6 +12,12 @@ final class CSJMediationRewardVideoAd: NSObject {
     }
 
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("CSJ RewardVideo placementId is empty")
+            delegate?.loadFail(errorMessage: "placementId is empty")
+            return
+        }
+        
         let model = BURewardedVideoModel()
         model.userId = ""
         rewardedAd = BUNativeExpressRewardedVideoAd(slotID: placementId, rewardedVideoModel: model)

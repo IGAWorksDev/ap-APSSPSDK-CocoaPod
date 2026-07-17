@@ -23,5 +23,7 @@ public final class FyberInitializationAdapter: APSSPInitializationProtocol {
         }
         IASDKCore.sharedInstance().initWithAppID(appId)
         completion(true, nil)
+//        IASDKCore.sharedInstance().initWithAppID("112191")
+//        DTXLogger.setLogLevel(.debug)
     }
 }

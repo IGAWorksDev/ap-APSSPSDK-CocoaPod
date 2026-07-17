@@ -30,4 +30,8 @@ public final class AdForusAdapterFactory: NSObject, APSSPAdapterFactory {
     public static func makeNativeAdapter(placementDic: [String: String], rootViewController: UIViewController?, render: AnyObject, info: [String: Any]) -> AnyObject? {
         return AdForusNativeAdapter(placementDic: placementDic, rootViewController: rootViewController, render: render, info: info)
     }
+
+    public static func makeUnifiedNativeAdapter(placementDic: [String: String], rootViewController: UIViewController?, viewBinder: APSSPMediationViewBinder, config: APSSPNativeAdConfig?, info: [String: Any]) -> AnyObject? {
+        return AdForusUnifiedNativeAdapter(placementDic: placementDic, rootViewController: rootViewController, viewBinder: viewBinder, config: config, info: info)
+    }
 }

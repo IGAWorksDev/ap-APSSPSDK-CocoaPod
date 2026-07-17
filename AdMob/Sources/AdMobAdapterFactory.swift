@@ -31,6 +31,10 @@ public final class AdMobAdapterFactory: NSObject, APSSPAdapterFactory {
         return AdMobNativeAdapter(placementDic: placementDic, rootViewController: rootViewController, render: render, info: info)
     }
 
+    public static func makeUnifiedNativeAdapter(placementDic: [String: String], rootViewController: UIViewController?, viewBinder: APSSPMediationViewBinder, config: APSSPNativeAdConfig?, info: [String: Any]) -> AnyObject? {
+        return AdMobUnifiedNativeAdapter(placementDic: placementDic, rootViewController: rootViewController, viewBinder: viewBinder, config: config, info: info)
+    }
+
     public static func makeVideoMixAdapter(placementDic: [String: String], rootViewController: UIViewController?, info: [String: Any]) -> AnyObject? {
         return AdMobVideoMixAdapter(placementDic: placementDic, rootViewController: rootViewController, info: info)
     }

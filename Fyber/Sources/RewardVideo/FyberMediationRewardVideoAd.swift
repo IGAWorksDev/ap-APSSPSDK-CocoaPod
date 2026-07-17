@@ -59,7 +59,7 @@ final class FyberMediationRewardVideoAd: NSObject {
         let adRequest: IAAdRequest? = IAAdRequest.build { builder in
             builder.useSecureConnections = true
             builder.spotID = self.placementId
-            builder.timeout = 10
+            builder.timeout = 5
         }
         
         guard let adRequest else {
@@ -97,7 +97,7 @@ final class FyberMediationRewardVideoAd: NSObject {
             adspot.fetchAd { adSpot, IAAdModel, error in
                 if let error {
                     APLogger.error("Fyber RewardVideo Error: \(error.localizedDescription)")
-                    self.delegate?.rewardVideoLoadFail(error: .nextMediation, errorMessage: "Fyber RewardVideo show error")
+                    self.delegate?.rewardVideoLoadFail(error: .nextMediation, errorMessage: "Fyber RewardVideo load error")
                 }
                 else {
                     self.delegate?.rewardVideoLoadSuccess()

@@ -41,6 +41,11 @@ final class MintegralMediationBannerView: UIView {
     }
     
     func load() {
+        guard !unitID.isEmpty else {
+            APLogger.error("Mintegral Banner unitID is empty")
+            delegate?.bannerViewFailed(bannerView: self, error: .nextMediation, errorMessage: "unitID is empty")
+            return
+        }
         
         guard let rootViewController else {
             delegate?.bannerViewFailed(bannerView: self, error: .nextMediation, errorMessage: "rootViewController is nil")

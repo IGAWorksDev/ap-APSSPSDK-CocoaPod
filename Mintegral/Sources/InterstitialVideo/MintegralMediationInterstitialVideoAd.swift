@@ -41,6 +41,12 @@ final class MintegralMediationInterstitialVideoAd: NSObject {
     }
     
     func load() {
+        guard !unitID.isEmpty else {
+            APLogger.error("Mintegral InterstitialVideo unitID is empty")
+            delegate?.interstitialVideoLoadFail(error: .nextMediation, errorMessage: "unitID is empty")
+            return
+        }
+        
         interstitialVideo = MTGNewInterstitialAdManager(placementId: placementId, unitId: unitID, delegate: self)
         
         APLogger.debug("Start Mintegral InterstitialVideo load,  placementId: \(placementId), unitId: \(unitID)")

@@ -24,4 +24,8 @@ public final class NAMAdapterFactory: NSObject, APSSPAdapterFactory {
     public static func makeModalAdapter(placementDic: [String: String], rootViewController: UIViewController?, info: [String: Any]) -> AnyObject? {
         return NAMModalAdapter(placementDic: placementDic, rootViewController: rootViewController, info: info)
     }
+
+    public static func makeUnifiedNativeAdapter(placementDic: [String: String], rootViewController: UIViewController?, viewBinder: APSSPMediationViewBinder, config: APSSPNativeAdConfig?, info: [String: Any]) -> AnyObject? {
+        return NAMUnifiedNativeAdapter(placementDic: placementDic, rootViewController: rootViewController, viewBinder: viewBinder, config: config, info: info)
+    }
 }

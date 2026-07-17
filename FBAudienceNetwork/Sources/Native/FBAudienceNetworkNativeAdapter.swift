@@ -1,15 +1,16 @@
 //
 //  FBAudienceNetworkNativeAdapter.swift
-//  MediationAdMob
+//  MediationFBAudienceNetwork
 //
 //  Created by Odin.송황호 on 2023/09/15.
 //
 
 import UIKit
+import FBAudienceNetwork
 import APSSPSDK
 
 
-final public class FBAudienceNetworkNativeAdapter: APSSPNativeAdapterProtocol {
+final public class FBAudienceNetworkNativeAdapter: APSSPNativeAdapterInappBiddingProtocol {
     
     public var render: AnyObject?
     
@@ -19,6 +20,8 @@ final public class FBAudienceNetworkNativeAdapter: APSSPNativeAdapterProtocol {
     
     private var nativeAdView: FBAudienceNetworkMediationNativeAdView
     
+    
+    // MARK: - Waterfall 초기화
 
     public init(placementDic: [String: String], rootViewController: UIViewController?, render: AnyObject, info: [String : Any?]) {
         let placementId = placementDic[APSSPPlacementKey.fbPlacementId.rawValue] ?? ""
@@ -32,7 +35,29 @@ final public class FBAudienceNetworkNativeAdapter: APSSPNativeAdapterProtocol {
                                                                    isNativeBanner: isNativeBanner)
         nativeAdView.delegate = self
     }
+    
+    // MARK: - InApp Bidding 초기화
+    
+    public required init(inappbiddingPlacementDic: [String: String], rootViewController: UIViewController?, render: AnyObject, info: [String: Any?]) {
+        let placementId = inappbiddingPlacementDic[APSSPBiddingKey.facebookPlacementId.rawValue] ?? ""
+        let biddingData = inappbiddingPlacementDic[APSSPBiddingKey.biddingData.rawValue] ?? ""
+        
+        self.nativeAdView = FBAudienceNetworkMediationNativeAdView(placementId: placementId,
+                                                                   biddingData: biddingData,
+                                                                   rootViewController: rootViewController,
+                                                                   render: render,
+                                                                   isNativeBanner: nil)
+        nativeAdView.delegate = self
+    }
+    
+    // MARK: - Bidding Token
+    
+    public func getBiddingToken() -> String {
+        return FBAdSettings.bidderToken
+    }
 
+    // MARK: - Protocol Methods
+    
     public func connectDelegate(delegate: APSSPNativeViewAdapterDelegate) {
         self.delegate = delegate
         nativeAdView.delegate = self

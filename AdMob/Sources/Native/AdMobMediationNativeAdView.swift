@@ -67,7 +67,7 @@ final class AdMobMediationNativeAdView: UIView {
 //        let multipleAdOptions = NativeAdViewAdOptions()
 //        multipleAdOptions.preferredAdChoicesPosition = .topRightCorner
 //        multipleAdOptions.numberOfAds = 5;
-        adLoader = AdLoader(adUnitID: placementId,      // ca-app-pub-3940256099942544/3986624511
+        adLoader = AdLoader(adUnitID: placementId,
             rootViewController: rootViewController,
             adTypes: [ .native ],
             options: [ multipleAdOptions ])

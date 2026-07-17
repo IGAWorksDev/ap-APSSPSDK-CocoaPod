@@ -36,6 +36,12 @@ final class CaulyMediationInterstitialAd: NSObject {
     }
     
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("Cauly Interstitial placementId is empty")
+            delegate?.interstitialLoadFail(error: .nextMediation, errorMessage: "placementId is empty")
+            return
+        }
+        
         guard let parentViewController else {
             APLogger.error("Cauly must set rootViewController")
             delegate?.interstitialLoadFail(error: .nextMediation, errorMessage: "rootViewController is nil")

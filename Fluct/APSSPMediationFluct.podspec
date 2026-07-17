@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
   s.name         = "APSSPMediationFluct"
-  s.version      = "6.42.1.8"
+  s.version      = "6.42.1.9"
   s.summary      = "APSSPSDK Mediation Fluct Adapter"
   s.homepage     = "https://github.com/IGAWorksDev/ap-APSSPSDK-CocoaPod"
   s.license      = { "type": "Apache License, Version 2.0", "file": "LICENSE" }
   s.author       = { "mick.kim" => "mick.kim@adpopcorn.com", "odin.song" => "odin.song@adpopcorn.com" }
 
   s.ios.deployment_target = "13.0"
-  s.source       = { :git => "https://github.com/IGAWorksDev/ap-APSSPSDK-CocoaPod.git", :tag => "3.1.9" }
+  s.source       = { :git => "https://github.com/IGAWorksDev/ap-APSSPSDK-CocoaPod.git", :tag => "3.2.0" }
 
   s.source_files = "Fluct/Sources/**/*.swift"
 
@@ -16,5 +16,5 @@ Pod::Spec.new do |s|
   s.pod_target_xcconfig = { "OTHER_LDFLAGS" => "-ObjC" }
 
   s.dependency "APSSPSDK", ">= 3.1.9"
-  s.dependency "FluctSDK", "~> 6.42"
+  s.dependency "FluctSDK", ">= 6.0"
 end

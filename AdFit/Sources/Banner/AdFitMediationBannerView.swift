@@ -50,6 +50,12 @@ final class AdFitMediationBannerView: UIView {
     }
     
     func load() {
+        guard !placementId.isEmpty else {
+            APLogger.error("AdFit Banner placementId is empty")
+            delegate?.bannerViewFailed(bannerView: self, error: .nextMediation, errorMessage: "placementId is empty")
+            return
+        }
+        
         bannerView = AdFitBannerAdView(clientId: placementId, adUnitSize: bannerType.AdFitSize)
         bannerView?.rootViewController = rootviewController
         bannerView?.delegate = self
