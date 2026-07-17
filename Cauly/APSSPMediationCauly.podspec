@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "APSSPMediationCauly"
-  s.version      = "3.1.22.9"
+  s.version      = "3.1.22.10"
   s.summary      = "APSSPSDK Mediation Cauly Adapter"
   s.homepage     = "https://github.com/IGAWorksDev/ap-APSSPSDK-CocoaPod"
   s.license      = { "type": "Apache License, Version 2.0", "file": "LICENSE" }

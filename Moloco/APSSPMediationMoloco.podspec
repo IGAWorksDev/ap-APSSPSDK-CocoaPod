@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "APSSPMediationMoloco"
-  s.version      = "4.5.1.11"
+  s.version      = "4.5.1.12"
   s.summary      = "APSSPSDK Mediation Moloco Adapter"
   s.homepage     = "https://github.com/IGAWorksDev/ap-APSSPSDK-CocoaPod"
   s.license      = { "type": "Apache License, Version 2.0", "file": "LICENSE" }
