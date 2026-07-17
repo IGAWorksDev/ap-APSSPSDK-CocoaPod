@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.author       = { "mick.kim" => "mick.kim@adpopcorn.com", "odin.song" => "odin.song@adpopcorn.com" }
 
   s.ios.deployment_target = "13.0"
-  s.source       = { :git => "https://github.com/IGAWorksDev/ap-APSSPSDK-CocoaPod.git", :tag => "3.2.1" }
+  s.source       = { :git => "https://github.com/IGAWorksDev/ap-APSSPSDK-CocoaPod.git", :tag => "3.2.2" }
 
   s.source_files = "NAM/Sources/**/*.swift"
 
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.swift_versions = ["5.0"]
   s.pod_target_xcconfig = { "OTHER_LDFLAGS" => "-ObjC" }
 
-  s.dependency "APSSPSDK", ">= 3.2.1"
+  s.dependency "APSSPSDK", ">= 3.2.2"
   s.dependency "NAMSDK", ">= 8.0"
   s.dependency "NAMSDK/MediationNDA", ">= 8.0"
 end
