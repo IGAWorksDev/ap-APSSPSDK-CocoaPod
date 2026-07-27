@@ -14,27 +14,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		TTUARKF1e6ofLN0/tc/FWYZFWiI=
+		NJkvJ9p1bmjNcVs/P1hDBzlgqcs=
 		</data>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		xxPQM+tciaZOks9VzHI7EwdyKwg=
+		9LJNj2j5nHwzR2dlSkfJ88olb2k=
 		</data>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		bWg0nkyKVkyopFeq2jgnG9cRkoo=
+		HSBD6tA2mFSFd+UTt3Ih25O5kWA=
 		</data>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		PJQ2zwrleAu5dB/NmmYHayE4tgA=
+		Q17Zj/dqWMx9B7mNeBpnVD8YmGM=
 		</data>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		bWg0nkyKVkyopFeq2jgnG9cRkoo=
+		HSBD6tA2mFSFd+UTt3Ih25O5kWA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		kzqJ0vfK77TF2OiqWBUMWd/w6+Q=
+		</data>
+		<key>PrivacyInfo.xcprivacy</key>
+		<data>
+		XGsBg3adhNFlN3Wg/KByE/vEzzM=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -57,28 +61,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			TZFWh6ckfk03rOCcAX1RxxnUXBYbUQVnPcvcHnjKII4=
+			uaHOehcaKvefyvdGKsL621PglFebvx9+H12eqa8hIaY=
 			</data>
 		</dict>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oR46q5RkxCui8jeWsMUNmVVCiPLLAjAVYHW6QBnOAOI=
+			KKgTXfK6xsvNCyzhj1t2M2jHThsZil3NN0s4CfhoN3c=
 			</data>
 		</dict>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bvSxj52OJB8xq2IPFRZcuXDfItM/P4vDlHGTLZnARPQ=
+			f09paaC50mEJAagvLtHpP18+RRc0q6bf+z+kGgULZ8Y=
 			</data>
 		</dict>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oR46q5RkxCui8jeWsMUNmVVCiPLLAjAVYHW6QBnOAOI=
+			KKgTXfK6xsvNCyzhj1t2M2jHThsZil3NN0s4CfhoN3c=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -86,6 +90,13 @@
 			<key>hash2</key>
 			<data>
 			HrHKxiqSos7A/rDPo6hEHuv+HSk4+JNaLRYgn5OCzHc=
+			</data>
+		</dict>
+		<key>PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			NSy3N8e56mMLFzo46NHywFVcT1yM2E6YsJNGx47ipl8=
 			</data>
 		</dict>
 	</dict>

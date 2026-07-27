@@ -21,32 +21,52 @@ final class AppLovinMediationRewardVideoAd: NSObject {
     
     private var rewardVideoAd: ALAd?
     
+    private var incentivizedAd: ALIncentivizedInterstitialAd?
+    
+    /// Reward 검증 결과 (showAndNotify 후 ALAdRewardDelegate에서 설정됨)
+    private var isRewardVerified: Bool = false
+    
     
     init(placementId: String, rootViewController: UIViewController?) {
         self.placementId = placementId
         self.rootViewController = rootViewController
+        super.init()
+        
+        // ZoneId가 있으면 해당 ZoneId로 인스턴스 생성
+        if !placementId.isEmpty {
+            self.incentivizedAd = ALIncentivizedInterstitialAd(zoneIdentifier: placementId)
+        } else {
+            self.incentivizedAd = ALIncentivizedInterstitialAd.shared()
+        }
     }
     
     public func present(from: UIViewController, completion: @escaping () -> Void) {
-        if ALIncentivizedInterstitialAd.isReadyForDisplay() {
-            // Show call not using a reward delegate
-            ALIncentivizedInterstitialAd.shared().adDisplayDelegate = self
-            ALIncentivizedInterstitialAd.shared().adVideoPlaybackDelegate = self
-            ALIncentivizedInterstitialAd.load()
-
+        guard let incentivizedAd = incentivizedAd else {
+            delegate?.rewardVideoShowFail(message: "AppLovin RewardVideo not initialized")
+            return
         }
-        else {
-            delegate?.rewardVideoShowFail(message: "")
+        
+        // Reward 검증 플래그 초기화
+        isRewardVerified = false
+        
+        if incentivizedAd.isReadyForDisplay {
+            incentivizedAd.adDisplayDelegate = self
+            incentivizedAd.adVideoPlaybackDelegate = self
+            // showAndNotify를 사용해야 ALAdRewardDelegate 콜백을 받을 수 있음
+            incentivizedAd.showAndNotify(self)
+        } else {
+            delegate?.rewardVideoShowFail(message: "AppLovin RewardVideo not ready")
         }
     }
     
     func load() {
-        ALIncentivizedInterstitialAd.preloadAndNotify(self)
-        
+        incentivizedAd?.preloadAndNotify(self)
     }
         
 }
 
+
+// MARK: - ALAdLoadDelegate, ALAdDisplayDelegate, ALAdVideoPlaybackDelegate
 
 extension AppLovinMediationRewardVideoAd: ALAdLoadDelegate, ALAdDisplayDelegate, ALAdVideoPlaybackDelegate {
     
@@ -75,9 +95,35 @@ extension AppLovinMediationRewardVideoAd: ALAdLoadDelegate, ALAdDisplayDelegate,
     func videoPlaybackBegan(in ad: ALAd) { }
     
     func videoPlaybackEnded(in ad: ALAd, atPlaybackPercent percentPlayed: NSNumber, fullyWatched wasFullyWatched: Bool) {
-        if wasFullyWatched {
+        APLogger.debug("AppLovin RewardVideo videoPlaybackEnded isRewardVerified: \(isRewardVerified), wasFullyWatched: \(wasFullyWatched)")
+        // ObjC와 동일하게 isRewardVerified 기준으로 completed 호출
+        if isRewardVerified {
             delegate?.rewardVideoCompleted()
         }
+    }
+    
+}
+
+
+// MARK: - ALAdRewardDelegate
+
+extension AppLovinMediationRewardVideoAd: ALAdRewardDelegate {
+    
+    func rewardValidationRequest(for ad: ALAd, didSucceedWithResponse response: [AnyHashable : Any]) {
+        APLogger.debug("AppLovin RewardVideo rewardValidationRequest didSucceedWithResponse")
+        isRewardVerified = true
+    }
+    
+    func rewardValidationRequest(for ad: ALAd, wasRejectedWithResponse response: [AnyHashable : Any]) {
+        APLogger.debug("AppLovin RewardVideo rewardValidationRequest wasRejectedWithResponse")
+    }
+    
+    func rewardValidationRequest(for ad: ALAd, didExceedQuotaWithResponse response: [AnyHashable : Any]) {
+        APLogger.debug("AppLovin RewardVideo rewardValidationRequest didExceedQuotaWithResponse: \(response)")
+    }
+    
+    func rewardValidationRequest(for ad: ALAd, didFailWithError responseCode: Int) {
+        APLogger.debug("AppLovin RewardVideo rewardValidationRequest didFailWithError: \(responseCode)")
     }
     
 }
