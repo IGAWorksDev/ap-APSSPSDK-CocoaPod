@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
   s.name         = "APSSPSDK"
-  s.version      = "3.2.3"
+  s.version      = "3.2.4"
   s.summary      = "AdPopcorn SSP iOS SDK (Swift)"
   s.homepage     = "https://github.com/IGAWorksDev/ap-APSSPSDK-CocoaPod"
   s.license      = { "type": "Apache License, Version 2.0", "file": "LICENSE" }
   s.author       = { "mick.kim" => "mick.kim@adpopcorn.com", "odin.song" => "odin.song@adpopcorn.com" }
 
   s.ios.deployment_target = "13.0"
-  s.source       = { :git => "https://github.com/IGAWorksDev/ap-APSSPSDK-CocoaPod.git", :tag => "3.2.3" }
+  s.source       = { :git => "https://github.com/IGAWorksDev/ap-APSSPSDK-CocoaPod.git", :tag => "3.2.4" }
 
   s.vendored_frameworks = "APSSPSDK/APSSPSDK.xcframework"
 

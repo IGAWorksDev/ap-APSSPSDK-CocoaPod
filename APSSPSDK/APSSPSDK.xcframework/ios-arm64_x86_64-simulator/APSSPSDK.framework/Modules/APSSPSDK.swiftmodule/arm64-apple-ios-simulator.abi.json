@@ -55679,126 +55679,126 @@
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/RewardAdPlusModel.swift",
       "kind": "StringLiteral",
-      "offset": 578,
+      "offset": 696,
       "length": 13,
       "value": "\"result_code\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/RewardAdPlusModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1145,
+      "offset": 2216,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/RewardAdPlusModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1177,
+      "offset": 2248,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/RewardAdPlusModel.swift",
       "kind": "StringLiteral",
-      "offset": 1247,
+      "offset": 2318,
       "length": 8,
       "value": "\"Result\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/RewardAdPlusModel.swift",
       "kind": "StringLiteral",
-      "offset": 1282,
+      "offset": 2353,
       "length": 12,
       "value": "\"ResultCode\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/RewardAdPlusModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1383,
+      "offset": 2454,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/RewardAdPlusModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1415,
+      "offset": 2486,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/RewardAdPlusModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1443,
+      "offset": 2514,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/RewardAdPlusModel.swift",
       "kind": "Array",
-      "offset": 1502,
+      "offset": 2573,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/RewardAdPlusModel.swift",
       "kind": "StringLiteral",
-      "offset": 1710,
+      "offset": 2781,
       "length": 13,
       "value": "\"result_code\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/RewardAdPlusModel.swift",
       "kind": "StringLiteral",
-      "offset": 1750,
+      "offset": 2821,
       "length": 17,
       "value": "\"total_box_count\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/RewardAdPlusModel.swift",
       "kind": "StringLiteral",
-      "offset": 1793,
+      "offset": 2864,
       "length": 12,
       "value": "\"limit_info\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/RewardAdPlusModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 2751,
+      "offset": 3822,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/RewardAdPlusModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2783,
+      "offset": 3854,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/RewardAdPlusModel.swift",
       "kind": "StringLiteral",
-      "offset": 2815,
+      "offset": 3886,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/RewardAdPlusModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2841,
+      "offset": 3912,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/RewardAdPlusModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2864,
+      "offset": 3935,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Model\/RewardAdPlusModel.swift",
       "kind": "StringLiteral",
-      "offset": 2958,
+      "offset": 4029,
       "length": 13,
       "value": "\"result_code\""
     }
