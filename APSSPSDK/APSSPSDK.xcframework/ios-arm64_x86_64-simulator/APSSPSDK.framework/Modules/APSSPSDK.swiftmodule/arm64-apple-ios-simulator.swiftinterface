@@ -656,6 +656,7 @@ public protocol APSSPBannerAdapterInappBiddingProtocol : APSSPSDK.APSSPBannerAda
   final public var registeredNetworkIDs: [Swift.Int] {
     get
   }
+  final public func networkVersions() -> [Swift.String : [Swift.String : Swift.String]]
   @objc deinit
 }
 @objc public protocol APSSPContentsAdDelegate {
@@ -869,6 +870,9 @@ public protocol APSSPAdapterFactory : AnyObject {
   static var sdkVersion: Swift.String? { get }
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
+  static var adapterVersion: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   static func makeInitializationAdapter() -> Swift.AnyObject?
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
@@ -920,6 +924,11 @@ public protocol APSSPAdapterFactory : AnyObject {
 extension APSSPSDK.APSSPAdapterFactory {
   #if compiler(>=5.3) && $NonescapableTypes
   public static var sdkVersion: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static var adapterVersion: Swift.String? {
     get
   }
   #endif
