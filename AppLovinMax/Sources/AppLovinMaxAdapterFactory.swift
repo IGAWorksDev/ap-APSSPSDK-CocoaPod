@@ -15,6 +15,7 @@ public final class AppLovinMaxAdapterFactory: NSObject, APSSPAdapterFactory {
     public static var networkID: Int { 23 }
 
     public static var sdkVersion: String? { AppLovinMaxInitializationAdapter().sdkVersion }
+    public static var adapterVersion: String? { "13.6.3.1" }
 
     public static func makeInitializationAdapter() -> AnyObject? {
         return AppLovinMaxInitializationAdapter()

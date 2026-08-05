@@ -8,6 +8,7 @@ public final class InMobiAdapterFactory: NSObject, APSSPAdapterFactory {
     public static var networkID: Int { 37 }
 
     public static var sdkVersion: String? { InMobiInitializationAdapter().sdkVersion }
+    public static var adapterVersion: String? { "11.2.0.10" }
 
     public static func makeInitializationAdapter() -> AnyObject? {
         return InMobiInitializationAdapter()

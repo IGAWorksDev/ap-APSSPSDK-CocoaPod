@@ -8,6 +8,7 @@ public final class NAMAdapterFactory: NSObject, APSSPAdapterFactory {
     public static var networkID: Int { 22 }
 
     public static var sdkVersion: String? { NAMInitializationAdapter().sdkVersion }
+    public static var adapterVersion: String? { "8.22.1.1" }
 
     public static func makeInitializationAdapter() -> AnyObject? {
         return NAMInitializationAdapter()

@@ -7,6 +7,7 @@ public final class FBAudienceNetworkAdapterFactory: NSObject, APSSPAdapterFactor
     public static var networkID: Int { 2 }
 
     public static var sdkVersion: String? { FBAudienceNetworkInitializationAdapter().sdkVersion }
+    public static var adapterVersion: String? { "8.22.1.1" }
 
     public static func makeInitializationAdapter() -> AnyObject? {
         return FBAudienceNetworkInitializationAdapter()

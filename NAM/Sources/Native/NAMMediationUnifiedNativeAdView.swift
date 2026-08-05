@@ -164,19 +164,19 @@ private extension NAMMediationUnifiedNativeAdView {
 
 // MARK: - NativeAd 처리
 private extension NAMMediationUnifiedNativeAdView {
-    
+
     func handleNativeAd(_ nativeAd: GFPNativeAd) {
         self.nativeAd = nativeAd
-        
+
         guard let mediaContainer = viewBinder.mediaContainerView else {
             delegate?.unifiedNativeLoadFail(error: .nextMediation, errorMessage: "NAM mediaContainerView is nil")
             return
         }
-        
+
         // GFPNativeAdView 생성
         let adView = GFPNativeAdView()
         self.gfpNativeAdView = adView
-        
+
         // GFPMediaView 생성 및 GFPNativeAdView에 addSubview
         let mediaView = GFPMediaView()
         mediaView.translatesAutoresizingMaskIntoConstraints = false
@@ -188,28 +188,44 @@ private extension NAMMediationUnifiedNativeAdView {
             mediaView.bottomAnchor.constraint(equalTo: adView.bottomAnchor)
         ])
         adView.mediaView = mediaView
-        
+
+        // GFPNativeAdView에 뷰 연결 (NAM SDK 클릭 트래킹용)
+        adView.titleLabel = viewBinder.titleLabel
+        adView.bodyLabel = viewBinder.bodyLabel
+        adView.advertiserLabel = viewBinder.advertiserLabel
+        adView.iconView = viewBinder.iconImageView
+        adView.callToActionLabel = viewBinder.ctaButton?.titleLabel
+
+        // AdChoices 뷰 연결 (DFP 등 광고에서 자동 삽입)
+        adView.adChoicesView = viewBinder.adChoiceContainerView
+
         // nativeAd 연결 (mediaView 렌더링 + tracking 시작)
         adView.nativeAd = nativeAd
         nativeAd.delegate = self
-        
+
         // mediaContainerView에 GFPNativeAdView 삽입
         mediaContainer.subviews.forEach { $0.removeFromSuperview() }
         adView.frame = mediaContainer.bounds
         adView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         mediaContainer.addSubview(adView)
-        
+
         // ViewBinder에 텍스트 바인딩
         viewBinder.titleLabel?.text = nativeAd.title
         viewBinder.bodyLabel?.text = nativeAd.body
         viewBinder.ctaButton?.setTitle(nativeAd.callToAction, for: .normal)
-        
-        // 옵셔널
+        viewBinder.iconImageView?.image = nativeAd.iconData?.image
+
+        // 옵셔널 필드 visible 설정
         var visibleKeys = Set<String>()
+
         if let advertiser = nativeAd.advertiser, !advertiser.isEmpty {
             viewBinder.advertiserLabel?.text = advertiser
             visibleKeys.insert("advertiser")
         }
+        if viewBinder.adChoiceContainerView != nil {
+            visibleKeys.insert("adChoice")
+        }
+
         viewBinder.hideOptionalViews(except: visibleKeys)
     }
 }

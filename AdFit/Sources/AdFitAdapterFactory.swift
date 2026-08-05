@@ -8,6 +8,7 @@ public final class AdFitAdapterFactory: NSObject, APSSPAdapterFactory {
     public static var networkID: Int { 10 }
 
     public static var sdkVersion: String? { AdFitInitializationAdapter().sdkVersion }
+    public static var adapterVersion: String? { "3.18.3.10" }
 
     public static func makeInitializationAdapter() -> AnyObject? {
         return AdFitInitializationAdapter()

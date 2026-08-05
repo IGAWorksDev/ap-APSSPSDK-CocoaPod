@@ -8,6 +8,7 @@ public final class CaulyAdapterFactory: NSObject, APSSPAdapterFactory {
     public static var networkID: Int { 4 }
 
     public static var sdkVersion: String? { CaulyInitializationAdapter().sdkVersion }
+    public static var adapterVersion: String? { "3.1.22.10" }
 
     public static func makeInitializationAdapter() -> AnyObject? {
         return CaulyInitializationAdapter()

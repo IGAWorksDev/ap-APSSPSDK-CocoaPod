@@ -8,6 +8,7 @@ public final class FluctAdapterFactory: NSObject, APSSPAdapterFactory {
     public static var networkID: Int { 41 }
 
     public static var sdkVersion: String? { FluctInitializationAdapter().sdkVersion }
+    public static var adapterVersion: String? { "6.42.1.10" }
 
     public static func makeInitializationAdapter() -> AnyObject? {
         return FluctInitializationAdapter()

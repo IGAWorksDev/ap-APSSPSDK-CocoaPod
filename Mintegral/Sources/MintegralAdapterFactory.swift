@@ -8,6 +8,7 @@ public final class MintegralAdapterFactory: NSObject, APSSPAdapterFactory {
     public static var networkID: Int { 8 }
 
     public static var sdkVersion: String? { MintegralInitializationAdapter().sdkVersion }
+    public static var adapterVersion: String? { "8.1.1.10" }
 
     public static func makeInitializationAdapter() -> AnyObject? {
         return MintegralInitializationAdapter()

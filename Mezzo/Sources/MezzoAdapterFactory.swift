@@ -8,6 +8,7 @@ public final class MezzoAdapterFactory: NSObject, APSSPAdapterFactory {
     public static var networkID: Int { 5 }
 
     public static var sdkVersion: String? { MezzoInitializationAdapter().sdkVersion }
+    public static var adapterVersion: String? { "1.0.10" }
 
     public static func makeInitializationAdapter() -> AnyObject? {
         return MezzoInitializationAdapter()

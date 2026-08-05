@@ -6,6 +6,7 @@ public final class AdForusAdapterFactory: NSObject, APSSPAdapterFactory {
 
     public static var networkID: Int { 28 }
     public static var sdkVersion: String? { AdForusInitializationAdapter().sdkVersion }
+    public static var adapterVersion: String? { "13.5.0.1" }
 
     public static func makeInitializationAdapter() -> AnyObject? {
         return AdForusInitializationAdapter()

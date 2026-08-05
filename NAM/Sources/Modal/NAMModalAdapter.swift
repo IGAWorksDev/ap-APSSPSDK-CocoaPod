@@ -70,12 +70,7 @@ final public class NAMModalAdapter: NSObject, APSSPModalAdapterProtocol {
 
         let bannerWidth = max(bannerView.frame.size.width, UIScreen.main.bounds.width)
         let bannerHeight = max(bannerView.frame.size.height, 50)
-        let bottomAreaHeight: CGFloat = {
-            if #available(iOS 11.0, *) {
-                return UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? 0
-            }
-            return 0
-        }()
+        let bottomAreaHeight: CGFloat = Self.safeAreaBottom
 
         bannerView.translatesAutoresizingMaskIntoConstraints = false
         modalRootView.addSubview(bannerView)
@@ -154,4 +149,17 @@ extension NAMModalAdapter: GFPAdLoaderDelegate, GFPBannerViewDelegate {
 
     public func bannerShouldUnload(_ bannerView: GFPBannerView) {}
     public func bannerAdWasMuted(_ bannerView: GFPBannerView) {}
+}
+
+
+// MARK: - Safe Area Helper
+private extension NAMModalAdapter {
+    static var safeAreaBottom: CGFloat {
+        guard let scene = UIApplication.shared.connectedScenes
+            .compactMap({ $0 as? UIWindowScene })
+            .first(where: { $0.activationState == .foregroundActive }),
+              let window = scene.windows.first(where: { $0.isKeyWindow }) ?? scene.windows.first
+        else { return 0 }
+        return window.safeAreaInsets.bottom
+    }
 }
