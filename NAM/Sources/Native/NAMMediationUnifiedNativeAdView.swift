@@ -162,30 +162,53 @@ private extension NAMMediationUnifiedNativeAdView {
 }
 
 
+// MARK: - Custom GFPNativeAdView (hitTest override)
+private class TransparentHitTestNativeAdView: GFPNativeAdView {
+    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        // super.hitTest() 먼저 호출해서 GFPNativeAdView의 자식(info button 등)이 받아야 하는지 확인
+        let hitView = super.hitTest(point, with: event)
+
+        // 자식 뷰(info button 등)가 받아야 하면 그대로 리턴
+        if let hitView = hitView, hitView !== self {
+            return hitView
+        }
+
+        // GFPNativeAdView 자기 자신이면 (= 빈 영역) 터치 통과
+        return nil
+    }
+}
+
+
 // MARK: - NativeAd 처리
 private extension NAMMediationUnifiedNativeAdView {
 
     func handleNativeAd(_ nativeAd: GFPNativeAd) {
         self.nativeAd = nativeAd
 
+        guard let container = viewBinder.containerView else {
+            delegate?.unifiedNativeLoadFail(error: .nextMediation, errorMessage: "NAM containerView is nil")
+            return
+        }
+
         guard let mediaContainer = viewBinder.mediaContainerView else {
             delegate?.unifiedNativeLoadFail(error: .nextMediation, errorMessage: "NAM mediaContainerView is nil")
             return
         }
 
-        // GFPNativeAdView 생성
-        let adView = GFPNativeAdView()
+        // GFPNativeAdView 생성 (hitTest override 버전)
+        let adView = TransparentHitTestNativeAdView()
         self.gfpNativeAdView = adView
 
-        // GFPMediaView 생성 및 GFPNativeAdView에 addSubview
+        // ✅ Android처럼: mediaView를 mediaContainerView에 배치
         let mediaView = GFPMediaView()
         mediaView.translatesAutoresizingMaskIntoConstraints = false
-        adView.addSubview(mediaView)
+        mediaContainer.subviews.forEach { $0.removeFromSuperview() }
+        mediaContainer.addSubview(mediaView)
         NSLayoutConstraint.activate([
-            mediaView.topAnchor.constraint(equalTo: adView.topAnchor),
-            mediaView.leadingAnchor.constraint(equalTo: adView.leadingAnchor),
-            mediaView.trailingAnchor.constraint(equalTo: adView.trailingAnchor),
-            mediaView.bottomAnchor.constraint(equalTo: adView.bottomAnchor)
+            mediaView.topAnchor.constraint(equalTo: mediaContainer.topAnchor),
+            mediaView.leadingAnchor.constraint(equalTo: mediaContainer.leadingAnchor),
+            mediaView.trailingAnchor.constraint(equalTo: mediaContainer.trailingAnchor),
+            mediaView.bottomAnchor.constraint(equalTo: mediaContainer.bottomAnchor)
         ])
         adView.mediaView = mediaView
 
@@ -203,11 +226,14 @@ private extension NAMMediationUnifiedNativeAdView {
         adView.nativeAd = nativeAd
         nativeAd.delegate = self
 
-        // mediaContainerView에 GFPNativeAdView 삽입
-        mediaContainer.subviews.forEach { $0.removeFromSuperview() }
-        adView.frame = mediaContainer.bounds
+        // ✅ Android처럼: GFPNativeAdView를 containerView 전체에 추가 (최상단)
+        container.subviews.filter { $0 is GFPNativeAdView }.forEach { $0.removeFromSuperview() }
+        adView.frame = container.bounds
         adView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        mediaContainer.addSubview(adView)
+        adView.backgroundColor = .clear  // 투명
+        container.addSubview(adView)  // ✅ 최상단에 올림 (overlay가 모든 걸 덮도록)
+
+        // hitTest override로 adChoicesView 영역만 터치 받고 나머지는 통과
 
         // ViewBinder에 텍스트 바인딩
         viewBinder.titleLabel?.text = nativeAd.title
