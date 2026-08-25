@@ -19,7 +19,7 @@ public final class AppLovinInitializationAdapter: APSSPInitializationProtocol {
             return
         }
         
-        let initConfig = ALSdkInitializationConfiguration(sdkKey: "sdkKey") { builder in
+        let initConfig = ALSdkInitializationConfiguration(sdkKey: sdkKey) { builder in
             builder.mediationProvider = ALMediationProviderMAX
         }
         ALSdk.shared().initialize(with: initConfig) { _ in
