@@ -34943,6 +34943,106 @@
           },
           {
             "kind": "Var",
+            "name": "namUseSimpleAd",
+            "printedName": "namUseSimpleAd",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPNativeAdConfig(py)namUseSimpleAd",
+            "mangledName": "$s8APSSPSDK19APSSPNativeAdConfigC012namUseSimpleC0Sbvp",
+            "moduleName": "APSSPSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPNativeAdConfig(im)namUseSimpleAd",
+                "mangledName": "$s8APSSPSDK19APSSPNativeAdConfigC012namUseSimpleC0Sbvg",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPNativeAdConfig(im)setNamUseSimpleAd:",
+                "mangledName": "$s8APSSPSDK19APSSPNativeAdConfigC012namUseSimpleC0Sbvs",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8APSSPSDK19APSSPNativeAdConfigC012namUseSimpleC0SbvM",
+                "mangledName": "$s8APSSPSDK19APSSPNativeAdConfigC012namUseSimpleC0SbvM",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "adFitTestMode",
             "printedName": "adFitTestMode",
             "children": [
@@ -39941,6 +40041,233 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "isContentViewMode",
+            "printedName": "isContentViewMode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPMediationViewBinder(py)isContentViewMode",
+            "mangledName": "$s8APSSPSDK24APSSPMediationViewBinderC09isContentC4ModeSbvp",
+            "moduleName": "APSSPSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPMediationViewBinder(im)isContentViewMode",
+                "mangledName": "$s8APSSPSDK24APSSPMediationViewBinderC09isContentC4ModeSbvg",
+                "moduleName": "APSSPSDK",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "placeholderView",
+            "printedName": "placeholderView",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "UIKit.UIView?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPMediationViewBinder(py)placeholderView",
+            "mangledName": "$s8APSSPSDK24APSSPMediationViewBinderC011placeholderC0So6UIViewCSgvp",
+            "moduleName": "APSSPSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "ReferenceOwnership",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPMediationViewBinder(im)placeholderView",
+                "mangledName": "$s8APSSPSDK24APSSPMediationViewBinderC011placeholderC0So6UIViewCSgvg",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPMediationViewBinder(im)setPlaceholderView:",
+                "mangledName": "$s8APSSPSDK24APSSPMediationViewBinderC011placeholderC0So6UIViewCSgvs",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8APSSPSDK24APSSPMediationViewBinderC011placeholderC0So6UIViewCSgvM",
+                "mangledName": "$s8APSSPSDK24APSSPMediationViewBinderC011placeholderC0So6UIViewCSgvM",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "resolvedPlaceholder",
+            "printedName": "resolvedPlaceholder",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPMediationViewBinder(py)resolvedPlaceholder",
+            "mangledName": "$s8APSSPSDK24APSSPMediationViewBinderC19resolvedPlaceholderSo6UIViewCSgvp",
+            "moduleName": "APSSPSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPMediationViewBinder(im)resolvedPlaceholder",
+                "mangledName": "$s8APSSPSDK24APSSPMediationViewBinderC19resolvedPlaceholderSo6UIViewCSgvg",
+                "moduleName": "APSSPSDK",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init()",
@@ -39966,6 +40293,116 @@
               "RawDocComment"
             ],
             "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(nibName:bundle:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "APSSPMediationViewBinder",
+                "printedName": "APSSPSDK.APSSPMediationViewBinder",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPMediationViewBinder"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bundle",
+                "printedName": "Foundation.Bundle",
+                "hasDefaultArg": true,
+                "usr": "c:objc(cs)NSBundle"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPMediationViewBinder(im)initWithNibName:bundle:",
+            "mangledName": "$s8APSSPSDK24APSSPMediationViewBinderC7nibName6bundleACSS_So8NSBundleCtcfc",
+            "moduleName": "APSSPSDK",
+            "objc_name": "initWithNibName:bundle:",
+            "declAttributes": [
+              "Convenience",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(contentViewProvider:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "APSSPMediationViewBinder",
+                "printedName": "APSSPSDK.APSSPMediationViewBinder",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPMediationViewBinder"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> APSSPSDK.APSSPUnifiedNativeAdView",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "APSSPUnifiedNativeAdView",
+                    "printedName": "APSSPSDK.APSSPUnifiedNativeAdView",
+                    "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8APSSPSDK24APSSPMediationViewBinderC07contentC8ProviderAcA020APSSPUnifiedNativeAdC0Cyc_tcfc",
+            "mangledName": "$s8APSSPSDK24APSSPMediationViewBinderC07contentC8ProviderAcA020APSSPUnifiedNativeAdC0Cyc_tcfc",
+            "moduleName": "APSSPSDK",
+            "declAttributes": [
+              "Convenience",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Function",
+            "name": "makeContentView",
+            "printedName": "makeContentView()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "APSSPSDK.APSSPUnifiedNativeAdView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "APSSPUnifiedNativeAdView",
+                    "printedName": "APSSPSDK.APSSPUnifiedNativeAdView",
+                    "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8APSSPSDK24APSSPMediationViewBinderC011makeContentC0AA020APSSPUnifiedNativeAdC0CSgyF",
+            "mangledName": "$s8APSSPSDK24APSSPMediationViewBinderC011makeContentC0AA020APSSPUnifiedNativeAdC0CSgyF",
+            "moduleName": "APSSPSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
@@ -40069,6 +40506,3132 @@
           "RawDocComment"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "APSSPSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "APSSPUnifiedNativeAdView",
+        "printedName": "APSSPUnifiedNativeAdView",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "titleLabel",
+            "printedName": "titleLabel",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UILabel?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UILabel",
+                    "printedName": "UIKit.UILabel",
+                    "usr": "c:objc(cs)UILabel"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(py)titleLabel",
+            "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC10titleLabelSo7UILabelCSgvp",
+            "moduleName": "APSSPSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "IBOutlet",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UILabel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UILabel",
+                        "printedName": "UIKit.UILabel",
+                        "usr": "c:objc(cs)UILabel"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)titleLabel",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC10titleLabelSo7UILabelCSgvg",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UILabel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UILabel",
+                        "printedName": "UIKit.UILabel",
+                        "usr": "c:objc(cs)UILabel"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)setTitleLabel:",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC10titleLabelSo7UILabelCSgvs",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC10titleLabelSo7UILabelCSgvM",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC10titleLabelSo7UILabelCSgvM",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "bodyLabel",
+            "printedName": "bodyLabel",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UILabel?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UILabel",
+                    "printedName": "UIKit.UILabel",
+                    "usr": "c:objc(cs)UILabel"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(py)bodyLabel",
+            "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC9bodyLabelSo7UILabelCSgvp",
+            "moduleName": "APSSPSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "IBOutlet",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UILabel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UILabel",
+                        "printedName": "UIKit.UILabel",
+                        "usr": "c:objc(cs)UILabel"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)bodyLabel",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC9bodyLabelSo7UILabelCSgvg",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UILabel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UILabel",
+                        "printedName": "UIKit.UILabel",
+                        "usr": "c:objc(cs)UILabel"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)setBodyLabel:",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC9bodyLabelSo7UILabelCSgvs",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC9bodyLabelSo7UILabelCSgvM",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC9bodyLabelSo7UILabelCSgvM",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "iconImageView",
+            "printedName": "iconImageView",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImageView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImageView",
+                    "printedName": "UIKit.UIImageView",
+                    "usr": "c:objc(cs)UIImageView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(py)iconImageView",
+            "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC09iconImageE0So07UIImageE0CSgvp",
+            "moduleName": "APSSPSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "IBOutlet",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIImageView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIImageView",
+                        "printedName": "UIKit.UIImageView",
+                        "usr": "c:objc(cs)UIImageView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)iconImageView",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC09iconImageE0So07UIImageE0CSgvg",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIImageView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIImageView",
+                        "printedName": "UIKit.UIImageView",
+                        "usr": "c:objc(cs)UIImageView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)setIconImageView:",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC09iconImageE0So07UIImageE0CSgvs",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC09iconImageE0So07UIImageE0CSgvM",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC09iconImageE0So07UIImageE0CSgvM",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "ctaButton",
+            "printedName": "ctaButton",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIButton?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIButton",
+                    "printedName": "UIKit.UIButton",
+                    "usr": "c:objc(cs)UIButton"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(py)ctaButton",
+            "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC9ctaButtonSo8UIButtonCSgvp",
+            "moduleName": "APSSPSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "IBOutlet",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIButton?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIButton",
+                        "printedName": "UIKit.UIButton",
+                        "usr": "c:objc(cs)UIButton"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)ctaButton",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC9ctaButtonSo8UIButtonCSgvg",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIButton?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIButton",
+                        "printedName": "UIKit.UIButton",
+                        "usr": "c:objc(cs)UIButton"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)setCtaButton:",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC9ctaButtonSo8UIButtonCSgvs",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC9ctaButtonSo8UIButtonCSgvM",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC9ctaButtonSo8UIButtonCSgvM",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "mediaContainerView",
+            "printedName": "mediaContainerView",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(py)mediaContainerView",
+            "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC014mediaContainerE0So6UIViewCSgvp",
+            "moduleName": "APSSPSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "IBOutlet",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)mediaContainerView",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC014mediaContainerE0So6UIViewCSgvg",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)setMediaContainerView:",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC014mediaContainerE0So6UIViewCSgvs",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC014mediaContainerE0So6UIViewCSgvM",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC014mediaContainerE0So6UIViewCSgvM",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "advertiserLabel",
+            "printedName": "advertiserLabel",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UILabel?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UILabel",
+                    "printedName": "UIKit.UILabel",
+                    "usr": "c:objc(cs)UILabel"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(py)advertiserLabel",
+            "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC15advertiserLabelSo7UILabelCSgvp",
+            "moduleName": "APSSPSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "IBOutlet",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UILabel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UILabel",
+                        "printedName": "UIKit.UILabel",
+                        "usr": "c:objc(cs)UILabel"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)advertiserLabel",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC15advertiserLabelSo7UILabelCSgvg",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UILabel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UILabel",
+                        "printedName": "UIKit.UILabel",
+                        "usr": "c:objc(cs)UILabel"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)setAdvertiserLabel:",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC15advertiserLabelSo7UILabelCSgvs",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC15advertiserLabelSo7UILabelCSgvM",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC15advertiserLabelSo7UILabelCSgvM",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "starRatingView",
+            "printedName": "starRatingView",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(py)starRatingView",
+            "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC010starRatingE0So6UIViewCSgvp",
+            "moduleName": "APSSPSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "IBOutlet",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)starRatingView",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC010starRatingE0So6UIViewCSgvg",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)setStarRatingView:",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC010starRatingE0So6UIViewCSgvs",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC010starRatingE0So6UIViewCSgvM",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC010starRatingE0So6UIViewCSgvM",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "priceLabel",
+            "printedName": "priceLabel",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UILabel?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UILabel",
+                    "printedName": "UIKit.UILabel",
+                    "usr": "c:objc(cs)UILabel"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(py)priceLabel",
+            "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC10priceLabelSo7UILabelCSgvp",
+            "moduleName": "APSSPSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "IBOutlet",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UILabel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UILabel",
+                        "printedName": "UIKit.UILabel",
+                        "usr": "c:objc(cs)UILabel"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)priceLabel",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC10priceLabelSo7UILabelCSgvg",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UILabel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UILabel",
+                        "printedName": "UIKit.UILabel",
+                        "usr": "c:objc(cs)UILabel"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)setPriceLabel:",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC10priceLabelSo7UILabelCSgvs",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC10priceLabelSo7UILabelCSgvM",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC10priceLabelSo7UILabelCSgvM",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "storeLabel",
+            "printedName": "storeLabel",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UILabel?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UILabel",
+                    "printedName": "UIKit.UILabel",
+                    "usr": "c:objc(cs)UILabel"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(py)storeLabel",
+            "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC10storeLabelSo7UILabelCSgvp",
+            "moduleName": "APSSPSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "IBOutlet",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UILabel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UILabel",
+                        "printedName": "UIKit.UILabel",
+                        "usr": "c:objc(cs)UILabel"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)storeLabel",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC10storeLabelSo7UILabelCSgvg",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UILabel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UILabel",
+                        "printedName": "UIKit.UILabel",
+                        "usr": "c:objc(cs)UILabel"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)setStoreLabel:",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC10storeLabelSo7UILabelCSgvs",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC10storeLabelSo7UILabelCSgvM",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC10storeLabelSo7UILabelCSgvM",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "sponsoredLabel",
+            "printedName": "sponsoredLabel",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UILabel?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UILabel",
+                    "printedName": "UIKit.UILabel",
+                    "usr": "c:objc(cs)UILabel"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(py)sponsoredLabel",
+            "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC14sponsoredLabelSo7UILabelCSgvp",
+            "moduleName": "APSSPSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "IBOutlet",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UILabel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UILabel",
+                        "printedName": "UIKit.UILabel",
+                        "usr": "c:objc(cs)UILabel"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)sponsoredLabel",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC14sponsoredLabelSo7UILabelCSgvg",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UILabel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UILabel",
+                        "printedName": "UIKit.UILabel",
+                        "usr": "c:objc(cs)UILabel"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)setSponsoredLabel:",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC14sponsoredLabelSo7UILabelCSgvs",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC14sponsoredLabelSo7UILabelCSgvM",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC14sponsoredLabelSo7UILabelCSgvM",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "socialContextLabel",
+            "printedName": "socialContextLabel",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UILabel?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UILabel",
+                    "printedName": "UIKit.UILabel",
+                    "usr": "c:objc(cs)UILabel"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(py)socialContextLabel",
+            "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC18socialContextLabelSo7UILabelCSgvp",
+            "moduleName": "APSSPSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "IBOutlet",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UILabel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UILabel",
+                        "printedName": "UIKit.UILabel",
+                        "usr": "c:objc(cs)UILabel"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)socialContextLabel",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC18socialContextLabelSo7UILabelCSgvg",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UILabel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UILabel",
+                        "printedName": "UIKit.UILabel",
+                        "usr": "c:objc(cs)UILabel"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)setSocialContextLabel:",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC18socialContextLabelSo7UILabelCSgvs",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC18socialContextLabelSo7UILabelCSgvM",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC18socialContextLabelSo7UILabelCSgvM",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "mainImageView",
+            "printedName": "mainImageView",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImageView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImageView",
+                    "printedName": "UIKit.UIImageView",
+                    "usr": "c:objc(cs)UIImageView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(py)mainImageView",
+            "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC09mainImageE0So07UIImageE0CSgvp",
+            "moduleName": "APSSPSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "IBOutlet",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIImageView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIImageView",
+                        "printedName": "UIKit.UIImageView",
+                        "usr": "c:objc(cs)UIImageView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)mainImageView",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC09mainImageE0So07UIImageE0CSgvg",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIImageView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIImageView",
+                        "printedName": "UIKit.UIImageView",
+                        "usr": "c:objc(cs)UIImageView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)setMainImageView:",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC09mainImageE0So07UIImageE0CSgvs",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC09mainImageE0So07UIImageE0CSgvM",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC09mainImageE0So07UIImageE0CSgvM",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "adChoiceContainerView",
+            "printedName": "adChoiceContainerView",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(py)adChoiceContainerView",
+            "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC017adChoiceContainerE0So6UIViewCSgvp",
+            "moduleName": "APSSPSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "IBOutlet",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)adChoiceContainerView",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC017adChoiceContainerE0So6UIViewCSgvg",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)setAdChoiceContainerView:",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC017adChoiceContainerE0So6UIViewCSgvs",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC017adChoiceContainerE0So6UIViewCSgvM",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC017adChoiceContainerE0So6UIViewCSgvM",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "adFitProfileNameLabel",
+            "printedName": "adFitProfileNameLabel",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UILabel?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UILabel",
+                    "printedName": "UIKit.UILabel",
+                    "usr": "c:objc(cs)UILabel"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(py)adFitProfileNameLabel",
+            "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC21adFitProfileNameLabelSo7UILabelCSgvp",
+            "moduleName": "APSSPSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "IBOutlet",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UILabel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UILabel",
+                        "printedName": "UIKit.UILabel",
+                        "usr": "c:objc(cs)UILabel"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)adFitProfileNameLabel",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC21adFitProfileNameLabelSo7UILabelCSgvg",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UILabel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UILabel",
+                        "printedName": "UIKit.UILabel",
+                        "usr": "c:objc(cs)UILabel"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)setAdFitProfileNameLabel:",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC21adFitProfileNameLabelSo7UILabelCSgvs",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC21adFitProfileNameLabelSo7UILabelCSgvM",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC21adFitProfileNameLabelSo7UILabelCSgvM",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "adFitProfileIconView",
+            "printedName": "adFitProfileIconView",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImageView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImageView",
+                    "printedName": "UIKit.UIImageView",
+                    "usr": "c:objc(cs)UIImageView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(py)adFitProfileIconView",
+            "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC016adFitProfileIconE0So07UIImageE0CSgvp",
+            "moduleName": "APSSPSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "IBOutlet",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIImageView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIImageView",
+                        "printedName": "UIKit.UIImageView",
+                        "usr": "c:objc(cs)UIImageView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)adFitProfileIconView",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC016adFitProfileIconE0So07UIImageE0CSgvg",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIImageView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIImageView",
+                        "printedName": "UIKit.UIImageView",
+                        "usr": "c:objc(cs)UIImageView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)setAdFitProfileIconView:",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC016adFitProfileIconE0So07UIImageE0CSgvs",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC016adFitProfileIconE0So07UIImageE0CSgvM",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC016adFitProfileIconE0So07UIImageE0CSgvM",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "OptionalKey",
+            "printedName": "OptionalKey",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "advertiser",
+                "printedName": "advertiser",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey.Type) -> APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OptionalKey",
+                        "printedName": "APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey",
+                        "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "OptionalKey",
+                            "printedName": "APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey",
+                            "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO10advertiseryA2EmF",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO10advertiseryA2EmF",
+                "moduleName": "APSSPSDK"
+              },
+              {
+                "kind": "Var",
+                "name": "starRating",
+                "printedName": "starRating",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey.Type) -> APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OptionalKey",
+                        "printedName": "APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey",
+                        "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "OptionalKey",
+                            "printedName": "APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey",
+                            "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO10starRatingyA2EmF",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO10starRatingyA2EmF",
+                "moduleName": "APSSPSDK"
+              },
+              {
+                "kind": "Var",
+                "name": "price",
+                "printedName": "price",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey.Type) -> APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OptionalKey",
+                        "printedName": "APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey",
+                        "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "OptionalKey",
+                            "printedName": "APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey",
+                            "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO5priceyA2EmF",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO5priceyA2EmF",
+                "moduleName": "APSSPSDK"
+              },
+              {
+                "kind": "Var",
+                "name": "store",
+                "printedName": "store",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey.Type) -> APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OptionalKey",
+                        "printedName": "APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey",
+                        "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "OptionalKey",
+                            "printedName": "APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey",
+                            "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO5storeyA2EmF",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO5storeyA2EmF",
+                "moduleName": "APSSPSDK"
+              },
+              {
+                "kind": "Var",
+                "name": "sponsored",
+                "printedName": "sponsored",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey.Type) -> APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OptionalKey",
+                        "printedName": "APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey",
+                        "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "OptionalKey",
+                            "printedName": "APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey",
+                            "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO9sponsoredyA2EmF",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO9sponsoredyA2EmF",
+                "moduleName": "APSSPSDK"
+              },
+              {
+                "kind": "Var",
+                "name": "socialContext",
+                "printedName": "socialContext",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey.Type) -> APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OptionalKey",
+                        "printedName": "APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey",
+                        "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "OptionalKey",
+                            "printedName": "APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey",
+                            "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO13socialContextyA2EmF",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO13socialContextyA2EmF",
+                "moduleName": "APSSPSDK"
+              },
+              {
+                "kind": "Var",
+                "name": "mainImage",
+                "printedName": "mainImage",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey.Type) -> APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OptionalKey",
+                        "printedName": "APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey",
+                        "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "OptionalKey",
+                            "printedName": "APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey",
+                            "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO9mainImageyA2EmF",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO9mainImageyA2EmF",
+                "moduleName": "APSSPSDK"
+              },
+              {
+                "kind": "Var",
+                "name": "adChoice",
+                "printedName": "adChoice",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey.Type) -> APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OptionalKey",
+                        "printedName": "APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey",
+                        "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "OptionalKey",
+                            "printedName": "APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey",
+                            "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO8adChoiceyA2EmF",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO8adChoiceyA2EmF",
+                "moduleName": "APSSPSDK"
+              },
+              {
+                "kind": "Var",
+                "name": "adFitProfileName",
+                "printedName": "adFitProfileName",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey.Type) -> APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OptionalKey",
+                        "printedName": "APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey",
+                        "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "OptionalKey",
+                            "printedName": "APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey",
+                            "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO16adFitProfileNameyA2EmF",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO16adFitProfileNameyA2EmF",
+                "moduleName": "APSSPSDK"
+              },
+              {
+                "kind": "Var",
+                "name": "adFitProfileIcon",
+                "printedName": "adFitProfileIcon",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey.Type) -> APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OptionalKey",
+                        "printedName": "APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey",
+                        "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "OptionalKey",
+                            "printedName": "APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey",
+                            "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO16adFitProfileIconyA2EmF",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO16adFitProfileIconyA2EmF",
+                "moduleName": "APSSPSDK"
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(rawValue:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OptionalKey",
+                        "printedName": "APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey",
+                        "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO8rawValueAESgSS_tcfc",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO8rawValueAESgSS_tcfc",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "rawValue",
+                "printedName": "rawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO8rawValueSSvp",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO8rawValueSSvp",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO8rawValueSSvg",
+                    "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO8rawValueSSvg",
+                    "moduleName": "APSSPSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO",
+            "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO",
+            "moduleName": "APSSPSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "enumRawTypeName": "String",
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "RawRepresentable",
+                "printedName": "RawRepresentable",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "RawValue",
+                    "printedName": "RawValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:SY",
+                "mangledName": "$sSY"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(frame:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "APSSPUnifiedNativeAdView",
+                "printedName": "APSSPSDK.APSSPUnifiedNativeAdView",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)initWithFrame:",
+            "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC5frameACSo6CGRectV_tcfc",
+            "moduleName": "APSSPSDK",
+            "overriding": true,
+            "objc_name": "initWithFrame:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "APSSPSDK.APSSPUnifiedNativeAdView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "APSSPUnifiedNativeAdView",
+                    "printedName": "APSSPSDK.APSSPUnifiedNativeAdView",
+                    "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)initWithCoder:",
+            "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC5coderACSgSo7NSCoderC_tcfc",
+            "moduleName": "APSSPSDK",
+            "overriding": true,
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Required",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "hideOptionalViews",
+            "printedName": "hideOptionalViews(except:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Set",
+                "printedName": "Swift.Set<APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OptionalKey",
+                    "printedName": "APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey",
+                    "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC11OptionalKeyO"
+                  }
+                ],
+                "usr": "s:Sh"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8APSSPSDK24APSSPUnifiedNativeAdViewC17hideOptionalViews6exceptyShyAC0G3KeyOG_tF",
+            "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC17hideOptionalViews6exceptyShyAC0G3KeyOG_tF",
+            "moduleName": "APSSPSDK",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hideOptionalViews",
+            "printedName": "hideOptionalViews(exceptKeys:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Set",
+                "printedName": "Swift.Set<Swift.String>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sh"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)hideOptionalViewsWithExceptKeys:",
+            "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC17hideOptionalViews10exceptKeysyShySSG_tF",
+            "moduleName": "APSSPSDK",
+            "objc_name": "hideOptionalViewsWithExceptKeys:",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hideAllOptionalViews",
+            "printedName": "hideAllOptionalViews()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)hideAllOptionalViews",
+            "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC20hideAllOptionalViewsyyF",
+            "moduleName": "APSSPSDK",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "resetContent",
+            "printedName": "resetContent()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)resetContent",
+            "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC12resetContentyyF",
+            "moduleName": "APSSPSDK",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "starRating",
+            "printedName": "starRating",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.NSNumber?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSNumber",
+                    "printedName": "Foundation.NSNumber",
+                    "usr": "c:objc(cs)NSNumber"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(py)starRating",
+            "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC10starRatingSo8NSNumberCSgvp",
+            "moduleName": "APSSPSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.NSNumber?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NSNumber",
+                        "printedName": "Foundation.NSNumber",
+                        "usr": "c:objc(cs)NSNumber"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)starRating",
+                "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC10starRatingSo8NSNumberCSgvg",
+                "moduleName": "APSSPSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "updateStarRating",
+            "printedName": "updateStarRating(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.NSNumber?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSNumber",
+                    "printedName": "Foundation.NSNumber",
+                    "usr": "c:objc(cs)NSNumber"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)updateStarRating:",
+            "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC16updateStarRatingyySo8NSNumberCSgF",
+            "moduleName": "APSSPSDK",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "applyStarRating",
+            "printedName": "applyStarRating(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.NSNumber?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSNumber",
+                    "printedName": "Foundation.NSNumber",
+                    "usr": "c:objc(cs)NSNumber"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)applyStarRating:",
+            "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC15applyStarRatingyySo8NSNumberCSgF",
+            "moduleName": "APSSPSDK",
+            "isOpen": true,
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hideEmptyViews",
+            "printedName": "hideEmptyViews(hidesIconWhenEmpty:hidesEmptySlots:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)hideEmptyViewsWithHidesIconWhenEmpty:hidesEmptySlots:",
+            "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC14hideEmptyViews013hidesIconWhenG00iG5SlotsySb_SbtF",
+            "moduleName": "APSSPSDK",
+            "objc_name": "hideEmptyViewsWithHidesIconWhenEmpty:hidesEmptySlots:",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hideEmptyRequiredViews",
+            "printedName": "hideEmptyRequiredViews(hidesIconWhenEmpty:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView(im)hideEmptyRequiredViewsWithHidesIconWhenEmpty:",
+            "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC22hideEmptyRequiredViews013hidesIconWhenG0ySb_tF",
+            "moduleName": "APSSPSDK",
+            "deprecated": true,
+            "objc_name": "hideEmptyRequiredViewsWithHidesIconWhenEmpty:",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "ObjC",
+              "Available"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAdView",
+        "mangledName": "$s8APSSPSDK24APSSPUnifiedNativeAdViewC",
+        "moduleName": "APSSPSDK",
+        "isOpen": true,
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom",
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "superclassUsr": "c:objc(cs)UIView",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "UIKit.UIView",
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "__DefaultCustomPlaygroundQuickLookable",
+            "printedName": "__DefaultCustomPlaygroundQuickLookable",
+            "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
+            "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "APSSPSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "APSSPUnifiedNativeAssembler",
+        "printedName": "APSSPUnifiedNativeAssembler",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "wrap",
+            "printedName": "wrap(_:in:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAssembler(cm)wrap:in:",
+            "mangledName": "$s8APSSPSDK27APSSPUnifiedNativeAssemblerC4wrap_2inySo6UIViewC_AGtFZ",
+            "moduleName": "APSSPSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "fillSlot",
+            "printedName": "fillSlot(_:with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAssembler(cm)fillSlot:with:",
+            "mangledName": "$s8APSSPSDK27APSSPUnifiedNativeAssemblerC8fillSlot_4withSbSo6UIViewCSg_AGtFZ",
+            "moduleName": "APSSPSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "attach",
+            "printedName": "attach(_:to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAssembler(cm)attach:to:",
+            "mangledName": "$s8APSSPSDK27APSSPUnifiedNativeAssemblerC6attach_2toySo6UIViewC_AGtFZ",
+            "moduleName": "APSSPSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "clear",
+            "printedName": "clear(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAssembler(cm)clear:",
+            "mangledName": "$s8APSSPSDK27APSSPUnifiedNativeAssemblerC5clearyySo6UIViewCSgFZ",
+            "moduleName": "APSSPSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@APSSPSDK@objc(cs)APSSPUnifiedNativeAssembler",
+        "mangledName": "$s8APSSPSDK27APSSPUnifiedNativeAssemblerC",
+        "moduleName": "APSSPSDK",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
         "inheritsConvenienceInitializers": true,
         "superclassNames": [
           "ObjectiveC.NSObject"
@@ -49646,7 +53209,7 @@
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Network\/APSSPAPIClient.swift",
       "kind": "BooleanLiteral",
-      "offset": 707,
+      "offset": 1166,
       "length": 5,
       "value": "false"
     },
@@ -53881,70 +57444,77 @@
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Ads\/UnifiedNative\/APSSPNativeAdConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 3588,
+      "offset": 4191,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Ads\/UnifiedNative\/APSSPNativeAdConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4327,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Ads\/UnifiedNative\/APSSPNativeAdConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 3698,
+      "offset": 4437,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Ads\/UnifiedNative\/APSSPNativeAdConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 3904,
+      "offset": 4643,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Ads\/UnifiedNative\/SSP\/APSSPUnifiedNativeAdapter.swift",
       "kind": "StringLiteral",
-      "offset": 11779,
+      "offset": 19046,
       "length": 6,
       "value": "\"_50p\""
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Ads\/UnifiedNative\/SSP\/APSSPUnifiedNativeAdapter.swift",
       "kind": "IntegerLiteral",
-      "offset": 12169,
+      "offset": 19432,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Ads\/UnifiedNative\/SSP\/APSSPUnifiedNativeAdapter.swift",
       "kind": "IntegerLiteral",
-      "offset": 12193,
+      "offset": 19456,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Ads\/UnifiedNative\/SSP\/APSSPUnifiedNativeAdapter.swift",
       "kind": "IntegerLiteral",
-      "offset": 12900,
+      "offset": 20163,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Ads\/UnifiedNative\/SSP\/APSSPUnifiedNativeAdapter.swift",
       "kind": "FloatLiteral",
-      "offset": 12932,
+      "offset": 20195,
       "length": 3,
       "value": "0.5"
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Ads\/UnifiedNative\/SSP\/APSSPUnifiedNativeAdapter.swift",
       "kind": "Array",
-      "offset": 13056,
+      "offset": 20319,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Ads\/UnifiedNative\/SSP\/APSSPUnifiedNativeAdapter.swift",
       "kind": "StringLiteral",
-      "offset": 13126,
+      "offset": 20389,
       "length": 6,
       "value": "\"_50p\""
     },
@@ -54129,6 +57699,27 @@
       "offset": 8423,
       "length": 53,
       "value": "\"com.adpopcorn.modalad.doNotShowTodayPlacementIdList\""
+    },
+    {
+      "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Ads\/UnifiedNative\/APSSPUnifiedNativeAdView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 9661,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Ads\/UnifiedNative\/APSSPUnifiedNativeAdView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 9728,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Ads\/UnifiedNative\/APSSPUnifiedNativeAdView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 11417,
+      "length": 4,
+      "value": "true"
     },
     {
       "filePath": "\/Users\/odin\/Desktop\/AdPopcorn\/SSP\/Swift\/AdPopcornSDK\/ap-ssp-iOS-sdk\/AdPopcornSSP-SDK\/AdPopcornSSP-SDK\/Sources\/Ads\/RewardAdPlus\/SSP\/RewardAdPlusViewController.swift",

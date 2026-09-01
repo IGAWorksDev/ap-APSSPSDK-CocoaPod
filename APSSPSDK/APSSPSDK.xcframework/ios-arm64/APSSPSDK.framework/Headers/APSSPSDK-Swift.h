@@ -1115,27 +1115,31 @@ typedef SWIFT_ENUM(NSInteger, APSSPMediationProvider, open) {
 @class UILabel;
 @class UIButton;
 @class UIImageView;
+@class NSBundle;
 /// <h1>APSSPMediationViewBinder</h1>
 /// 통합형 네이티브 광고의 레이아웃 매핑 클래스.
-/// 매체 개발자가 하나의 ViewBinder에 UIView 참조를 설정하면,
-/// 모든 미디에이션 업체의 네이티브 광고가 동일한 레이아웃에 표시됩니다.
-/// <h2>사용 예시</h2>
+/// 매체가 광고 화면을 한 번만 구성하면 모든 미디에이션 업체의 광고가 동일한 레이아웃으로 표시됩니다.
+/// <h2>두 가지 방식</h2>
+/// <h3>[NEW] ContentView 방식 (권장)</h3>
+/// 매체가 만든 <code>APSSPUnifiedNativeAdView</code>(XIB 또는 코드)를 SDK가 그대로 사용합니다.
+/// 업체 컨테이너 <em>안에</em> 이 화면을 넣으므로 각 업체 SDK가 요구하는 뷰 계층이 만족되어
+/// 클릭·노출 추적이 정상 동작합니다.
+/// \code
+/// let binder = APSSPMediationViewBinder(nibName: "MyNativeAdView")
+/// binder.placeholderView = adPlaceholderView
+///
+/// \endcode<h3>[LEGACY] 뷰 참조 방식 (제거 예정)</h3>
+/// 매체가 배치한 뷰를 하나씩 지정합니다. 업체 컨테이너를 매체 뷰 위에 오버레이하거나
+/// 형제로 삽입하므로 일부 업체에서 클릭·노출이 누락됩니다.
 /// \code
 /// let binder = APSSPMediationViewBinder()
 /// binder.containerView = nativeAdContainerView
 /// binder.titleLabel = titleLabel
-/// binder.bodyLabel = bodyLabel
-/// binder.ctaButton = ctaButton
-/// binder.iconImageView = iconImageView
-/// binder.mediaContainerView = mediaContainerView
-/// binder.advertiserLabel = advertiserLabel
-/// binder.adChoiceContainerView = adChoiceContainerView
+/// // …
 ///
-/// \endcodenote:
-/// <code>containerView</code>는 광고 전체를 감싸는 최상위 뷰입니다.
-/// 미디에이션 업체 SDK가 click tracking을 위해 이 뷰를 등록합니다.
-/// note:
-/// <code>mediaContainerView</code>에 업체별 MediaView(GADMediaView, FBMediaView 등)가 동적으로 삽입됩니다.
+/// \endcodeimportant:
+/// 레거시 경로는 신규 기능 추가 없이 유지만 하며, 다음 메이저에서 제거됩니다.
+/// 제거 대상은 <code>APSSP-LEGACY</code> 로 grep 하면 전부 찾을 수 있습니다.
 SWIFT_CLASS("_TtC8APSSPSDK24APSSPMediationViewBinder")
 @interface APSSPMediationViewBinder : NSObject
 /// 광고 전체를 감싸는 컨테이너 뷰 (클릭 영역 등록용)
@@ -1173,9 +1177,30 @@ SWIFT_CLASS("_TtC8APSSPSDK24APSSPMediationViewBinder")
 @property (nonatomic, weak) UILabel * _Nullable adFitProfileNameLabel;
 /// AdFit — 프로필 아이콘 이미지 뷰
 @property (nonatomic, weak) UIImageView * _Nullable adFitProfileIconView;
+/// 신규(레시피) 방식으로 설정된 binder인지 여부
+@property (nonatomic, readonly) BOOL isContentViewMode;
+/// 조립된 광고 뷰가 부착될 플레이스홀더.
+/// 미설정 시 <code>containerView</code>를 사용합니다.
+@property (nonatomic, weak) UIView * _Nullable placeholderView;
+/// 실제 부착 대상. <code>placeholderView</code>가 없으면 <code>containerView</code>를 사용합니다.
+/// note:
+/// 각 미디에이션 어댑터가 별도 모듈이므로 <code>public</code>이어야 합니다.
+@property (nonatomic, readonly, strong) UIView * _Nullable resolvedPlaceholder;
 /// 통합형 네이티브 광고 ViewBinder를 생성합니다.
 /// 생성 후 필요한 프로퍼티를 개별 설정합니다.
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// 매체가 만든 XIB를 광고 화면으로 사용합니다. (권장)
+/// <h2>사용 예시</h2>
+/// \code
+/// let binder = APSSPMediationViewBinder(nibName: "MyNativeAdView")
+/// binder.placeholderView = adContainerView
+/// nativeAd.setViewBinder(binder)
+///
+/// \endcode\param nibName XIB 파일명 (최상위 View의 커스텀 클래스가 <code>APSSPUnifiedNativeAdView</code>여야 합니다)
+///
+/// \param bundle XIB가 포함된 번들 (기본값 <code>.main</code>)
+///
+- (nonnull instancetype)initWithNibName:(NSString * _Nonnull)nibName bundle:(NSBundle * _Nonnull)bundle;
 /// 모든 옵셔널 뷰에 대해 Key가 전달되지 않은 항목을 숨김 처리합니다.
 /// 사용 가능한 키:
 /// <code>"mainImage"</code>, <code>"advertiser"</code>, <code>"starRating"</code>, <code>"price"</code>, <code>"store"</code>, <code>"logo"</code>, <code>"sponsored"</code>, <code>"socialContext"</code>, <code>"adChoice"</code>,
@@ -1452,6 +1477,16 @@ SWIFT_CLASS("_TtC8APSSPSDK19APSSPNativeAdConfig")
 @property (nonatomic) BOOL namEnableMediaBackgroundBlur;
 /// NAM GfpDedupeManager 설정 (광고 중복 노출 방지)
 @property (nonatomic, strong) id _Nullable namDedupeManager;
+/// NAM SimpleAd 사용 허용 여부 (기본값: true)
+/// SimpleAd는 NAM SDK가 광고 전체를 렌더하는 방식이라
+/// <em>매체가 구성한 레이아웃(<code>APSSPUnifiedNativeAdView</code>)이 적용되지 않습니다.</em>
+/// 레이아웃을 반드시 지켜야 하는 경우 <code>false</code>로 설정합니다.
+/// note:
+/// GFP SDK가 SimpleAd delegate 등록을 필수로 요구하므로 요청 자체는 항상 보냅니다.
+/// <code>false</code>인 경우 SimpleAd가 수신되면 사용하지 않고 다음 미디에이션으로 넘깁니다.
+/// warning:
+/// <code>false</code>로 설정하면 SimpleAd 물량을 버리게 되어 fill rate가 낮아집니다.
+@property (nonatomic) BOOL namUseSimpleAd;
 /// AdFit 테스트 모드 (기본값: false)
 @property (nonatomic) BOOL adFitTestMode;
 /// AdFit BizBoard 사용 여부 (기본값: false)
@@ -2035,7 +2070,13 @@ SWIFT_CLASS("_TtC8APSSPSDK20APSSPUnifiedNativeAd")
 - (void)stop;
 /// 기본 네이티브 UI 이외의 버튼에서 클릭 이벤트 발생 시, 수동으로 클릭 처리
 - (void)manualClickEvent;
-/// 광고 요청 결과가 No Ad일 경우, view 영역을 hidden 시킬지 여부 (기본값: true)
+/// 광고 요청 결과가 No Ad일 경우, 광고 영역을 hidden 시킬지 여부 (기본값: true)
+/// ContentView 방식에서는 <code>placeholderView</code>의 내용을 제거하고 placeholder 자체를 숨깁니다.
+/// (개별 뷰만 숨기면 배경·테두리가 있는 빈 박스가 남습니다)
+/// 다음 로드가 성공하면 자동으로 다시 표시됩니다.
+/// note:
+/// <code>false</code>로 두면 매체가 직접 영역을 처리해야 합니다.
+/// <code>unifiedNativeAdLoadFail</code>에서 원하는 처리를 하세요.
 - (void)noAdViewHidden:(BOOL)hidden;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
@@ -2055,6 +2096,176 @@ SWIFT_PROTOCOL("_TtP8APSSPSDK28APSSPUnifiedNativeAdDelegate_")
 - (void)unifiedNativeAdImpressionWithNativeAd:(APSSPUnifiedNativeAd * _Nonnull)nativeAd;
 /// 통합형 네이티브 광고 숨김 시 호출
 - (void)unifiedNativeAdHiddenWithNativeAd:(APSSPUnifiedNativeAd * _Nonnull)nativeAd;
+@end
+
+@class NSNumber;
+/// <h1>APSSPUnifiedNativeAdView</h1>
+/// 매체가 구성하는 통합형 네이티브 광고의 <em>레이아웃 화면</em>.
+/// 매체는 이 클래스를 커스텀 클래스로 지정한 XIB를 만들어 원하는 대로 화면을 구성하고,
+/// 각 뷰를 아래 outlet에 연결합니다. SDK는 이 화면을 그대로 사용해
+/// <em>모든 미디에이션 업체의 광고를 동일한 모습으로</em> 표시합니다.
+/// <h2>XIB 사용</h2>
+/// <ol>
+///   <li>
+///     XIB를 만들고 최상위 View의 커스텀 클래스를 <code>APSSPUnifiedNativeAdView</code>로 지정
+///   </li>
+///   <li>
+///     title / body / icon / cta / mediaContainer 등을 배치하고 outlet 연결
+///   </li>
+///   <li>
+///     <code>APSSPMediationViewBinder(nibName:bundle:)</code>에 XIB 이름 전달
+///   </li>
+/// </ol>
+/// <h2>코드 사용</h2>
+/// 서브클래싱해서 뷰를 직접 구성하고 각 프로퍼티에 대입해도 됩니다.
+/// <h2>빈 슬롯 (중요)</h2>
+/// <code>mediaContainerView</code>와 <code>adChoiceContainerView</code>는 <em>빈 UIView</em>로 두어야 합니다.
+/// 업체 전용 뷰(<code>GFPMediaView</code>, <code>GADMediaView</code>, <code>GFPAdChoicesView</code> 등)는
+/// 어댑터가 런타임에 생성해 이 안에 채웁니다. 매체가 직접 만들면 안 됩니다.
+/// note:
+/// 업체별 지원 에셋이 다릅니다. 전 업체 공통은 title / body / icon / cta / media 5종이며,
+/// 나머지는 지원 업체에서만 표시되고 그 외에는 자동으로 숨겨집니다.
+SWIFT_CLASS("_TtC8APSSPSDK24APSSPUnifiedNativeAdView")
+@interface APSSPUnifiedNativeAdView : UIView
+/// 광고 제목
+@property (nonatomic, strong) IBOutlet UILabel * _Nullable titleLabel;
+/// 광고 본문(설명)
+@property (nonatomic, strong) IBOutlet UILabel * _Nullable bodyLabel;
+/// 광고주 아이콘
+@property (nonatomic, strong) IBOutlet UIImageView * _Nullable iconImageView;
+/// CTA(Call To Action) 버튼
+@property (nonatomic, strong) IBOutlet UIButton * _Nullable ctaButton;
+/// 업체별 MediaView가 삽입될 <em>빈 컨테이너</em>
+@property (nonatomic, strong) IBOutlet UIView * _Nullable mediaContainerView;
+/// 광고주명
+@property (nonatomic, strong) IBOutlet UILabel * _Nullable advertiserLabel;
+/// 별점 뷰
+@property (nonatomic, strong) IBOutlet UIView * _Nullable starRatingView;
+/// 가격 (AdMob/GAM/ADOP/AdForus 전용)
+@property (nonatomic, strong) IBOutlet UILabel * _Nullable priceLabel;
+/// 스토어명 (AdMob/GAM/ADOP/AdForus 전용)
+@property (nonatomic, strong) IBOutlet UILabel * _Nullable storeLabel;
+/// “Sponsored” 등 광고 표시
+@property (nonatomic, strong) IBOutlet UILabel * _Nullable sponsoredLabel;
+/// 소셜 컨텍스트 (NAM / Meta 전용)
+@property (nonatomic, strong) IBOutlet UILabel * _Nullable socialContextLabel;
+/// 메인 이미지 (자사 등 동영상 없는 업체에서 사용)
+@property (nonatomic, strong) IBOutlet UIImageView * _Nullable mainImageView;
+/// AdChoice / Privacy 아이콘이 삽입될 <em>빈 컨테이너</em>
+@property (nonatomic, strong) IBOutlet UIView * _Nullable adChoiceContainerView;
+/// AdFit — 프로필명
+@property (nonatomic, strong) IBOutlet UILabel * _Nullable adFitProfileNameLabel;
+/// AdFit — 프로필 아이콘
+@property (nonatomic, strong) IBOutlet UIImageView * _Nullable adFitProfileIconView;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+/// ObjC 호환 — 문자열 키 버전
+- (void)hideOptionalViewsWithExceptKeys:(NSSet<NSString *> * _Nonnull)visibleKeys;
+/// 모든 옵셔널 뷰를 숨깁니다.
+- (void)hideAllOptionalViews;
+/// XIB에 디자인 타임으로 넣어둔 더미 텍스트/이미지를 비웁니다.
+/// XIB는 로드마다 새로 생성되므로 “광고 제목”, “자세히 보기” 같은 placeholder가 그대로 남습니다.
+/// 어댑터가 값을 채우기 <em>전에</em> 비워야 <code>hideEmptyRequiredViews()</code>가 올바르게 판단할 수 있습니다.
+/// SDK가 <code>makeContentView()</code> 시점에 자동으로 호출합니다.
+- (void)resetContent;
+/// 광고의 별점 값 (0~5). 광고가 제공하지 않으면 <code>nil</code>.
+/// 업체 SDK는 별점을 <em>숫자로만</em> 제공합니다. 별 이미지 등으로 직접 그리려면
+/// 이 값을 읽거나 <code>applyStarRating(_:)</code>을 오버라이드하세요.
+@property (nonatomic, readonly, strong) NSNumber * _Nullable starRating;
+/// 어댑터가 별점을 전달할 때 호출합니다. (SDK 내부용)
+/// note:
+/// <code>starRating</code> 프로퍼티의 ObjC setter selector(<code>setStarRating:</code>)와 충돌하지 않도록
+/// <code>updateStarRating(_:)</code> 이름을 사용합니다.
+- (void)updateStarRating:(NSNumber * _Nullable)rating;
+/// 별점을 화면에 반영합니다.
+/// 기본 구현은 <code>starRatingView</code>가 <code>UILabel</code>일 때 별 문자열(<code>★★★★☆</code>)을 채우고,
+/// 값이 없으면 숨깁니다. 별 이미지 등 다른 표현이 필요하면 서브클래싱해서 오버라이드하세요.
+/// \code
+/// final class MyNativeAdView: APSSPUnifiedNativeAdView {
+///     override func applyStarRating(_ rating: NSNumber?) {
+///         guard let value = rating?.doubleValue, value > 0 else {
+///             starRatingView?.isHidden = true; return
+///         }
+///         (starRatingView as? UIImageView)?.image = myStarImage(for: value)
+///         starRatingView?.isHidden = false
+///     }
+/// }
+///
+/// \endcode\param rating 0~5 별점. nil이거나 0 이하면 숨깁니다.
+///
+- (void)applyStarRating:(NSNumber * _Nullable)rating;
+/// 값이 채워지지 않은 <em>모든</em> 뷰를 숨깁니다. (필수 + 옵셔널)
+/// 광고에 해당 에셋이 없을 때 빈 라벨이나 placeholder 배경이 남는 것을 방지합니다.
+/// 어댑터가 데이터 바인딩을 마친 뒤 호출합니다.
+/// 판정 기준:
+/// important:
+/// 아이콘을 <em>비동기로 로드</em>하는 어댑터는 이 호출 시점에 아직 <code>image</code>가 nil이므로
+/// <code>hidesIconWhenEmpty: false</code> 로 아이콘 판정을 건너뛰고,
+/// 완료 콜백에서 <code>iconImageView?.isHidden = (image == nil)</code> 로 직접 처리해야 합니다.
+/// <ul>
+///   <li>
+///     <code>UILabel</code> — <code>text</code>가 nil이거나 빈 문자열
+///   </li>
+///   <li>
+///     <code>UIImageView</code> — <code>image == nil</code>
+///   </li>
+///   <li>
+///     <code>UIButton</code> — title이 nil이거나 빈 문자열
+///   </li>
+///   <li>
+///     컨테이너(<code>mediaContainerView</code>, <code>adChoiceContainerView</code>) — 자식 뷰 없음
+///   </li>
+///   <li>
+///     <code>starRatingView</code> — UILabel이면 text, 그 외에는 자식 뷰 유무
+///   </li>
+/// </ul>
+/// \param hidesIconWhenEmpty 아이콘을 비동기로 로드하는 어댑터는 <code>false</code>로 판정을 건너뛴다.
+///
+/// \param hidesEmptySlots 업체 SDK가 <em>이 호출 이후에</em> 슬롯을 채우는 경우(NAM AdChoices 등)
+/// <code>false</code>로 두어야 한다. <code>true</code>로 두면 아직 비어 있다는 이유로 숨겨져 표시되지 않는다.
+///
+- (void)hideEmptyViewsWithHidesIconWhenEmpty:(BOOL)hidesIconWhenEmpty hidesEmptySlots:(BOOL)hidesEmptySlots;
+- (void)hideEmptyRequiredViewsWithHidesIconWhenEmpty:(BOOL)hidesIconWhenEmpty SWIFT_DEPRECATED_MSG("", "hideEmptyViews(hidesIconWhenEmpty:)");
+@end
+
+/// <h1>APSSPUnifiedNativeAssembler</h1>
+/// 통합형 네이티브 광고의 뷰 계층 조립 헬퍼.
+/// 각 미디에이션 어댑터가 동일한 방식으로 계층을 구성하도록 강제하기 위한 유틸리티입니다.
+/// 업체 SDK는 자기 컨테이너 뷰가 title/media/icon/cta를 <em>자손으로 포함</em>한다고 가정하므로,
+/// 반드시 아래 순서를 지켜야 클릭·임프레션 트래킹이 정상 동작합니다.
+/// <h2>필수 순서</h2>
+/// \code
+/// 1. content = viewBinder.makeContentView()        // 매체 화면 생성 (매 로드마다 새로)
+/// 2. wrap(content, in: 업체컨테이너)                 // 컨테이너 "안에" 삽입
+/// 3. fillSlot(content.mediaContainerView, with: 업체MediaView)
+///    fillSlot(content.adChoiceContainerView, with: 업체AdChoicesView)
+/// 4. 업체컨테이너.titleLabel = content.titleLabel   // setter 등록 (이제 진짜 자손)
+/// 5. 데이터 바인딩 + hideOptionalViews
+/// 6. 업체컨테이너.nativeAd = nativeAd               // 반드시 마지막
+/// 7. attach(업체컨테이너, to: placeholder)
+///
+/// \endcodenote:
+/// 컨테이너 클래스가 없는 업체(Vungle, Mintegral, InMobi, Fyber, Meta)는
+/// 2번을 생략하고 <code>attach(content, to: placeholder)</code> 후 <code>registerView(root: content, ...)</code>를 호출합니다.
+/// clickableViews가 root의 자손이면 조건이 충족됩니다.
+SWIFT_CLASS("_TtC8APSSPSDK27APSSPUnifiedNativeAssembler")
+@interface APSSPUnifiedNativeAssembler : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+/// 매체 화면을 업체 컨테이너 <em>안에</em> 넣고 4방향 제약으로 꽉 채웁니다.
+/// 이 단계를 거쳐야 <code>container.titleLabel = content.titleLabel</code> 같은 등록이
+/// “컨테이너의 자손”이라는 업체 SDK 계약을 만족합니다.
++ (void)wrap:(UIView * _Nonnull)content in:(UIView * _Nonnull)container;
+/// 빈 슬롯(mediaContainerView / adChoiceContainerView)에 업체 전용 뷰를 채웁니다.
+/// 기존 자식은 제거하므로 waterfall 재시도 시에도 안전합니다.
+///
+/// returns:
+/// 슬롯이 nil이면 <code>false</code>
++ (BOOL)fillSlot:(UIView * _Nullable)slot with:(UIView * _Nonnull)view;
+/// 조립이 끝난 뷰를 플레이스홀더에 부착합니다. 기존 자식은 모두 제거되어 <em>단일 자식</em>이 됩니다.
++ (void)attach:(UIView * _Nonnull)view to:(UIView * _Nonnull)placeholder;
+/// 플레이스홀더를 비웁니다. (다음 미디에이션 시도 전 정리)
++ (void)clear:(UIView * _Nullable)placeholder;
 @end
 
 @protocol APSSPVideoMixAdDelegate;

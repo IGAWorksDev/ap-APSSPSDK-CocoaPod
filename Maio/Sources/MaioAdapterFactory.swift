@@ -8,6 +8,7 @@ public final class MaioAdapterFactory: NSObject, APSSPAdapterFactory {
     public static var networkID: Int { 39 }
 
     public static var sdkVersion: String? { MaioInitializationAdapter().sdkVersion }
+    public static var adapterVersion: String? { "2.2.1.11" }
 
     public static func makeInitializationAdapter() -> AnyObject? {
         return MaioInitializationAdapter()

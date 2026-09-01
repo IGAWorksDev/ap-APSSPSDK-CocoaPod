@@ -1014,6 +1014,7 @@ extension APSSPSDK.APSSPAdapterFactory {
   @objc final public var namActivateObservingOnBackground: Swift.Bool
   @objc final public var namEnableMediaBackgroundBlur: Swift.Bool
   @objc final public var namDedupeManager: Swift.AnyObject?
+  @objc final public var namUseSimpleAd: Swift.Bool
   @objc final public var adFitTestMode: Swift.Bool
   @objc final public var adFitBizBoard: Swift.Bool
   @objc final public var adFitVideoAutoPlayPolicy: Swift.Int
@@ -1116,10 +1117,93 @@ public protocol APSSPNativeAdapterInappBiddingProtocol : APSSPSDK.APSSPNativeAda
   @objc weak final public var adChoiceContainerView: UIKit.UIView?
   @objc weak final public var adFitProfileNameLabel: UIKit.UILabel?
   @objc weak final public var adFitProfileIconView: UIKit.UIImageView?
+  @objc final public var isContentViewMode: Swift.Bool {
+    @objc get
+  }
+  @objc weak final public var placeholderView: UIKit.UIView?
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc final public var resolvedPlaceholder: UIKit.UIView? {
+    @objc get
+  }
+  #endif
   @objc override dynamic public init()
+  @objc convenience public init(nibName: Swift.String, bundle: Foundation.Bundle = .main)
+  convenience public init(contentViewProvider: @escaping () -> APSSPSDK.APSSPUnifiedNativeAdView)
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func makeContentView() -> APSSPSDK.APSSPUnifiedNativeAdView?
+  #endif
   @objc final public func hideOptionalViews(except visibleKeys: Swift.Set<Swift.String>)
   @objc final public func hideAllOptionalViews()
   @objc final public func insertMediaView(_ mediaView: UIKit.UIView)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor @preconcurrency open class APSSPUnifiedNativeAdView : UIKit.UIView {
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency public var titleLabel: UIKit.UILabel?
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency public var bodyLabel: UIKit.UILabel?
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency public var iconImageView: UIKit.UIImageView?
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency public var ctaButton: UIKit.UIButton?
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency public var mediaContainerView: UIKit.UIView?
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency public var advertiserLabel: UIKit.UILabel?
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency public var starRatingView: UIKit.UIView?
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency public var priceLabel: UIKit.UILabel?
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency public var storeLabel: UIKit.UILabel?
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency public var sponsoredLabel: UIKit.UILabel?
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency public var socialContextLabel: UIKit.UILabel?
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency public var mainImageView: UIKit.UIImageView?
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency public var adChoiceContainerView: UIKit.UIView?
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency public var adFitProfileNameLabel: UIKit.UILabel?
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency public var adFitProfileIconView: UIKit.UIImageView?
+  public enum OptionalKey : Swift.String {
+    case advertiser
+    case starRating
+    case price
+    case store
+    case sponsored
+    case socialContext
+    case mainImage
+    case adChoice
+    case adFitProfileName
+    case adFitProfileIcon
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init?(rawValue: Swift.String)
+    #endif
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
+  @_Concurrency.MainActor @preconcurrency public func hideOptionalViews(except visibleKeys: Swift.Set<APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey>)
+  @objc @_Concurrency.MainActor @preconcurrency public func hideOptionalViews(exceptKeys visibleKeys: Swift.Set<Swift.String>)
+  @objc @_Concurrency.MainActor @preconcurrency public func hideAllOptionalViews()
+  @objc @_Concurrency.MainActor @preconcurrency public func resetContent()
+  @objc @_Concurrency.MainActor @preconcurrency public var starRating: Foundation.NSNumber? {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @_Concurrency.MainActor @preconcurrency public func updateStarRating(_ rating: Foundation.NSNumber?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc @_Concurrency.MainActor @preconcurrency open func applyStarRating(_ rating: Foundation.NSNumber?)
+  #endif
+  @objc @_Concurrency.MainActor @preconcurrency public func hideEmptyViews(hidesIconWhenEmpty: Swift.Bool = true, hidesEmptySlots: Swift.Bool = true)
+  @available(*, deprecated, renamed: "hideEmptyViews(hidesIconWhenEmpty:)")
+  @objc @_Concurrency.MainActor @preconcurrency public func hideEmptyRequiredViews(hidesIconWhenEmpty: Swift.Bool = true)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class APSSPUnifiedNativeAssembler : ObjectiveC.NSObject {
+  @objc public static func wrap(_ content: UIKit.UIView, in container: UIKit.UIView)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @discardableResult
+  @objc public static func fillSlot(_ slot: UIKit.UIView?, with view: UIKit.UIView) -> Swift.Bool
+  #endif
+  @objc public static func attach(_ view: UIKit.UIView, to placeholder: UIKit.UIView)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func clear(_ placeholder: UIKit.UIView?)
+  #endif
   @objc deinit
 }
 public protocol APSSPInterstitialVideoAdapterDelegate : AnyObject {
@@ -1470,6 +1554,9 @@ extension APSSPSDK.APSSPAdapterInfo : Swift.RawRepresentable {}
 extension APSSPSDK.APSSPModalAdStatus : Swift.Equatable {}
 extension APSSPSDK.APSSPModalAdStatus : Swift.Hashable {}
 extension APSSPSDK.APSSPModalAdStatus : Swift.RawRepresentable {}
+extension APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey : Swift.Equatable {}
+extension APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey : Swift.Hashable {}
+extension APSSPSDK.APSSPUnifiedNativeAdView.OptionalKey : Swift.RawRepresentable {}
 extension APSSPSDK.APSSPReactNativeAdStatus : Swift.Equatable {}
 extension APSSPSDK.APSSPReactNativeAdStatus : Swift.Hashable {}
 extension APSSPSDK.APSSPReactNativeAdStatus : Swift.RawRepresentable {}

@@ -58,6 +58,29 @@ final class CSJMediationUnifiedNativeAdView: UIView, BUCustomEventProtocol {
     }
 }
 
+// MARK: - [NEW] ContentView 방식 — 매체가 만든 화면(APSSPUnifiedNativeAdView)을 사용
+//
+// CSJ는 `BUNativeExpressAdView`가 **완성된 광고 뷰 전체**를 렌더한다.
+// title / body / icon / cta 같은 개별 에셋에 접근할 수 있는 API가 없고
+// (헤더에도 render() / registerClickableRects() 정도만 공개되어 있다),
+// 뷰 등록(setter) API도 없다. 따라서 매체가 만든 XIB 레이아웃을
+// **구조적으로 적용할 수 없다.** 광고 뷰를 placeholder에 통째로 부착한다.
+private extension CSJMediationUnifiedNativeAdView {
+
+    func handleRenderSuccessWithContentView(_ nativeExpressAdView: BUNativeExpressAdView) {
+        guard let placeholder = viewBinder.resolvedPlaceholder else {
+            delegate?.unifiedNativeLoadFail(error: .nextMediation, errorMessage: "CSJ placeholder is nil")
+            return
+        }
+
+        APLogger.debug("CSJ UnifiedNative → BUNativeExpressAdView 통째 부착 (SDK 자체 렌더 — 매체 XIB 미적용). CSJ SDK는 개별 에셋(title/body/icon/cta) 접근 API를 제공하지 않아 매체 레이아웃을 적용할 수 없습니다.")
+
+        APSSPUnifiedNativeAssembler.attach(nativeExpressAdView, to: placeholder)
+        delegate?.unifiedNativeLoadSuccess()
+    }
+}
+
+
 extension CSJMediationUnifiedNativeAdView: BUNativeExpressAdViewDelegate {
     func nativeExpressAdSuccess(toLoad nativeExpressAd: BUNativeExpressAdManager, views: [BUNativeExpressAdView]) {
         guard let view = views.first else {
@@ -70,10 +93,14 @@ extension CSJMediationUnifiedNativeAdView: BUNativeExpressAdViewDelegate {
     }
     
     func nativeExpressAdViewRenderSuccess(_ nativeExpressAdView: BUNativeExpressAdView) {
-        // CSJ는 자체 렌더링 뷰 → mediaContainerView에 삽입
-        viewBinder.insertMediaView(nativeExpressAdView)
-        viewBinder.hideAllOptionalViews()
-        delegate?.unifiedNativeLoadSuccess()
+        if viewBinder.isContentViewMode {
+            handleRenderSuccessWithContentView(nativeExpressAdView)
+        } else {
+            // 기존: CSJ는 자체 렌더링 뷰 → mediaContainerView에 삽입
+            viewBinder.insertMediaView(nativeExpressAdView)
+            viewBinder.hideAllOptionalViews()
+            delegate?.unifiedNativeLoadSuccess()
+        }
     }
     
     func nativeExpressAdViewRenderFail(_ nativeExpressAdView: BUNativeExpressAdView, error: Error?) {

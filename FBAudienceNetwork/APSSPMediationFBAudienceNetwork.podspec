@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
   s.name         = "APSSPMediationFBAudienceNetwork"
-  s.version      = "8.22.1.2"
+  s.version      = "8.22.1.3"
   s.summary      = "APSSPSDK Mediation FBAudienceNetwork Adapter"
   s.homepage     = "https://github.com/IGAWorksDev/ap-APSSPSDK-CocoaPod"
   s.license      = { "type": "Apache License, Version 2.0", "file": "LICENSE" }
   s.author       = { "mick.kim" => "mick.kim@adpopcorn.com", "odin.song" => "odin.song@adpopcorn.com" }
 
   s.ios.deployment_target = "13.0"
-  s.source       = { :git => "https://github.com/IGAWorksDev/ap-APSSPSDK-CocoaPod.git", :tag => "3.3.0-release1" }
+  s.source       = { :git => "https://github.com/IGAWorksDev/ap-APSSPSDK-CocoaPod.git", :tag => "3.4.0" }
 
   s.source_files = "FBAudienceNetwork/Sources/**/*.swift"
 
@@ -15,6 +15,6 @@ Pod::Spec.new do |s|
   s.swift_versions = ["5.0"]
   s.pod_target_xcconfig = { "OTHER_LDFLAGS" => "-ObjC" }
 
-  s.dependency "APSSPSDK", ">= 3.2.2"
+  s.dependency "APSSPSDK", ">= 3.4.0"
   s.dependency "FBAudienceNetwork", ">= 6.15"
 end

@@ -8,7 +8,7 @@ public final class CSJAdapterFactory: NSObject, APSSPAdapterFactory {
     public static var networkID: Int { 40 }
 
     public static var sdkVersion: String? { CSJInitializationAdapter().sdkVersion }
-    public static var adapterVersion: String? { "7.5.1.10" }
+    public static var adapterVersion: String? { "7.5.1.12" }
 
     public static func makeInitializationAdapter() -> AnyObject? {
         return CSJInitializationAdapter()

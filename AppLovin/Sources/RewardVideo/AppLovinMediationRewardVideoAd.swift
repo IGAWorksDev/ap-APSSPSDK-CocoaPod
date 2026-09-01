@@ -32,12 +32,7 @@ final class AppLovinMediationRewardVideoAd: NSObject {
         self.rootViewController = rootViewController
         super.init()
         
-        // ZoneId가 있으면 해당 ZoneId로 인스턴스 생성
-        if !placementId.isEmpty {
-            self.incentivizedAd = ALIncentivizedInterstitialAd(zoneIdentifier: placementId)
-        } else {
-            self.incentivizedAd = ALIncentivizedInterstitialAd.shared()
-        }
+        self.incentivizedAd = ALIncentivizedInterstitialAd(zoneIdentifier: placementId)
     }
     
     public func present(from: UIViewController, completion: @escaping () -> Void) {

@@ -6,7 +6,7 @@ public final class GAMAdapterFactory: NSObject, APSSPAdapterFactory {
 
     public static var networkID: Int { 19 }
     public static var sdkVersion: String? { GAMInitializationAdapter().sdkVersion }
-    public static var adapterVersion: String? { "13.5.0.1" }
+    public static var adapterVersion: String? { "13.5.0.3" }
 
     public static func makeInitializationAdapter() -> AnyObject? {
         return GAMInitializationAdapter()
