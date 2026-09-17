@@ -18,7 +18,7 @@
 		</data>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		WdfBRHlkG7gbBsj5bRTlfChldfQ=
+		2gnlsonzTpLDi14C6iMBAbMnWow=
 		</data>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -39,6 +39,30 @@
 		<key>PrivacyInfo.xcprivacy</key>
 		<data>
 		XGsBg3adhNFlN3Wg/KByE/vEzzM=
+		</data>
+		<key>apssp_play.png</key>
+		<data>
+		UGnISHr5X/3P/V4J4SrGh/MfC0g=
+		</data>
+		<key>apssp_play@2x.png</key>
+		<data>
+		QKN0YFZvTwm9WZqTE86g7672nRs=
+		</data>
+		<key>apssp_play@3x.png</key>
+		<data>
+		9XkJST0OCJ3IfJXA5Fg2cjTVBbk=
+		</data>
+		<key>apssp_spinner.png</key>
+		<data>
+		q/vVo+i7G0fkxdtJ1HT6ooCBEOQ=
+		</data>
+		<key>apssp_spinner@2x.png</key>
+		<data>
+		JacqSfud/ZKSc4GfvVkOradKTm0=
+		</data>
+		<key>apssp_spinner@3x.png</key>
+		<data>
+		Z413kdOmGk5sEKPe2x9WblS5ZGc=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -61,7 +85,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			A9+l1bG9WbSltJbb9e7M6s4ytbT+EAJTIW15lKDzWWY=
+			3Qdkq9OgK+8o9wVwyMUU+nW5ysF/L752OXdn/Q1lJjo=
 			</data>
 		</dict>
 		<key>Modules/APSSPSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -97,6 +121,48 @@
 			<key>hash2</key>
 			<data>
 			NSy3N8e56mMLFzo46NHywFVcT1yM2E6YsJNGx47ipl8=
+			</data>
+		</dict>
+		<key>apssp_play.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			4GyCrxoEScwSqRXP8MTqhmzvoNCCw8KPyHMrtOCRzW0=
+			</data>
+		</dict>
+		<key>apssp_play@2x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			klRdfyxBQirntMJfwKYAiI2PQAMv5c9BmrGgX/er+pY=
+			</data>
+		</dict>
+		<key>apssp_play@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			GYzYCdVZE/lLYoemcLcXHjG9rmDUMT5OoLZZ29/qM8o=
+			</data>
+		</dict>
+		<key>apssp_spinner.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			mN/Xk5m9/WIbg/C75WRLTD4elqW8QXZD6GKbZluXxDM=
+			</data>
+		</dict>
+		<key>apssp_spinner@2x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			eRf9VjmZx2DBgal/0tugT8BL2clETT46Iova4bqVP/c=
+			</data>
+		</dict>
+		<key>apssp_spinner@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			hFAQA4q65DbKzDhIV1QUM4cDHgxsrBxRdmCYeXXVge4=
 			</data>
 		</dict>
 	</dict>
